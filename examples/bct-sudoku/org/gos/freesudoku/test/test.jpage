@@ -1,0 +1,4 @@
+Integer[][] pairs = new Integer[9][2]; 
+
+System.out.println( pairs.length);
+System.out.println( pairs[0].length);

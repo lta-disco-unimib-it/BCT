@@ -1,0 +1,31 @@
+#############################################################
+# Copyright (c) 2005, 2006 IBM Corporation and others. 
+# All rights reserved.   This program and the accompanying materials 
+# are made available under the terms of the Eclipse Public License v1.0 
+# which accompanies this distribution, and is available at 
+# http://www.eclipse.org/legal/epl-v10.html         
+# $Id: JDump.dep,v 1.5 2006/03/24 22:01:33 hleung Exp $ 
+#  
+# Contributors: 
+# IBM - Initial contribution
+#############################################################
+
+# Microsoft Developer Studio Generated Dependency File, included by JDump.mak
+
+..\Common\Command.cpp : \
+	"..\Common\Command.h"\
+	"..\common\commondef.h"\
+	
+
+.\JDump.cpp : \
+	"..\BCIEng\BCIEngJ\JVMInsSet.h"\
+	"..\BCIEng\InsSet.h"\
+	"..\BCIEng\Module.h"\
+	"..\Common\Command.h"\
+	"..\common\commondef.h"\
+	"..\JClass\JavaDef.h"\
+	"..\JClass\JBaseStream.h"\
+	"..\JClass\JClassFile.h"\
+	"..\JClass\JFileStream.h"\
+	"..\JClass\JStream.h"\
+	

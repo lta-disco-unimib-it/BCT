@@ -1,0 +1,566 @@
+<CommonBaseEvent creationTime="2009-02-18T14:00:22.971Z" localInstanceId="BCTMODELVIOLATION-2" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>main.Persona.saluta:-1</values>
+		<values>main.PersonaTest.testSalutaNomeNull:25</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0:-2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke:39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke:25</values>
+		<values>java.lang.reflect.Method.invoke:597</values>
+		<values>junit.framework.TestCase.runTest:164</values>
+		<values>junit.framework.TestCase.runBare:130</values>
+		<values>junit.framework.TestResult$1.protect:106</values>
+		<values>junit.framework.TestResult.runProtected:124</values>
+		<values>junit.framework.TestResult.run:109</values>
+		<values>junit.framework.TestCase.run:120</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run:130</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run:38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run:386</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+		<values>main.PersonaTest.testSalutaNomeNull(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>main.Persona.saluta((Lmain.Persona;)Ljava.lang.String;):::ENTER</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>IO</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>parameter[0].nome != null</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>NotValid</values>
+	</extendedDataElements>
+	<extendedDataElements name="ParametersStates" type="string">
+		<values>Parameters : &#xA;parameter[0].nome&#xA;null&#xA;1&#xA;</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32110@laptop" subComponent="util.cbe.ModelViolationsExporter" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" component="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32110@laptop" subComponent="main.Persona.saluta:-1" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2009-02-18T14:00:23.017Z" localInstanceId="BCTMODELVIOLATION-5" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>main.Persona.saluta:15</values>
+		<values>main.PersonaTest.testSalutaNomeNull:25</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0:-2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke:39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke:25</values>
+		<values>java.lang.reflect.Method.invoke:597</values>
+		<values>junit.framework.TestCase.runTest:164</values>
+		<values>junit.framework.TestCase.runBare:130</values>
+		<values>junit.framework.TestResult$1.protect:106</values>
+		<values>junit.framework.TestResult.runProtected:124</values>
+		<values>junit.framework.TestResult.run:109</values>
+		<values>junit.framework.TestCase.run:120</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run:130</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run:38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run:386</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+		<values>main.PersonaTest.testSalutaNomeNull(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>main.Persona.saluta((Lmain.Persona;)Ljava.lang.String;):::EXIT</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>IO</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>parameter[0].nome != null</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>NotValid</values>
+	</extendedDataElements>
+	<extendedDataElements name="ParametersStates" type="string">
+		<values>Parameters : &#xA;parameter[0].nome&#xA;null&#xA;1&#xA;</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32110@laptop" subComponent="util.cbe.ModelViolationsExporter" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" component="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32110@laptop" subComponent="main.Persona.saluta:15" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2009-02-18T14:05:40.279Z" localInstanceId="BCTMODELVIOLATION-2" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>main.Persona.saluta:-1</values>
+		<values>main.PersonaTest.testSalutaNomeNull:25</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0:-2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke:39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke:25</values>
+		<values>java.lang.reflect.Method.invoke:597</values>
+		<values>junit.framework.TestCase.runTest:164</values>
+		<values>junit.framework.TestCase.runBare:130</values>
+		<values>junit.framework.TestResult$1.protect:106</values>
+		<values>junit.framework.TestResult.runProtected:124</values>
+		<values>junit.framework.TestResult.run:109</values>
+		<values>junit.framework.TestCase.run:120</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run:130</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run:38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run:386</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+		<values>main.PersonaTest.testSalutaNomeNull(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>main.Persona.saluta((Lmain.Persona;)Ljava.lang.String;):::ENTER</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>IO</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>parameter[0].nome != null</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>NotValid</values>
+	</extendedDataElements>
+	<extendedDataElements name="ParametersStates" type="string">
+		<values>Parameters : &#xA;parameter[0].nome&#xA;null&#xA;1&#xA;</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="util.cbe.ModelViolationsExporter" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" component="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="main.Persona.saluta:-1" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2009-02-18T14:05:40.326Z" localInstanceId="BCTMODELVIOLATION-5" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>main.Persona.saluta:15</values>
+		<values>main.PersonaTest.testSalutaNomeNull:25</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0:-2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke:39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke:25</values>
+		<values>java.lang.reflect.Method.invoke:597</values>
+		<values>junit.framework.TestCase.runTest:164</values>
+		<values>junit.framework.TestCase.runBare:130</values>
+		<values>junit.framework.TestResult$1.protect:106</values>
+		<values>junit.framework.TestResult.runProtected:124</values>
+		<values>junit.framework.TestResult.run:109</values>
+		<values>junit.framework.TestCase.run:120</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run:130</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run:38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run:386</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+		<values>main.PersonaTest.testSalutaNomeNull(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>main.Persona.saluta((Lmain.Persona;)Ljava.lang.String;):::EXIT</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>IO</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>parameter[0].nome != null</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>NotValid</values>
+	</extendedDataElements>
+	<extendedDataElements name="ParametersStates" type="string">
+		<values>Parameters : &#xA;parameter[0].nome&#xA;null&#xA;1&#xA;</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="util.cbe.ModelViolationsExporter" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" component="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="main.Persona.saluta:15" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2009-02-18T14:05:40.404Z" localInstanceId="BCTMODELVIOLATION-6" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>main.Persona.saluta:-1</values>
+		<values>main.Riunione.inizia:21</values>
+		<values>main.RiunioneTest.testInizia:18</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0:-2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke:39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke:25</values>
+		<values>java.lang.reflect.Method.invoke:597</values>
+		<values>junit.framework.TestCase.runTest:164</values>
+		<values>junit.framework.TestCase.runBare:130</values>
+		<values>junit.framework.TestResult$1.protect:106</values>
+		<values>junit.framework.TestResult.runProtected:124</values>
+		<values>junit.framework.TestResult.run:109</values>
+		<values>junit.framework.TestCase.run:120</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run:130</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run:38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run:386</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+		<values>main.RiunioneTest.testInizia(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>main.Persona.saluta((Lmain.Persona;)Ljava.lang.String;):::ENTER</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>IO</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>parameter[0] != null</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>NotValid</values>
+	</extendedDataElements>
+	<extendedDataElements name="ParametersStates" type="string">
+		<values>Parameters : &#xA;parameter[0]&#xA;null&#xA;1&#xA;</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="util.cbe.ModelViolationsExporter" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" component="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="main.Persona.saluta:-1" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2009-02-18T14:05:40.411Z" localInstanceId="BCTMODELVIOLATION-7" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>main.Persona.saluta:15</values>
+		<values>main.Riunione.inizia:21</values>
+		<values>main.RiunioneTest.testInizia:18</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0:-2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke:39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke:25</values>
+		<values>java.lang.reflect.Method.invoke:597</values>
+		<values>junit.framework.TestCase.runTest:164</values>
+		<values>junit.framework.TestCase.runBare:130</values>
+		<values>junit.framework.TestResult$1.protect:106</values>
+		<values>junit.framework.TestResult.runProtected:124</values>
+		<values>junit.framework.TestResult.run:109</values>
+		<values>junit.framework.TestCase.run:120</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run:130</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run:38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run:386</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+		<values>main.RiunioneTest.testInizia(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>main.Persona.saluta((Lmain.Persona;)Ljava.lang.String;):::EXIT</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>IO</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>parameter[0] != null</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>NotValid</values>
+	</extendedDataElements>
+	<extendedDataElements name="ParametersStates" type="string">
+		<values>Parameters : &#xA;parameter[0]&#xA;null&#xA;1&#xA;</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="util.cbe.ModelViolationsExporter" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" component="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="main.Persona.saluta:15" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2009-02-18T14:05:40.414Z" localInstanceId="BCTMODELVIOLATION-8" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>main.Persona.saluta:15</values>
+		<values>main.Riunione.inizia:21</values>
+		<values>main.RiunioneTest.testInizia:18</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0:-2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke:39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke:25</values>
+		<values>java.lang.reflect.Method.invoke:597</values>
+		<values>junit.framework.TestCase.runTest:164</values>
+		<values>junit.framework.TestCase.runBare:130</values>
+		<values>junit.framework.TestResult$1.protect:106</values>
+		<values>junit.framework.TestResult.runProtected:124</values>
+		<values>junit.framework.TestResult.run:109</values>
+		<values>junit.framework.TestCase.run:120</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run:130</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run:38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run:386</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+		<values>main.RiunioneTest.testInizia(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>main.Persona.saluta((Lmain.Persona;)Ljava.lang.String;):::EXIT</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>IO</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>returnValue != null</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>NotValid</values>
+	</extendedDataElements>
+	<extendedDataElements name="ParametersStates" type="string">
+		<values>Parameters : &#xA;parameter[0]&#xA;null&#xA;1&#xA;</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="util.cbe.ModelViolationsExporter" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" component="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="main.Persona.saluta:15" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2009-02-18T14:05:40.417Z" localInstanceId="BCTMODELVIOLATION-9" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>main.Persona.saluta:15</values>
+		<values>main.Riunione.inizia:21</values>
+		<values>main.RiunioneTest.testInizia:18</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0:-2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke:39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke:25</values>
+		<values>java.lang.reflect.Method.invoke:597</values>
+		<values>junit.framework.TestCase.runTest:164</values>
+		<values>junit.framework.TestCase.runBare:130</values>
+		<values>junit.framework.TestResult$1.protect:106</values>
+		<values>junit.framework.TestResult.runProtected:124</values>
+		<values>junit.framework.TestResult.run:109</values>
+		<values>junit.framework.TestCase.run:120</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run:130</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run:38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run:386</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+		<values>main.RiunioneTest.testInizia(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>main.Persona.saluta((Lmain.Persona;)Ljava.lang.String;)</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>FSA</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>main.Persona.saluta((Lmain.Persona;)Ljava.lang.String;)</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>UnexpectedTermination</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentStates" type="stringArray">
+		<values>q1</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="util.cbe.ModelViolationsExporter" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" component="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="main.Riunione.inizia:21" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2009-02-18T14:05:40.420Z" localInstanceId="BCTMODELVIOLATION-10" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>main.Riunione.inizia:24</values>
+		<values>main.RiunioneTest.testInizia:18</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0:-2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke:39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke:25</values>
+		<values>java.lang.reflect.Method.invoke:597</values>
+		<values>junit.framework.TestCase.runTest:164</values>
+		<values>junit.framework.TestCase.runBare:130</values>
+		<values>junit.framework.TestResult$1.protect:106</values>
+		<values>junit.framework.TestResult.runProtected:124</values>
+		<values>junit.framework.TestResult.run:109</values>
+		<values>junit.framework.TestCase.run:120</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run:130</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run:38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run:386</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+		<values>main.RiunioneTest.testInizia(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>main.Riunione.inizia(()Ljava.lang.String;):::EXIT</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>IO</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>returnValue != null</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>NotValid</values>
+	</extendedDataElements>
+	<extendedDataElements name="ParametersStates" type="string">
+		<values>Parameters : &#xA;</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="util.cbe.ModelViolationsExporter" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" component="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="main.Riunione.inizia:24" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2009-02-18T14:05:40.422Z" localInstanceId="BCTMODELVIOLATION-11" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>main.Riunione.inizia:24</values>
+		<values>main.RiunioneTest.testInizia:18</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0:-2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke:39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke:25</values>
+		<values>java.lang.reflect.Method.invoke:597</values>
+		<values>junit.framework.TestCase.runTest:164</values>
+		<values>junit.framework.TestCase.runBare:130</values>
+		<values>junit.framework.TestResult$1.protect:106</values>
+		<values>junit.framework.TestResult.runProtected:124</values>
+		<values>junit.framework.TestResult.run:109</values>
+		<values>junit.framework.TestCase.run:120</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run:130</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run:38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run:386</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+		<values>main.RiunioneTest.testInizia(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>main.Riunione.inizia(()Ljava.lang.String;)</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>FSA</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>main.Riunione.inizia(()Ljava.lang.String;)</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>UnexpectedTermination</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentStates" type="stringArray">
+		<values>q2</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="util.cbe.ModelViolationsExporter" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" component="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="main.RiunioneTest.testInizia:18" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2009-02-18T14:05:40.427Z" localInstanceId="0" msg="Failure detected by BCT" severity="60" version="1.0.1">
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+		<values>main.RiunioneTest.testInizia(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="FailingTestId" type="string">
+		<values>main.RiunioneTest.testInizia(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="FailingTestName" type="string">
+		<values>main.RiunioneTest.testInizia(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="FailureClass" type="string">
+		<values>failureDetection.ExceptionFailure</values>
+	</extendedDataElements>
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>main.Persona.saluta:15</values>
+		<values>main.Riunione.inizia:21</values>
+		<values>main.RiunioneTest.testInizia:18</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0:-2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke:39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke:25</values>
+		<values>java.lang.reflect.Method.invoke:597</values>
+		<values>junit.framework.TestCase.runTest:164</values>
+		<values>junit.framework.TestCase.runBare:130</values>
+		<values>junit.framework.TestResult$1.protect:106</values>
+		<values>junit.framework.TestResult.runProtected:124</values>
+		<values>junit.framework.TestResult.run:109</values>
+		<values>junit.framework.TestCase.run:120</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run:130</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run:38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run:386</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196</values>
+	</extendedDataElements>
+	<extendedDataElements name="CatchingMethod" type="string">
+		<values>main.RiunioneTest.testInizia(()V)1</values>
+	</extendedDataElements>
+	<extendedDataElements name="ExceptionClass" type="string">
+		<values>java.lang.NullPointerException</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="util.cbe.FailuresExporter" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196" component="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196" componentIdType="Application" executionEnvironment="Linux_i386#2.6.27-7-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="32400@laptop" subComponent="main.RiunioneTest.testInizia(()V)1" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>

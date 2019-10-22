@@ -1,0 +1,45 @@
+
+\section{KBehavior Usage}
+To run KBehavior you just need to run
+
+java -cp path/to/kbehavior.jar grammarInference.Engine.KBehaviorEngine
+
+\begin{minipage}{15cm}
+\tiny
+\begin{tabular}{|p{3cm}|p{5cm}|p{3cm}|p{1cm}|}
+\textbf{Key}&\textbf{Description}&\textbf{Example}&\textbf{Mandatory}\\
+
+logger&Type of logger. Can be one of: console, file.&console&Y\\
+level&Logger verbosity level:
+\begin{itemize}
+\item 0 : log only critical events
+\item 1 : log unexpected events
+\item 2 : log events (FSA Extension etc)
+\item 3 : log info (addBranch, addTail, merge)
+\item 4 : log debugging info (trace all events)
+\end{itemize}
+&1&Y\\
+
+logfile&File where you want to store logging info if you set \textit{file} logger.&event.log&N\\
+
+enableMinimization&Set if you want to enable the minimization of the inferred automata. Accepted values are:
+\begin{itemize}
+\item none : no minimization
+\item end : minimize after all the traces have been processed
+\item step : minimize after a trace have been processed
+\end{itemize}
+&end&Y\\
+
+minTrustLen&Min number of K-future to consider in order to merge two states.&2&Y\\
+
+
+
+maxTrustLen&If \textit{cutoffSearch} is set to true, the algorithm stop searching for similar traces when maxTrustLen equals symbols are found.This number can be equals to \textit{minTrustLen} in the case you want to merge two states whenever you find \textit{minTrustLen} equals K-Future.&6&Y\\
+
+cutoffSearch&Set to true if you want stop searching for the best similar trace after maxTrustLen symbols have been found.&true&Y\\
+
+stepSave&Set to true if you want to save all the FSA produced after every trace.&false&N\\
+
+
+\end{tabular}
+\end{minipage}

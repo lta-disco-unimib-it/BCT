@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<options>
+	<section name="Basic Options">
+	  	
+	  <!-- use empty value to avoid a value option -->
+	  
+	  <valueOption name="-projectDir" description="Path of the dir that will contain all the outputs of the tools" default="GdbBCTAnalysis" actual="GdbBCTAnalysis"/>
+	  
+	  <!--  <valueOption name="-ccrtOutputs" description="Path of the dir that will contain ccrt outputs" default="/pincette/BCT" actual="ccrtXmlOutputs"/> -->
+	  
+	  <!-- <valueOption name="-installDir" description="Folder where BCT has been installed" default="/pincette/BCT/" actual="../../../"/> -->
+	  
+	  <valueOption name="-clean" description="Set to true if you want only to clean up previous results" default="true" actual="true"/>	
+	  
+	  <valueOption name="-validTraces" description="Path of the trace or the folder with the traces recorded during valid executions" default="validTraces" actual="validTraces"/>
+	  
+	  <valueOption name="-faultyTraces" description="Path of the trace or the folder with the traces recorded during failing executions" default="faultyTraces" actual="faultyTraces"/>
+	  
+	 
+
+	</section>
+	<section name="Advanced Options">
+		<valueOption name="-enableAva" description="Set to true if you want to enable the automated interpretations of flow anomalies" default="false" actual="false"/>	
+		
+		<valueOption name="-cleanOnly" description="Set to true if you want only to clean up previous results" default="false" actual="false"/>	
+	</section>
+</options>

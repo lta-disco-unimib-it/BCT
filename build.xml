@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="standalone" name="Showing the possible ant targets for BCT" xmlns:jacoco="antlib:org.jacoco.ant">
+
+	
+	<tstamp>
+	<format property="BUILD_STAMP" pattern="yyyyMMddHHmm" />
+	</tstamp>
+	
+	<taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
+			<classpath path="lib-test/jacocoant.jar"/>
+	</taskdef>
+	
+	<property name="ant.build.javac.target" value="1.7" />
+	
+	<property name="bctSrcZip" value="bct-src.zip" />
+	<property name="bctJar" value="bct.jar" />
+	<property name="bctCoreJar" value="bct-core.jar" />
+	<property name="bctStandaloneJar" value="bct-standalone.jar" />
+	<property name="bctStandaloneNoJunitJar" value="bct-standalone-nojunit.jar" />
+	<property name="bctStandalone14Jar" value="bct-standalone-1.4.jar" />
+	<property name="bctStandaloneMonitoringOnlyJar" value="bct-monitoring-only.jar" />
+	
+	<property name="combinatorics" value="lib/combinatoricslib-2.0.jar" />
+	<property name="aspectwerkz" value="lib/aspectwerkz-2.0.jar" />
+	<property name="jgrapht" value="lib/jgrapht-jdk1.5.jar" />
+	<property name="lpsolve55j" value="lib/lpsolve55j.jar" />
+	<property name="mysql-connector" value="lib/mysql-connector-java-5.0.5-bin.jar" />
+	<property name="tlcbe101" value="lib/tlcbe101.jar" />
+	<property name="tlcore" value="lib/tlcore.jar" />
+	<property name="junit" value="lib/junit-4.4.jar" />
+	
+	<property name="bcel" value="lib/bcel-6.0.jar" />
+	
+	<property name="diffutils" value="lib/diffutils-1.2.1.jar" />
+
+
+	<property name="guava" value="lib/guava-13.0.1.jar" />
+	
+	<property name="aspectjrt" value="lib/aspectjrt.jar" />
+	<property name="avaLib" value="lib/ava.jar" />
+	<property name="klfaLib" value="lib/klfa.jar" />
+	<property name="daikon" value="lib/daikon_7.jar" />
+	<property name="avaDir" value="../AutomataViolationsAnalyzer" />
+	<property name="klfaDir" value="../LogFileAnalysis-FSA" />
+	
+	
+	<property name="bctTmpFolder" value="bct-${BUILD_STAMP}" />
+	<property name="bctZip" value="bct-${BUILD_STAMP}.zip" />
+	
+	
+	<property name="bin" value="classes" />
+	
+	<property name="easyMock" value="lib/easymock-3.1.jar" />
+	<property name="junit" value="lib/junit-4.4.jar" />
+			
+	<property name="buildClasspath" value="${aspectwerkz}:${jgrapht}:${lpsolve55j}:${mysql-connector}:${tlcbe101}:${tlcore}:${junit}:${avaLib}:${klfaLib}:${diffutils}:${guava}:${combinatorics}:${daikon}:${aspectjrt}" />
+	<property name="testClasspath" value="${easyMock}:${junit}:../AutomataViolationsAnalyzer/lib/jgraph.jar" />
+	
+	<target name="init">
+		<mkdir dir="${bin}" />
+		<mkdir dir="dist" />
+		<mkdir dir="dist/bin" />
+		
+		<copy todir="dist/bin">
+			<fileset dir="scripts/bin" includes="**/*"/>
+		</copy>
+	</target>
+	
+	  <target name="clean">
+	  	<delete dir="dist" />
+	  	<delete dir="${bin}" />
+	      <!-- <delete includeemptydirs="true">
+	         <fileset dir="${bin}" excludes="CVS/*" includes="**/*"/>
+	       </delete>  -->
+	  </target>
+	
+	   <tstamp>
+	     <format property="BUILD_STAMP" pattern="yyyyMMddHHmm" />
+	   </tstamp>
+	
+	
+	<target name="src" depends="init">
+			<zip destfile="dist/${bctSrcZip}" >
+				
+				<fileset dir="." includes="src-jflap/**/*" />
+				<fileset dir="." includes="src/**/*" />
+				<fileset dir="." includes="probes/**/*" />
+				<fileset dir="." includes="aspects/**/*" />
+				<fileset dir="." includes="src-cbeLogging/**/*" />
+				<fileset dir="." includes="src-conFunkHealer-porting/**/*" />
+				<fileset dir="." includes="src-ava/**/*" />
+				<fileset dir="." includes="src-sjmParser/**/*" />
+				
+				<fileset dir="." includes="src-sjmParser/**/*" />
+				
+				<fileset dir="." includes="src-native/**/*" />
+				<fileset dir="." includes="test/**/*" />
+				<fileset dir="." includes="test-deprecated/**/*" />
+				
+				<fileset dir="." includes="DB Script/**/*" />
+				
+				<fileset dir="." includes="doc/**/*" />
+				
+				<fileset dir="." includes="examples/**/*" />
+				
+				<fileset dir="." includes="lib/*" />
+				<fileset dir="." includes="*txt" />
+				<fileset dir="." includes="*xml" />				
+				
+				<!-- not to include till not ready -->
+				<fileset dir="." includes="src-regressionTestManager/**/*" />
+				<fileset dir="." includes="scripts/**/*" />
+				</zip>
+		</target>
+	
+	<target name="compileCore" depends="init">
+		<echo>Compiling the core BCT classes</echo>
+		
+		<javac destdir="${bin}" classpath="${buildClasspath}" debug="true" debuglevel="lines,vars,source"  encoding="utf-8">
+			
+			
+			<src path="src-jflap" />
+			<src path="src" />
+			<src path="probes" />
+			<src path="aspects" />
+			<src path="src-cbeLogging" />
+			<src path="src-conFunkHealer-porting" />
+			
+			<src path="src-sjmParser" />
+			
+			<src path="src-regressionTestManager" />
+			
+			<src path="aspectj" />
+		</javac>
+		
+		<copy todir="${bin}" >
+			<fileset dir="src" includes="conf/files/**/*"/>
+			<fileset dir="src-jflap" includes="ICON/**/*"/>	
+			<fileset dir="src-jflap" includes="MEDIA/**/*"/>
+			<fileset dir="tptp_generated_probes" includes="*.class" />
+		</copy>
+		
+	</target>
+	
+	<target name="compile" depends="compileCore">
+		<echo>Compiling the extended BCT classes</echo>
+			<javac destdir="${bin}" classpath="${buildClasspath}:${daikon}" debug="true" debuglevel="lines,vars,source" encoding="utf-8" >
+				
+				
+				<src path="src-ava" />
+				<src path="src-advance" />
+			</javac>
+			
+		<copy file="src-advance/cpp/pin/buffer.cpp" toFile="${bin}/cpp/pin/buffer.cpp" />
+			
+	</target>
+
+	<target name="compileTests" depends="compile">
+			<echo>Compiling the test cases</echo>
+				<javac destdir="${bin}" classpath="${buildClasspath}:${daikon}:${testClasspath}" debug="true" debuglevel="lines,vars,source" encoding="utf-8" >
+					
+					
+					<src path="test/unit/src" />
+					<src path="test/system/src" />
+					<src path="test/bugs/src" />
+				</javac>
+				
+				
+				
+		</target>
+	
+	<target name="compile14" depends="compile">
+		<echo>Compile 1.4</echo>
+			<javac target="1.4" destdir="${bin}" classpath="${buildClasspath}" debug="true" debuglevel="lines,vars,source" encoding="utf-8" >
+				<src path="src-14" />
+			</javac>
+	</target>
+	
+	<target name="libCore" depends="compileCore" >
+			<mkdir dir="dist"/>
+		    <jar destfile="dist/${bctCoreJar}">
+		        <fileset dir="${bin}"/>
+			</jar>
+		</target>
+	
+	<target name="lib" depends="compile" >
+		<mkdir dir="dist"/>
+	    <jar destfile="dist/${bctJar}">
+	        <fileset dir="${bin}"/>
+		</jar>
+	</target>
+	
+	<target name="kbehavior" depends="compileCore" >
+		<echo>Compiling the KBehavior classes</echo>
+		    <jar destfile="dist/kbehavior-${BUILD_STAMP}.jar">
+		    	<manifest >
+		    		<attribute name="Main-Class" value="grammarInference.Engine.KBehaviorEngine"/>
+		    		<attribute name="Class-Path" value="."/>
+		    		<attribute name="Built-Date" value="${BUILD_STAMP}"/> 
+		    		<attribute name="Implementation-Version" value="${version.num}"/> 
+		    	</manifest>
+		        <fileset dir="${bin}"/>
+			</jar>
+		</target>
+	
+	<target name="kbehaviorExamples" >
+			<echo>Zipping the KBehavior examples</echo>
+		<zip destfile="dist/kbehavior-examples-${BUILD_STAMP}.zip" basedir="examples" includes="kbehavior/**" />
+		
+			   
+			</target>
+	
+	<target name="buildDependencies" depends="init"  >
+		
+		
+		<ant dir="${klfaDir}" inheritAll="false">
+			<target name="clean"/>
+			<target name="lib"/>
+		</ant>	
+		<copy file="${klfaDir}/dist/klfa-lib.jar" toFile="${klfaLib}" />
+		
+		<ant dir="${avaDir}" inheritAll="false">
+			<target name="clean"/>
+			<target name="lib"/>
+		</ant>
+		
+		<copy file="${avaDir}/dist/ava.jar" toFile="${avaLib}" />
+				
+	</target>
+	
+
+	
+	<target name="standalone14" depends="compile14"  >
+	        <jar destfile="dist/${bctStandalone14Jar}">
+	        	
+	        	<manifest >
+					<attribute name="Class-Path" value="."/>
+					<attribute name="Built-Date" value="${BUILD_STAMP}"/> 
+					<attribute name="Implementation-Version" value="${version.num}"/> 
+	        	</manifest>
+	        	
+	        	
+	            <fileset dir="${bin}"/>
+	        		
+	            <zipfileset excludes="META-INF/*.SF" src="${aspectwerkz}"/>
+	            <zipfileset excludes="META-INF/*.SF" src="${jgrapht}"/>
+	            <zipfileset excludes="META-INF/*.SF" src="${lpsolve55j}"/>
+	            <zipfileset excludes="META-INF/*.SF" src="${mysql-connector}"/>
+	            <zipfileset excludes="META-INF/*.SF" src="${tlcbe101}"/>
+	            <zipfileset excludes="META-INF/*.SF" src="${tlcore}"/>
+	            <zipfileset excludes="META-INF/*.SF" src="${junit}"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="${avaLib}"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="${klfaLib}"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="${diffutils}"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="${guava}"/>
+	        	
+	        	<zipfileset excludes="META-INF/*.SF" src="../AutomataViolationsAnalyzer/lib/jgraph.jar"/>
+	        	
+	        	<zipfileset excludes="META-INF/*.SF" src="lib/daikon.jar"/>
+	        	        	
+	        	
+	        	
+	            <!-- zipfileset excludes="META-INF/*.SF" src="/opt/eclipse-3.5.0/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/ -->
+	            
+	            
+	            <!-- zipfileset excludes="META-INF/*.SF" src="../BCT/lib/asm-all-3.1.jar"/ -->
+	        </jar>
+	    	
+	    	
+	    	</target>
+	
+	<target name="standaloneNoJUnit" depends="compile"  >
+	        <jar destfile="dist/${bctStandaloneNoJunitJar}">
+	        	
+	        	<manifest >
+					<attribute name="Class-Path" value="."/>
+					<attribute name="Built-Date" value="${BUILD_STAMP}"/> 
+					<attribute name="Implementation-Version" value="${version.num}"/> 
+	        	</manifest>
+	        	
+	        	
+	            <fileset dir="${bin}"/>
+	        		
+	            <zipfileset excludes="META-INF/*.SF" src="${aspectwerkz}"/>
+	            
+	            <zipfileset excludes="META-INF/*.SF" src="${lpsolve55j}"/>
+	            
+	            <zipfileset excludes="META-INF/*.SF" src="${tlcbe101}"/>
+	            <zipfileset excludes="META-INF/*.SF" src="${tlcore}"/>
+	            
+	        	<!--
+	        	<zipfileset excludes="META-INF/*.SF" src="${jgrapht}"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="${mysql-connector}"/>
+	        	
+	        	<zipfileset excludes="META-INF/*.SF" src="${avaLib}"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="${klfaLib}"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="${diffutils}"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="${guava}"/>
+	        	-->
+	        	
+	        	
+	        	<zipfileset excludes="META-INF/*.SF" src="../AutomataViolationsAnalyzer/lib/jgraph.jar"/>
+	        	
+	        	
+	        </jar>
+	    	
+	    	
+	    	</target>
+	
+	
+	<target name="standaloneMonitoringOnly" depends="libCore"  >
+	        <jar destfile="dist/${bctStandaloneMonitoringOnlyJar}">
+	        	
+	        	<manifest >
+					<attribute name="Class-Path" value="."/>
+					<attribute name="Built-Date" value="${BUILD_STAMP}"/> 
+					<attribute name="Implementation-Version" value="${version.num}"/> 
+	        	</manifest>
+	        	
+	        	<zipfileset excludes="META-INF/*.SF" src="dist/${bctCoreJar}"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="${tlcbe101}"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="${tlcore}"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="${avaLib}"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="${klfaLib}"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="../AutomataViolationsAnalyzer/lib/jgraph.jar"/>
+	        	
+
+	        </jar>
+	    	
+	    	
+	    	</target>
+	
+	
+    <target name="standalone" depends="compile,standaloneMonitoringOnly"  >
+        <jar destfile="dist/${bctStandaloneJar}">
+        	
+        	<manifest >
+				<attribute name="Class-Path" value="."/>
+				<attribute name="Built-Date" value="${BUILD_STAMP}"/> 
+				<attribute name="Implementation-Version" value="${version.num}"/> 
+        	</manifest>
+        	
+        	
+            <fileset dir="${bin}"/>
+        		
+            <zipfileset excludes="META-INF/*.SF" src="${aspectwerkz}"/>
+            <zipfileset excludes="META-INF/*.SF" src="${jgrapht}"/>
+            <zipfileset excludes="META-INF/*.SF" src="${lpsolve55j}"/>
+            <zipfileset excludes="META-INF/*.SF" src="${mysql-connector}"/>
+            <zipfileset excludes="META-INF/*.SF" src="${tlcbe101}"/>
+            <zipfileset excludes="META-INF/*.SF" src="${tlcore}"/>
+            <zipfileset excludes="META-INF/*.SF" src="${junit}"/>
+        	<zipfileset excludes="META-INF/*.SF" src="${avaLib}"/>
+        	<zipfileset excludes="META-INF/*.SF" src="${klfaLib}"/>
+        	<zipfileset excludes="META-INF/*.SF" src="${diffutils}"/>
+        	<zipfileset excludes="META-INF/*.SF" src="${guava}"/>
+        	
+        	
+        	<zipfileset excludes="META-INF/*.SF" src="../AutomataViolationsAnalyzer/lib/jgraph.jar"/>
+        	
+        	<zipfileset excludes="META-INF/*.SF" src="${daikon}"/>
+        	
+        	<zipfileset excludes="META-INF/*.SF" src="${bcel}"/>
+        	        	
+        	
+        	
+            <!-- zipfileset excludes="META-INF/*.SF" src="/opt/eclipse-3.5.0/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/ -->
+            
+            
+            <!-- zipfileset excludes="META-INF/*.SF" src="../BCT/lib/asm-all-3.1.jar"/ -->
+        </jar>
+    	
+    	
+    	</target>
+	
+    	<target name="distribution" depends="standalone"  >
+    	<mkdir dir="dist/${bctTmpFolder}"/>
+    	
+    		<copy todir="dist/${bctTmpFolder}" file="CCRT-Readme.txt" />
+    		
+    		<copy todir="dist/${bctTmpFolder}" file="ccrt/options.xml" />
+		
+    		<copy todir="dist/${bctTmpFolder}" file="dist/${bctStandaloneJar}" />
+    	<copy todir="dist/${bctTmpFolder}" >
+    		<fileset dir="." includes="examples/ccrt/**"/>
+    		</copy>
+    		
+    	<zip destfile="dist/${bctZip}" >
+    		<fileset dir="dist" includes="${bctTmpFolder}/**/*" />				
+    	</zip>
+    	
+    </target>
+	
+	<target name="test" depends="compileTests">
+		<jacoco:coverage destfile="coverage/jacoco.exec">
+	        <junit printsummary="yes" haltonfailure="no" fork="yes" forkmode="once">
+				<jvmarg value="-Dbct.home=${basedir}/test/unit/artifacts/BCT_HOME/"/>
+	            
+	            <formatter type="xml"/>
+	        	
+				
+				<classpath>
+					<pathelement location="${bin}"/>
+					<path path="${buildClasspath}"/>
+					<path path="${testClasspath}"/>
+				</classpath>
+		
+	           <batchtest fork="yes">
+	        		<fileset dir="test/unit/src" includes="**/*Test.java"/>
+	           		<fileset dir="test/bugs/src" includes="**/*Test.java"/>
+	        	</batchtest>
+	        </junit>
+	    </jacoco:coverage>
+		
+		
+		
+	</target>
+	
+	<target name="coverageReport" depends="test">
+			<!-- Step 3: Create coverage report -->
+			<jacoco:report>
+
+				<!-- This task needs the collected execution data and ... -->
+				<executiondata>
+					<file file="${jacoco.exec.file}" />
+				</executiondata>
+
+				<!-- the class files and optional source files ... -->
+				<structure name="JaCoCo Ant Example">
+					<classfiles>
+						<fileset dir="${result.classes.dir}" />
+					</classfiles>
+					<sourcefiles encoding="UTF-8">
+						<fileset dir="${src.dir}" />
+					</sourcefiles>
+				</structure>
+
+				<!-- to produce reports in different formats. -->
+				<html destdir="${result.report.dir}" />
+				<csv destfile="${result.report.dir}/report.csv" />
+				<xml destfile="${result.report.dir}/report.xml" />
+			</jacoco:report>
+		</target>
+	
+		<target name="testOld" >
+					        <junit>
+					        	<jvmarg value="-Dbct.home=${basedir}/test/unit/artifacts/BCT_HOME/"/>
+					        	
+					        	<formatter type="xml" />
+					            <classpath>
+						                <pathelement location="${bin}"/>
+						                <path path="${buildClasspath}"/>
+						        </classpath>
+					            
+					            <batchtest fork="yes">
+					            	<fileset dir="test/unit/src" includes="**/*Test.java"/>
+					            </batchtest>
+					        </junit>
+					    </target>
+		
+	<target name="help" >
+		<echo>Possible targets:</echo>
+		<echo>buildDependencies : compile all the dependencies (KLFA,AVA) and put the jar in the "lib" folder</echo>
+		<echo>clean : clean the project by deleted all the files generated in previous builds</echo>
+		<echo>lib : compiles a jar that contains all the BCT classes</echo>
+		<echo>libCore : compiles a jar that contains only the core bct classes (it is mainly used by other tools that rely on BCT, like KLFA or AVA)</echo>
+		<echo>kbehavior : compiles a jar that contains only the KBehavior classes and their dependencies</echo>
+		<echo>standalone : compiles a jar that contains BCT classes and all its dependencies (this should be your DEFAULT choice)</echo>
+	</target>
+</project>

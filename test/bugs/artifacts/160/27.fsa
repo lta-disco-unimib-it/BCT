@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fsa:FSA xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsa="fsa" initialState="//@states.5">
+  <transitions description="java.io.PushbackInputStream.read(()I)" to="//@states.7" from="//@states.6"/>
+  <transitions description="java.io.PushbackInputStream.&lt;init>((Ljava.io.InputStream;)V)" to="//@states.6" from="//@states.4"/>
+  <transitions description="java.io.PushbackReader.&lt;init>((Ljava.io.Reader;I)V)" to="//@states.1" from="//@states.0"/>
+  <transitions description="java.io.PushbackInputStream.read(()I)" to="//@states.7" from="//@states.7"/>
+  <transitions description="java.net.URL.&lt;init>((Ljava.net.URL;Ljava.lang.String;)V)" to="//@states.2" from="//@states.1"/>
+  <transitions description="java.io.FileInputStream.&lt;init>((Ljava.lang.String;)V)" to="//@states.8" from="//@states.5"/>
+  <transitions description="java.io.PushbackInputStream.&lt;init>((Ljava.io.InputStream;)V)" to="//@states.4" from="//@states.8"/>
+  <transitions description="java.io.LineNumberReader.&lt;init>((Ljava.io.Reader;)V)" to="//@states.0" from="//@states.9"/>
+  <transitions description="java.net.URL.&lt;init>((Ljava.lang.String;)V)" to="//@states.3" from="//@states.1"/>
+  <transitions description="java.io.InputStreamReader.&lt;init>((Ljava.io.InputStream;Ljava.lang.String;)V)" to="//@states.9" from="//@states.7"/>
+  <transitions description="java.io.StringReader.&lt;init>((Ljava.lang.String;)V)" to="//@states.9" from="//@states.3"/>
+  <states name="q5" fsa="/"/>
+  <states name="q6" fsa="/"/>
+  <states name="q8" final="true" fsa="/"/>
+  <states name="q0" fsa="/"/>
+  <states name="q1" fsa="/"/>
+  <states name="q7" fsa="/"/>
+  <states name="q2" fsa="/"/>
+  <states name="q3" fsa="/"/>
+  <states name="q9" final="true" fsa="/"/>
+  <states name="q4" fsa="/"/>
+</fsa:FSA>

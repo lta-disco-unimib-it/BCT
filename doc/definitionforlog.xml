@@ -1,0 +1,17 @@
+<aspectwerkz>
+  <system id="Log">
+    <package name="log">
+      <aspect class="InteractionLoggingAspect">
+        <pointcut name="pc0" expression="execution(public * jdiff..*(..))" /> 
+        <pointcut name="pc1" expression="call(public * *(..)) AND !call(public * jdiff..*(..)) AND within(jdiff..*)" /> 
+        <advice name="interactionLogEntry" type="before" bind-to="pc0 || pc1" />
+        <advice name="interactionLogExit" type="after" bind-to="pc0 || pc1" />
+      </aspect>
+      <aspect class="IOLoggingAspect">
+        <pointcut name="pc0" expression="execution(public * jdiff.JDiffPlugin.*(..))" /> 
+        <advice name="ioLogEntry" type="before" bind-to="pc0" />
+        <advice name="ioLogExit" type="after" bind-to="pc0" />
+      </aspect>
+    </package>
+  </system>
+</aspectwerkz>

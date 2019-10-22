@@ -1,0 +1,9 @@
+program.CounterTest.<init>(()V)=0.dtrace
+program.CounterTest.testAverage(()V)=1.dtrace
+program.Counter.<init>(()V)=2.dtrace
+program.Counter.increment(()V)=3.dtrace
+program.Counter.divideByCounterValue((I)I)=4.dtrace
+org.junit.Assert.assertEquals((JJ)V)=5.dtrace
+program.CounterTest.testAverageMultiple(()V)=6.dtrace
+program.CounterTest.testAverageMany(()V)=7.dtrace
+program.CounterTest.testAverageNoValue(()V)=8.dtrace

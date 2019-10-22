@@ -1,0 +1,350 @@
+#############################################################
+# Copyright (c) 2005, 2006 IBM Corporation and others. 
+# All rights reserved.   This program and the accompanying materials 
+# are made available under the terms of the Eclipse Public License v1.0 
+# which accompanies this distribution, and is available at 
+# http://www.eclipse.org/legal/epl-v10.html         
+# $Id: ProbeInstrumenter.mak64,v 1.1 2006/05/19 21:06:04 rsmith Exp $ 
+#  
+# Contributors: 
+# IBM - Initial contribution
+#############################################################
+
+
+# Microsoft Developer Studio Generated NMAKE File, Based on ProbeInstrumenter.dsp
+!IF "$(CFG)" == ""
+CFG=ProbeInstrumenter - IA64 Debug
+!MESSAGE No configuration specified. Defaulting to ProbeInstrumenter - IA64 Debug.
+!ENDIF 
+
+!IF "$(CFG)" != "ProbeInstrumenter - IA64 Release" && "$(CFG)" != "ProbeInstrumenter - IA64 Debug" && "$(CFG)" != "ProbeInstrumenter - X64 Release" && "$(CFG)" != "ProbeInstrumenter - X64 Debug"
+!MESSAGE Invalid configuration "$(CFG)" specified.
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "ProbeInstrumenter.mak64" CFG="ProbeInstrumenter - IA64 Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "ProbeInstrumenter - IA64 Release"
+!MESSAGE "ProbeInstrumenter - IA64 Debug"
+!MESSAGE "ProbeInstrumenter - X64 Release"
+!MESSAGE "ProbeInstrumenter - X64 Debug"
+!MESSAGE 
+!ERROR An invalid configuration is specified.
+!ENDIF 
+
+!IF "$(OS)" == "Windows_NT"
+NULL=
+!ELSE 
+NULL=nul
+!ENDIF 
+
+CPP=cl.exe
+RSC=rc.exe
+
+!IF  "$(CFG)" == "ProbeInstrumenter - IA64 Release"
+
+OUTDIR=.\Release
+INTDIR=.\Release
+# Begin Custom Macros
+OutDir=.\Release
+# End Custom Macros
+
+!IF "$(RECURSE)" == "0" 
+
+ALL : "..\Release\ProbeInstrumenter.exe"
+
+!ELSE 
+
+ALL : "BCIEngProbe - IA64 Release" "..\Release\ProbeInstrumenter.exe"
+
+!ENDIF 
+
+!IF "$(RECURSE)" == "1" 
+CLEAN :"BCIEngProbe - IA64 ReleaseCLEAN" 
+!ELSE 
+CLEAN :
+!ENDIF 
+	-@erase "$(INTDIR)\ProbeInstrumenter.obj"
+	-@erase "$(INTDIR)\vc80.idb"
+	-@erase "$(INTDIR)\vc80.pdb"
+	-@erase "..\Release\ProbeInstrumenter.exe"
+	-@erase "..\Release\ProbeInstrumenter.sbr"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP_PROJ=/nologo /ML /W3 /EHsc /Zi /O2 /I "..\..\..\Common" /I "..\..\..\jclass" /I "..\..\..\bcieng" /I "..\..\..\bcieng\bciengj" /I ".." /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /FR"..\Release\\" /Fp"$(INTDIR)\ProbeInstrumenter.pch" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /c 
+
+LINK32=link.exe
+LINK32_FLAGS=kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib bufferoverflowU.lib /nologo /subsystem:console /incremental:no /pdb:"$(OUTDIR)\ProbeInstrumenter.pdb" /out:"../Release/ProbeInstrumenter.exe" /libpath:"..\Release" /machine:IA64
+LINK32_OBJS= \
+	"$(INTDIR)\ProbeInstrumenter.obj" \
+	"..\Release\BCIEngProbe.lib"
+
+"..\Release\ProbeInstrumenter.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "ProbeInstrumenter - IA64 Debug"
+
+OUTDIR=.\..\Debug
+INTDIR=.\Debug
+# Begin Custom Macros
+OutDir=.\..\Debug
+# End Custom Macros
+
+!IF "$(RECURSE)" == "0" 
+
+ALL : "$(OUTDIR)\ProbeInstrumenter.exe"
+
+!ELSE 
+
+ALL : "BCIEngProbe - IA64 Debug" "$(OUTDIR)\ProbeInstrumenter.exe"
+
+!ENDIF 
+
+!IF "$(RECURSE)" == "1" 
+CLEAN :"BCIEngProbe - IA64 DebugCLEAN" 
+!ELSE 
+CLEAN :
+!ENDIF 
+	-@erase "$(INTDIR)\ProbeInstrumenter.obj"
+	-@erase "$(INTDIR)\ProbeInstrumenter.sbr"
+	-@erase "$(INTDIR)\vc80.idb"
+	-@erase "$(INTDIR)\vc80.pdb"
+	-@erase "$(OUTDIR)\ProbeInstrumenter.exe"
+	-@erase "$(OUTDIR)\ProbeInstrumenter.ilk"
+	-@erase "$(OUTDIR)\ProbeInstrumenter.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+"$(INTDIR)" :
+    if not exist "$(INTDIR)/$(NULL)" mkdir "$(INTDIR)"
+
+CPP_PROJ=/nologo /MDd /W3 /Gm /EHsc /ZI /Od /I "..\..\..\Common" /I "..\..\..\jclass" /I "..\..\..\bcieng" /I "..\..\..\bcieng\bciengj" /I ".." /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"$(INTDIR)\\" /Fp"$(INTDIR)\ProbeInstrumenter.pch" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /GZ /c 
+
+LINK32=link.exe
+LINK32_FLAGS=kernel32.lib bciengprobe.lib bufferoverflowU.lib /nologo /subsystem:console /incremental:yes /pdb:"$(OUTDIR)\ProbeInstrumenter.pdb" /debug /out:"$(OUTDIR)\ProbeInstrumenter.exe" /libpath:"..\debug" /machine:IA64
+LINK32_OBJS= \
+	"$(INTDIR)\ProbeInstrumenter.obj" \
+	"$(OUTDIR)\BCIEngProbe.lib"
+
+"$(OUTDIR)\ProbeInstrumenter.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "ProbeInstrumenter - X64 Release"
+
+OUTDIR=.\Release
+INTDIR=.\Release
+# Begin Custom Macros
+OutDir=.\Release
+# End Custom Macros
+
+!IF "$(RECURSE)" == "0" 
+
+ALL : "..\Release\ProbeInstrumenter.exe"
+
+!ELSE 
+
+ALL : "BCIEngProbe - X64 Release" "..\Release\ProbeInstrumenter.exe"
+
+!ENDIF 
+
+!IF "$(RECURSE)" == "1" 
+CLEAN :"BCIEngProbe - X64 ReleaseCLEAN" 
+!ELSE 
+CLEAN :
+!ENDIF 
+	-@erase "$(INTDIR)\ProbeInstrumenter.obj"
+	-@erase "$(INTDIR)\vc80.idb"
+	-@erase "$(INTDIR)\vc80.pdb"
+	-@erase "..\Release\ProbeInstrumenter.exe"
+	-@erase "..\Release\ProbeInstrumenter.sbr"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP_PROJ=/nologo /ML /W3 /EHsc /Zi /O2 /I "..\..\..\Common" /I "..\..\..\jclass" /I "..\..\..\bcieng" /I "..\..\..\bcieng\bciengj" /I ".." /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /FR"..\Release\\" /Fp"$(INTDIR)\ProbeInstrumenter.pch" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /c 
+
+LINK32=link.exe
+LINK32_FLAGS=kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib bufferoverflowU.lib /nologo /subsystem:console /incremental:no /pdb:"$(OUTDIR)\ProbeInstrumenter.pdb" /out:"../Release/ProbeInstrumenter.exe" /libpath:"..\Release" /machine:AMD64
+LINK32_OBJS= \
+	"$(INTDIR)\ProbeInstrumenter.obj" \
+	"..\Release\BCIEngProbe.lib"
+
+"..\Release\ProbeInstrumenter.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "ProbeInstrumenter - X64 Debug"
+
+OUTDIR=.\..\Debug
+INTDIR=.\Debug
+# Begin Custom Macros
+OutDir=.\..\Debug
+# End Custom Macros
+
+!IF "$(RECURSE)" == "0" 
+
+ALL : "$(OUTDIR)\ProbeInstrumenter.exe"
+
+!ELSE 
+
+ALL : "BCIEngProbe - X64 Debug" "$(OUTDIR)\ProbeInstrumenter.exe"
+
+!ENDIF 
+
+!IF "$(RECURSE)" == "1" 
+CLEAN :"BCIEngProbe - X64 DebugCLEAN" 
+!ELSE 
+CLEAN :
+!ENDIF 
+	-@erase "$(INTDIR)\ProbeInstrumenter.obj"
+	-@erase "$(INTDIR)\ProbeInstrumenter.sbr"
+	-@erase "$(INTDIR)\vc80.idb"
+	-@erase "$(INTDIR)\vc80.pdb"
+	-@erase "$(OUTDIR)\ProbeInstrumenter.exe"
+	-@erase "$(OUTDIR)\ProbeInstrumenter.ilk"
+	-@erase "$(OUTDIR)\ProbeInstrumenter.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+"$(INTDIR)" :
+    if not exist "$(INTDIR)/$(NULL)" mkdir "$(INTDIR)"
+
+CPP_PROJ=/nologo /MDd /W3 /Gm /EHsc /ZI /Od /I "..\..\..\Common" /I "..\..\..\jclass" /I "..\..\..\bcieng" /I "..\..\..\bcieng\bciengj" /I ".." /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"$(INTDIR)\\" /Fp"$(INTDIR)\ProbeInstrumenter.pch" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /GZ /c 
+
+LINK32=link.exe
+LINK32_FLAGS=kernel32.lib bciengprobe.lib bufferoverflowU.lib /nologo /subsystem:console /incremental:yes /pdb:"$(OUTDIR)\ProbeInstrumenter.pdb" /debug /out:"$(OUTDIR)\ProbeInstrumenter.exe" /libpath:"..\debug" /machine:AMD64
+LINK32_OBJS= \
+	"$(INTDIR)\ProbeInstrumenter.obj" \
+	"$(OUTDIR)\BCIEngProbe.lib"
+
+"$(OUTDIR)\ProbeInstrumenter.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ENDIF 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+
+!IF "$(CFG)" == "ProbeInstrumenter - IA64 Release" || "$(CFG)" == "ProbeInstrumenter - IA64 Debug" || "$(CFG)" == "ProbeInstrumenter - X64 Release" || "$(CFG)" == "ProbeInstrumenter - X64 Debug"
+SOURCE=.\ProbeInstrumenter.cpp
+
+!IF  "$(CFG)" == "ProbeInstrumenter - IA64 Release"
+
+
+"$(INTDIR)\ProbeInstrumenter.obj"	"..\Release\ProbeInstrumenter.sbr" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "ProbeInstrumenter - IA64 Debug"
+
+
+"$(INTDIR)\ProbeInstrumenter.obj"	"$(INTDIR)\ProbeInstrumenter.sbr" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "ProbeInstrumenter - X64 Release"
+
+
+"$(INTDIR)\ProbeInstrumenter.obj"	"..\Release\ProbeInstrumenter.sbr" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "ProbeInstrumenter - X64 Debug"
+
+
+"$(INTDIR)\ProbeInstrumenter.obj"	"$(INTDIR)\ProbeInstrumenter.sbr" : $(SOURCE) "$(INTDIR)"
+
+
+!ENDIF 
+
+!IF  "$(CFG)" == "ProbeInstrumenter - IA64 Release"
+
+"BCIEngProbe - IA64 Release" : 
+   cd ".."
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngProbe.mak64 CFG="BCIEngProbe - IA64 Release" 
+   cd ".\ProbeInstrumenter"
+
+"BCIEngProbe - IA64 ReleaseCLEAN" : 
+   cd ".."
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngProbe.mak64 CFG="BCIEngProbe - IA64 Release" RECURSE=1 CLEAN 
+   cd ".\ProbeInstrumenter"
+
+!ELSEIF  "$(CFG)" == "ProbeInstrumenter - IA64 Debug"
+
+"BCIEngProbe - IA64 Debug" : 
+   cd ".."
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngProbe.mak64 CFG="BCIEngProbe - IA64 Debug" 
+   cd ".\ProbeInstrumenter"
+
+"BCIEngProbe - IA64 DebugCLEAN" : 
+   cd ".."
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngProbe.mak64 CFG="BCIEngProbe - IA64 Debug" RECURSE=1 CLEAN 
+   cd ".\ProbeInstrumenter"
+
+!ELSEIF  "$(CFG)" == "ProbeInstrumenter - X64 Release"
+
+"BCIEngProbe - X64 Release" : 
+   cd ".."
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngProbe.mak64 CFG="BCIEngProbe - X64 Release" 
+   cd ".\ProbeInstrumenter"
+
+"BCIEngProbe - X64 ReleaseCLEAN" : 
+   cd ".."
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngProbe.mak64 CFG="BCIEngProbe - X64 Release" RECURSE=1 CLEAN 
+   cd ".\ProbeInstrumenter"
+
+!ELSEIF  "$(CFG)" == "ProbeInstrumenter - X64 Debug"
+
+"BCIEngProbe - X64 Debug" : 
+   cd ".."
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngProbe.mak64 CFG="BCIEngProbe - X64 Debug" 
+   cd ".\ProbeInstrumenter"
+
+"BCIEngProbe - X64 DebugCLEAN" : 
+   cd ".."
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngProbe.mak64 CFG="BCIEngProbe - X64 Debug" RECURSE=1 CLEAN 
+   cd ".\ProbeInstrumenter"
+
+!ENDIF 
+
+
+!ENDIF 
+

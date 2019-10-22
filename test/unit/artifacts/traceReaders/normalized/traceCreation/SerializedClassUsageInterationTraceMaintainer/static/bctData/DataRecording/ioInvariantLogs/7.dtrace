@@ -1,0 +1,10 @@
+
+program.StaticClassA.methodD((Lprogram.ClassB;)V):::ENTER
+parameter[0]
+!NULL
+1
+
+program.StaticClassA.methodD((Lprogram.ClassB;)V):::EXIT1
+parameter[0]
+!NULL
+1

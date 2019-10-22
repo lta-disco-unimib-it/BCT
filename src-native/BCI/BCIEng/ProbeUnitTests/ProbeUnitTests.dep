@@ -1,0 +1,36 @@
+# Microsoft Developer Studio Generated Dependency File, included by ProbeUnitTests.mak
+# Hand-edited by apratt to remove absolute paths and other silliness
+
+..\BCIEngProbe\BCIEngProbe.cpp : \
+	"..\..\common\commondef.h"\
+	"..\..\JClass\JavaDef.h"\
+	"..\..\JClass\JBaseStream.h"\
+	"..\..\JClass\JClassFile.h"\
+	"..\..\JClass\JMemStream.h"\
+	"..\..\JClass\JStream.h"\
+	"..\BCIEng.h"\
+	"..\BCIEngJ\ExtRefJ_StatMethod.h"\
+	"..\BCIEngJ\JVMInsSet.h"\
+	"..\BCIEngJ\ModuleJ.h"\
+	"..\BCIEngProbe\BCIEngProbe.h"\
+	"..\InsSet.h"\
+	"..\Module.h"\
+	
+
+.\ProbeUnitTests.cpp : \
+	"..\..\common\commondef.h"\
+	"..\..\JClass\JavaDef.h"\
+	"..\..\JClass\JBaseStream.h"\
+	"..\..\JClass\JClassFile.h"\
+	"..\..\JClass\JStream.h"\
+	"..\BCIEng.h"\
+	"..\BCIEngJ\ModuleJ.h"\
+	"..\BCIEngProbe\BCIEngProbe.h"\
+	"..\InsSet.h"\
+	"..\Module.h"\
+	".\StdAfx.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	

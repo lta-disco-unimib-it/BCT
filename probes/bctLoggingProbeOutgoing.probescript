@@ -1,0 +1,7 @@
+REM unnamed_probe
+PROBE
+RULE probes* * * * exclude
+RULE log* * * * exclude
+RULE java* * * * exclude
+REF AFTERCALL bctLoggingProbeOutgoing_probe$Probe_0 _afterCall (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args
+REF BEFORECALL bctLoggingProbeOutgoing_probe$Probe_0 _beforeCall (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args

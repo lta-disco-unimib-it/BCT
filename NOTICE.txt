@@ -1,0 +1,3 @@
+This program includes the sources of JFLAP (src-jflap).
+Copyright notice for JFLAP are indicated in each JFLAP source file.
+

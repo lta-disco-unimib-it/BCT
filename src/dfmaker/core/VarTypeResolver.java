@@ -1,0 +1,173 @@
+/*******************************************************************************
+ *    Copyright 2019 Fabrizio Pastore, Leonardo Mariani, and other authors indicated in the source code below.
+ *   
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
+ *******************************************************************************/
+package dfmaker.core;
+
+import java.io.Serializable;
+
+/**
+ * This class is used to resolve  a variable type given the daikon variable value.
+ * 
+ * @author Fabrizio Pastore [ fabrizio.pastore at gmail dot com ]
+ *
+ */
+public class VarTypeResolver {
+	
+	/**
+	 * Class used only to contain type, with java 1.5 we can use enum, but we want to maintain compatibility with 
+	 * java 1.4
+	 * 
+	 * @author Fabrizio Pastore [ fabrizio.pastore at gmail dot com ]
+	 *
+	 */
+	public static abstract class Types implements Serializable {
+		
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		
+		@Override
+		public boolean equals(Object obj) {
+			if ( ! ( obj instanceof Types ) ){
+				return false;
+			}
+			Types rhs = (Types) obj;
+			return rhs.toString().equals(toString());
+		}
+		
+		public static final class StringType extends Types{
+			private static final long serialVersionUID = 1L;
+			public String toString(){
+				return "java.lang.String";
+			}
+		}
+		
+		public static final class IntegerType extends Types{
+			private static final long serialVersionUID = 1L;
+			public String toString(){
+				return "int";
+			}
+		}
+
+		public static final class DoubleType extends Types{
+			private static final long serialVersionUID = 1L;
+			public String toString(){
+				return "double";
+			}
+		}
+
+		public static final class BooleanType extends Types{
+			private static final long serialVersionUID = 1L;
+			public String toString(){
+				return "boolean";
+			}
+		}
+
+		public static final class HashcodeType extends Types{
+			private static final long serialVersionUID = 1L;
+			public String toString(){
+				return "hashcode";
+			}
+		}
+	
+		
+		public static final StringType stringType = new StringType();
+		public static final DoubleType doubleType = new DoubleType();
+		public static final IntegerType integerType = new IntegerType();
+		public static final BooleanType booleanType = new BooleanType();
+		public static final HashcodeType hashcodeType = new HashcodeType();
+		
+
+	}
+	
+	/**
+	 * Returns the type of the passed value.
+	 * 
+	 * @param variableValue value of the variable we want to know the representation type
+	 * 
+	 * @return variable type
+	 */
+	public static Types getType(String variableValue) {
+        Types declaredType = null;
+
+        
+        // If is an array the starting '[' is removed        
+        if (isArray(variableValue)) {
+            variableValue = variableValue.substring(1,variableValue.length()-1).trim();
+            int space = variableValue.indexOf(' ');
+            
+            if ( space > 0 ){ 
+            	variableValue = variableValue.substring(0, space);
+            }
+            
+            //if there is no space the array contains just a single value or is empty so we can keep variableValue as is
+            
+        }
+        
+        if (variableValue.startsWith("\"")) {
+            declaredType = Types.stringType;
+        }
+        else if (variableValue.startsWith("'")) {
+            declaredType = Types.stringType;
+        }
+        else if (variableValue.indexOf(".") != -1) {
+            declaredType = Types.doubleType;
+        }
+        else if (variableValue.equals("NaN") ) {
+            declaredType = Types.doubleType;
+        }
+        else if (variableValue.startsWith("Infinity") ) {
+            declaredType = Types.doubleType;
+        }
+        else if (variableValue.startsWith("-Infinity") ) {
+            declaredType = Types.doubleType;
+        }
+        else if (variableValue.equals("true") || variableValue.equals("false")) {
+            declaredType = Types.booleanType;
+        }
+        else if (variableValue.equals("null") ) {
+            declaredType = Types.hashcodeType;
+        }
+        else if (variableValue.equals("!NULL") ) {
+            declaredType = Types.hashcodeType;
+        }
+        else if (variableValue.startsWith("0x") ) {
+            declaredType = Types.hashcodeType;
+        }
+        else {
+            declaredType = Types.integerType;
+        }
+        
+        
+        return declaredType;
+		
+	}
+
+	
+	/**
+	 * Check if passed value is one of an array
+     * @param variableValue
+     * @return
+     */
+    public static boolean isArray(String variableValue) {        
+        if (variableValue.startsWith("[") && variableValue.endsWith("]")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+}

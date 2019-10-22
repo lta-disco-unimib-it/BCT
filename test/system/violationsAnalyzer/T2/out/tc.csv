@@ -1,0 +1,5 @@
+TestCase Name	Violation Name	Violation ID	#Test for this violation	#Passing test for violation	#Occurrencies in test
+2	Interaction Invariant of the method p1.C2.m2 has been violated._q_3 at (465,340) label: 6_Transition p3.C3.m3 is not valid	2	2	1	1
+1	Violation of IOinvariant for method p4.C4.m4 during exit_returnValue != null = false	0	1	0	1
+1	Interaction Invariant of the method p1.C2.m2 has been violated._q_3 at (465,340) label: 6_Transition p3.C3.m3 is not valid	2	2	1	1
+1	Interaction Invariant of the method p1.C1.m1 has been violated._q_3 at (465,340) label: 6_Transition p2.C2.m2 is not valid	1	1	0	1

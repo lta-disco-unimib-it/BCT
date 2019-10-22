@@ -1,0 +1,2 @@
+program.ProgramForStaticTesting.main(([Ljava.lang.String;)V)
+|

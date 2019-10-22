@@ -1,0 +1,11 @@
+REM unnamed_probe
+PROBE
+RULE packageM/one/two/three* * * * exclude
+RULE packageM/one/two* * * * include
+RULE packageM/one* * * * exclude
+RULE packageM* * * * include
+RULE packageN/one* * * * exclude
+RULE packageN* * * * include
+RULE * * * * exclude
+REF ONENTRY bctTCLP_probe$Probe_0 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args
+REF ONEXIT bctTCLP_probe$Probe_0 _exit (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args

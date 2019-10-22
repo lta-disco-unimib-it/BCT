@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fsa:FSA xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsa="fsa" initialState="//@states.1">
+<states name="q1" final="true" fsa="/"/>
+<states name="q0" fsa="/"/>
+<transitions description="λ" to="//@states.0" from="//@states.1"/>
+</fsa:FSA>

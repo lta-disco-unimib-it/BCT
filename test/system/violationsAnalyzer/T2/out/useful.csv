@@ -1,0 +1,5 @@
+Test case	violation point	#children	#reachable parents	#reachable useful	#reachable
+-	-	Total 50	-	-	-	Parent 20	-	-	-	Weighted 20	-	-	-	Total 30	-	-	-	Total 40	-	-	-
+TestCase	Failing	ViolationPoint	# children	# children+parents	#useful reachable	#reachable nodes	# children	# children+parents	#useful reachable	#reachable nodes	# children	# children+parents	#useful reachable	#reachable nodes	# children	# children+parents	#useful reachable	#reachable nodes	# children	# children+parents	#useful reachable	#reachable nodes
+2	false	2:92	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+1	true	0:1	2	2	0	2	2	2	0	2	2	2	0	2	2	2	0	2	2	2	0	2

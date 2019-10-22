@@ -1,0 +1,6 @@
+REM unnamed_probe
+PROBE
+RULE componentPackage* * * * include
+RULE * * * * exclude
+REF ONENTRY bctLP_probe$Probe_0 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args
+REF ONEXIT bctLP_probe$Probe_0 _exit (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args

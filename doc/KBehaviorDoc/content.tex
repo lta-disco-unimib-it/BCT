@@ -1,0 +1,163 @@
+\chapter{KBehavior User Manual}
+
+This document describes how to use the standalone implementation of the KBehavior algorithm detailed in ~\cite{Mariani:BCT:TSE:2011}.
+
+The command to run KBehavior is:
+
+\texttt{java -jar kbehavior-XXXXXXXX.jar  <traceFile> <confFile>
+<outputFile> <showFsa> [<fsaToExtend>]}
+
+
+
+
+where:
+
+\begin{tabular}{p{3cm}|p{10cm}}
+<traceFile>& is the trace file\\
+<confFile>& is the configuration file\\
+<outputFile>& is the file where the output FSA will be saved\\
+<showFsa>& it can be either true or false, it specifies if you want to graphically display the inferred FSA\\
+<fsaToExtend>& indicates the name of a file name with a FSA that needs to be extended with the input trace file. If you want to generate a new FSA omit this parameter.\\
+\end{tabular}
+
+\vspace{5mm}
+
+If you need to graphically visualize a saved FSA, the following
+command can be executed:
+
+\begin{verbatim}
+java -cp kbehavior-XXXXXX.jar tools.ShowFSA <path/to/fsa>
+\end{verbatim}
+Note that the FSA is visualized by JFLAP (\texttt{www.jflap.org}).
+
+
+If you need to textually visualize a saved FSA, the following
+command can be executed:
+
+\begin{verbatim}
+java -cp kbehavior140907.jar tools.FSAInspector -print myFSA.fsa
+\end{verbatim}
+
+The FSAInspector can provide further information about a saved FSA.
+The command \texttt{java -cp kbehavior-XXXXXXXX.jar
+tools.FSAInspector} visualizes the list of available options.
+
+
+\section{Configuration}
+
+This section overviews the  configuration
+file. Table~\ref{table:conf} describes parameters while
+Figure~\ref{fig:conf} shows an example configuration file.
+
+\begin{table}[h]
+
+\begin{minipage}{15cm}
+\tiny
+\begin{tabular}{|p{3cm}|p{5cm}|p{3cm}|p{1cm}|}
+\textbf{Parameter name}&\textbf{Description}&\textbf{Example}&\textbf{Mandatory}\\
+
+logger&It indicates where the logging should print information. Can be one of: console, file.&console&Y\\
+level&Logger verbosity level:
+\begin{itemize}
+\item 0 : log only critical events
+\item 1 : log unexpected events
+\item 2 : log events (FSA Extension etc)
+\item 3 : log info (addBranch, addTail, merge)
+\item 4 : log debugging info (trace all events)
+\end{itemize}
+&1&Y\\
+
+logfile&The name of the file where you the logging info are saved if you set \textit{file} as a logger.&event.log&N\\
+
+enableMinimization&Type of minimization used by kBehavior:
+\begin{itemize}
+\item none : no minimization
+\item end : minimize after all the traces have been processed
+\item step : minimize after a trace has been processed
+\end{itemize}
+&end&Y\\
+
+minTrustLen&Minimum length of the behaviors considered during the matching process.&2&Y\\
+
+cutoffSearch&enables an optimization in the inference process.&true&Y\\
+
+
+maxTrustLen&If \textit{cutoffSearch} is set to true, kBehavior matches two behaviors of length greater or equal maxTrustLen, independently from the existence of unknown longer behaviors.&6&Y\\
+
+
+stepSave&Set to true if you want to save all partial FSAs obtained after processing of every trace.&false&N\\
+
+
+\end{tabular}
+\end{minipage}
+\label{table:conf}
+\caption{Parameters of KBehavior configuration file}
+\end{table}
+
+\begin{center}
+
+
+
+\begin{figure}[h]
+
+
+
+\begin{tabular}{|p{12cm}|}
+\hline
+\begin{minipage}{12cm}
+\begin{verbatim}
+level = 3
+logger = console
+logfile = event.log
+
+minTrustLen = 2
+maxTrustLen = 4
+
+enableMinimization = step
+
+cutOffSearch = true
+stepsave = false
+\end{verbatim}
+\end{minipage}\\
+
+\hline
+\end{tabular}
+\caption{An example configuration file}
+\label{fig:conf}
+\end{figure}
+
+\end{center}
+
+\clearpage
+
+\section{Example}
+
+A simple example is provided in the file \emph{kebehavior-example.zip}.
+
+\section{Additional Inference Engines}
+
+The kBehavior jar comes with three additional inference engines kTailEngine, cookEngine, and reissEngine that respectively implement the KTail inference algorithm~\cite{Bierman:KTAIL:TC:1972} plus the versions of the algorithm with the optimizations introduced by Cook et al.~\cite{Cook:DiscoveringModels:TOSEM:1998} and Reiss et al.~\cite{RenierisASE2003}.
+
+These three additional inference engines are implemented in the package \textit{grammarInference.Engine}.
+
+You can invoke the three engines by specifying the name of the algorithm to execute: 
+\begin{itemize}
+\item \emph{grammarInference.Engine.kTailEngine}
+\item \emph{grammarInference.Engine.cookEngine}
+\item \emph{grammarInference.Engine.reissEngine}
+\end{itemize}
+
+Example (pay attention to replace \emph{-jar} with \emph{-cp}):
+
+\texttt{java -cp kbehavior-XXXXXXXX.jar grammarInference.Engine.kTailEngine <traceFile> <confFile>
+<outputFile> <showFsa>}
+
+The only difference between these three additional engines and KBhevaior is that they do not allow to provide an <fsaToExtend> argument.
+
+Furthermore the property \emph{minimizationOption} of the configuration file accepts only the values "none" or "end" (this depends upon the fact that these engines are not incremental and thus we cannot use the option "step" to incrementally minimize the FSA).
+
+Options \emph{maxTrustLen}, \emph{stepSave}, and \emph{cutoffSearch} are ignored.
+
+Option \emph{minTrustLen} is used to specify the parameter \emph{k} of the three algorithms, alternatively you can specify an option whose name is \emph{k}.
+
+

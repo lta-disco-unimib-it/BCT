@@ -1,0 +1,140 @@
+#**********************************************************************
+# Copyright (c) 2005, 2006 IBM Corporation and others. 
+# All rights reserved.   This program and the accompanying materials 
+# are made available under the terms of the Eclipse Public License v1.0 
+# which accompanies this distribution, and is available at 
+# http://www.eclipse.org/legal/epl-v10.html         
+# $Id: Makefile.include,v 1.10 2006/09/15 21:18:28 nmehrega Exp $ 
+#  
+# Contributors: 
+# IBM - Initial contribution
+#**********************************************************************
+
+###
+# Some platforms set the appropriate file extension by setting DYNAMIC_EXT_LIB in probekit/makefile.include
+###
+SHLIB_EXT = .$(DYNAMIC_EXT_LIB)
+
+###
+# Figure out what  platform this is
+###
+UNAME = /bin/uname
+
+uname := $(shell $(UNAME) -sr)
+OS_VERSION = $(shell $(UNAME) -r)
+MACHINE = $(shell $(UNAME) -m)
+
+ENVIRON = linux
+ARCH=EM64T_ARCH
+###
+#  Set up platform-specific defines which can be used to drive
+#  the builds and as define's on the compiler cmd line.
+#  OS is usually the big thing, but hardware architecture matters
+#  for things like endian-ness.
+###
+ifneq ($(findstring SunOS 5., $(uname)),)
+   ENVIRON = sunos5
+   ARCH=SPARC_ARCH
+endif
+ifneq ($(findstring HP-UX, $(uname)),)
+   ENVIRON = hpux
+   ARCH=HPPA_ARCH
+endif
+ifneq ($(findstring AIX, $(uname)),)
+   ENVIRON = aix
+   ifeq ($(MACHINE),"alpha")
+      ARCH=ALPHA_ARCH
+   else
+      # extend for your architecture, as needed.
+#      error: Unrecognized configuration
+   endif # MACHINE
+endif # AIX
+ifneq ($(findstring Linux, $(uname)),)
+   ENVIRON = linux
+   ifneq ($(findstring i686,$(MACHINE)),)
+      ARCH=IA32_ARCH
+   else
+      ifneq ($(findstring x86_64,$(MACHINE)),)
+         ARCH=EM64T_ARCH
+      else
+
+         # extend for your architecture, as needed.
+#         error: Unrecognized configuration
+      endif
+   endif # MACHINE
+endif # LINUX
+ifndef ENVIRON
+#   error Unrecognized platform configuration
+endif
+
+###
+# Platform specific compile & link flags
+###
+ifeq ($(ENVIRON),sunos5)
+   # I had to add these options to the CXX line that builds the shared library,
+   # or I would get unresolved symbols and/or errors about duplicates for
+   # template functions.
+   SHLIB_FINAL_FLAGS = -z muldefs -lCstd -lCrun -lm -lw -lcx -lc
+
+   # Forte compiler settings
+   CC=cc
+   CXX=CC
+   # See note below about this var. Also, do NOT quote the value.
+   CXX_AR=$(CXX) -xar -o
+   PIC_FLAG = -pic
+   OPT_FLAG = -O
+   SHLIB_FLAG = -G
+   SHLIB_EXT = .so
+   PLATFORM = -DSOLARIS -D$(ARCH)
+endif # sunos5
+ifeq ($(ENVIRON),linux)
+   # Note: Need gcc/g++ 3.x or better
+   CC = gcc
+   CXX = g++
+   PIC_FLAG = -fpic
+   OPT_FLAG = -O
+   SHLIB_FLAG = -shared
+   SHLIB_EXT = .so
+   PLATFORM = -DLINUX -D$(ARCH)
+endif # linux
+ifeq ($(ENVIRON),aix)
+	SHLIB_EXT = .so
+endif # aix
+ifeq ($(ENVIRON),hpux)
+   OPT_FLAG = -O
+   SHLIB_CXX_LIBS = -lstd -lstream -lCsup -lm -lcl -lc
+endif # hpux
+
+###
+# More generic flags & rules
+###
+ifdef debug
+   CFLAGS += -g
+else
+   CFLAGS += $(OPT_FLAG)
+endif
+
+CPPFLAGS = -D_UNIX_ $(PLATFORM)
+
+###
+# How do you create an archive library? Need this because creation of
+# C++ archive libs sometimes gets weird. Sun's Forte compiler, for example.
+# This is the "normal" way. Do not put quotes around the value - want it to
+# expand unquoted.
+###
+ifndef CXX_AR
+   CXX_AR=$(AR) cr
+endif  # CXX_AR
+
+
+###
+# Makefile name for recursive invocations
+###
+MAKEFILE_NAME := -f Makefile.unix
+
+###
+# Default rules
+###
+%.o : %.cpp
+	$(CXX) -c $(CFLAGS) $(CPPFLAGS) $< 
+

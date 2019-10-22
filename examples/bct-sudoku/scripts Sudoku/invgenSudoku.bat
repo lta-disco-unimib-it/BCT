@@ -1,0 +1,1 @@
+java -cp ../../bin tools.InvariantGenerator -logs ../../logScripts -dest ../../invariants/ -TARGET_HOME .. org.gos.freesudoku.FreeSudoku 

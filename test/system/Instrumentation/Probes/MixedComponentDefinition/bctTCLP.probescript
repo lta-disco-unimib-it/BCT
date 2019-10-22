@@ -1,0 +1,65 @@
+REM unnamed_probe
+PROBE
+RULE packageF* * * * include
+RULE * * * * exclude
+REF ONENTRY bctTCLP_probe$Probe_5 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args
+REF ONEXIT bctTCLP_probe$Probe_5 _exit (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args
+REM unnamed_probe
+PROBE
+RULE packageA* * * * include
+RULE * * * * exclude
+REF ONENTRY bctTCLP_probe$Probe_0 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args
+REF ONEXIT bctTCLP_probe$Probe_0 _exit (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args
+REM unnamed_probe
+PROBE
+RULE packageE* * * * include
+RULE * * * * exclude
+REF ONENTRY bctTCLP_probe$Probe_4 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args
+REF ONEXIT bctTCLP_probe$Probe_4 _exit (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args
+REM unnamed_probe
+PROBE
+RULE packageC* * * * include
+RULE * * * * exclude
+REF ONENTRY bctTCLP_probe$Probe_2 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args
+REF ONEXIT bctTCLP_probe$Probe_2 _exit (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args
+REM unnamed_probe
+PROBE
+RULE packageL* * * * include
+RULE * * * * exclude
+REF ONENTRY bctTCLP_probe$Probe_8 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args
+REF ONEXIT bctTCLP_probe$Probe_8 _exit (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args
+REM unnamed_probe
+PROBE
+RULE packageM/one/two/three* * * * exclude
+RULE packageM/one/two* * * * include
+RULE packageM/one* * * * exclude
+RULE packageM* * * * include
+RULE packageN/one* * * * exclude
+RULE packageN* * * * include
+RULE * * * * exclude
+REF ONENTRY bctTCLP_probe$Probe_9 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args
+REF ONEXIT bctTCLP_probe$Probe_9 _exit (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args
+REM unnamed_probe
+PROBE
+RULE packageB* * * * include
+RULE * * * * exclude
+REF ONENTRY bctTCLP_probe$Probe_1 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args
+REF ONEXIT bctTCLP_probe$Probe_1 _exit (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args
+REM unnamed_probe
+PROBE
+RULE packageH* * * * include
+RULE * * * * exclude
+REF ONENTRY bctTCLP_probe$Probe_7 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args
+REF ONEXIT bctTCLP_probe$Probe_7 _exit (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args
+REM unnamed_probe
+PROBE
+RULE packageD* * * * include
+RULE * * * * exclude
+REF ONENTRY bctTCLP_probe$Probe_3 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args
+REF ONEXIT bctTCLP_probe$Probe_3 _exit (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args
+REM unnamed_probe
+PROBE
+RULE packageG* * * * include
+RULE * * * * exclude
+REF ONENTRY bctTCLP_probe$Probe_6 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args
+REF ONEXIT bctTCLP_probe$Probe_6 _exit (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args

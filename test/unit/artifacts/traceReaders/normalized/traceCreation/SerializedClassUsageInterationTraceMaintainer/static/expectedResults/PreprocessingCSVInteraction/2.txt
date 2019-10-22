@@ -1,0 +1,6 @@
+program.StaticClassA.<clinit>(()V)
+program.StaticClassA.methodC(()V)
+program.StaticClassA.methodD((Lprogram.ClassB;)V)
+program.StaticClassA.methodA((Lprogram.ClassB;)V)
+program.StaticClassA.methodE(()V)
+|

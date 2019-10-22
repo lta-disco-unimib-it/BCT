@@ -1,0 +1,111 @@
+
+
+1.)Generazione degli script di preprocessing
+
+
+java -cp "$BCT_HOME" tools.PreProcessor -io "<regolePointCutIO>" -int "<regolePointCutInterazione>" -dest <cartellaDoveMettereScript> -TARGET_HOME "<classPathDelProgramma>" <tipoDIWeaving> <classeDaCaricare>
+
+<regolePointCutIO>,<regolePointCutInterazione>	sono le regole (separate da File.pathSeparator ) da inserire nei vari PointCut	al'interno di execution( ). Produce solo regole di tipo execution.
+
+<cartellaDOveMetterScript>	è la cartella dove crea gli script di esecuzione (e la cartella 01-logs ) , deve esistere.
+
+<tipoDiWeaving>	se omesso considera offline
+								-online
+								-offline
+
+<classeDaCaricare>	nome della classe con il main (se si intende passargli parametri mettere il  tutto tra doppi apici)
+
+
+2)Logging online dell'applicazione
+
+aspectwerkz <indicazioniSussidiarie> -Daspectwerkz.definition.file=definitionforlog.xml -cp "<classpathDiTutto>" <programma> <parametri>
+
+<indicazioniSussidiarie>	ad esempio dimensione nmassima della memoria utilizzabile dalla virtual machine -Xmx512m
+
+<classpathDiTutto>				deve includere la cartella corrente, il classpath del programma, il path di BCT ( quello della variabile d'ambiente BCT_HOME ), il path ASPECTWERKZ_HOME/lib/aspectwerkz-2.0.jar il tutto separato dal carattere FIle.pathSeparator
+
+<programm>								la classe con il main
+
+<parametri>							eventuali parametri (Separati da spazio come si fa  di solito)
+
+
+
+3)Logging offline dell'applicazione
+
+3.1) instrumentazione applicazione
+
+aspectwerkz -offline definitionforlog.xml -cp "<classPath>" <classPathDaInstrumentare>
+
+<classPath>	è il classpath necessario per eseguire "normalmente" l'applicazione più il path degli aspetti di log
+						gli aspetti di log possono essere copiati nella cartella con i .class dell'applicazione (cioè nel classpath della stessa) oppure nella cartella corrente (e includere la cartella corrente nel classPath)
+
+<classPathDaInstrumentare>	il classPath delle classi da instrumenmtare, possono essere piu cartelle o jar separate da spazio (in realtà sembra non ne instrumenti piu di 5)
+
+
+3.2)esecuzione dell'applicazione instrumentata (e conseguente logging)
+
+
+java -cp <classPath> -Daspectwerkz.definition.file=definitionforlog.xml <programma> <parametri>
+
+<classPath>		deve includere il classpath del programma, il path di BCT ( quello della variabile d'ambiente BCT_HOME ), il path ASPECTWERKZ_HOME/lib/aspectwerkz-2.0.jar il tutto separato dal carattere FIle.PathSeparator
+
+<program>			la classe con il main
+
+<parametri>		eventuali parametri (Separati da spazio come si fa  di solito)
+
+
+4)Generazione delle invarianti
+
+java tools.InvariantGenerator -logs <percorso_cartella_con_i_log> -dest <percorso_cartella_dove_mettere_invarianti> -TARGET_HOME <class_path_programma> <nomeDelProgramma> <fsaEngine> <configurazioneDiDaikon>
+
+<class_path_del_programma> serve solamente per generare script per il controllo delle invarianti corretti, se non devono essere generati gli script si può mettere anche una cosa non esistente
+
+
+<nome_del_programma>	la classe con il main
+
+
+<fsaEngine>						motore di inferenze da usare: -kTail
+																										-kBehavior
+																										-cook
+																										-kInclusion
+																										-reiss
+
+<configurazioneDiDaikon>	file di configurazione di daikon,  può assumere i valori
+											-essentials
+											-defaults	
+											-intermediates
+
+
+
+5) Esecuzione applicazione per il check
+
+aspectwerkz <indicazioniSussidiarie> -Daspectwerkz.definition.file=definitionforcheck.xml -cp <classPath> <programma> <parametri>
+
+
+<indicazioniSussidiarie>	ad esempio dimensione nmassima della memoria utilizzabile dalla virtual machine -Xmx512m
+
+<classPath>		deve includere la cartella corrente, il classpath del programma, il path di BCT ( quello della variabile d'ambiente BCT_HOME ), il path ASPECTWERKZ_HOME/lib/aspectwerkz-2.0.jar il tutto separato dal carattere FIle.PathSeparator
+
+<program>			la classe con il main
+
+<parametri>		eventuali parametri (Separati da spazio come si fa  di solito)
+
+
+
+
+per il loggin offline + checking si fa
+
+1
+3.1
+3.2
+4
+5
+
+
+per il loggin checking online si fa
+1
+2
+4
+5
+
+

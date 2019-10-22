@@ -1,0 +1,48 @@
+Breakpoint 1 at 0x80488f2: file ../src/Recurser.cpp, line 20.
+Breakpoint 2 at 0x804895d: file ../src/Recurser.cpp, line 27.
+Breakpoint 3 at 0x80489bc: file ../src/Recursive-V0.cpp, line 16.
+Breakpoint 4 at 0x8048a26: file ../src/Recursive-V0.cpp, line 24.
+Breakpoint 5 at 0x80488f2: file ../src/Recurser.cpp, line 20.
+Breakpoint 6 at 0x804895d: file ../src/Recurser.cpp, line 27.
+!!!BCT-NEW-EXECUTION
+!!!BCT-ENTER: main
+!!!BCT-stack
+#0  main () at ../src/Recursive-V0.cpp:16
+!!!BCT-stack-end
+!!!BCT-ENTER: _ZN8Recurser7recurseEi
+!!!BCT-stack
+#0  Recurser::recurse (this=0xbffff11c, x=1000) at ../src/Recurser.cpp:20
+#1  0x08048a0b in main () at ../src/Recursive-V0.cpp:21
+!!!BCT-stack-end
+!!!BCT-ENTER: _ZN8Recurser7recurseEi
+!!!BCT-stack
+#0  Recurser::recurse (this=0xbffff11c, x=999) at ../src/Recurser.cpp:20
+#1  0x08048959 in Recurser::recurse (this=0xbffff11c, x=1000) at ../src/Recurser.cpp:26
+#2  0x08048a0b in main () at ../src/Recursive-V0.cpp:21
+!!!BCT-stack-end
+!!!BCT-ENTER: _ZN8Recurser7recurseEi
+!!!BCT-stack
+#0  Recurser::recurse (this=0xbffff11c, x=998) at ../src/Recurser.cpp:20
+#1  0x08048959 in Recurser::recurse (this=0xbffff11c, x=999) at ../src/Recurser.cpp:26
+#2  0x08048959 in Recurser::recurse (this=0xbffff11c, x=1000) at ../src/Recurser.cpp:26
+#3  0x08048a0b in main () at ../src/Recursive-V0.cpp:21
+!!!BCT-stack-end
+!!!BCT-ENTER: _ZN8Recurser7recurseEi
+!!!BCT-stack
+#0  Recurser::recurse (this=0xbffff11c, x=997) at ../src/Recurser.cpp:20
+#1  0x08048959 in Recurser::recurse (this=0xbffff11c, x=998) at ../src/Recurser.cpp:26
+#2  0x08048959 in Recurser::recurse (this=0xbffff11c, x=999) at ../src/Recurser.cpp:26
+#3  0x08048959 in Recurser::recurse (this=0xbffff11c, x=1000) at ../src/Recurser.cpp:26
+#4  0x08048a0b in main () at ../src/Recursive-V0.cpp:21
+!!!BCT-stack-end
+!!!BCT-ENTER: _ZN8Recurser7recurseEi
+!!!BCT-stack
+#0  Recurser::recurse (this=0xbffff11c, x=996) at ../src/Recurser.cpp:20
+#1  0x08048959 in Recurser::recurse (this=0xbffff11c, x=997) at ../src/Recurser.cpp:26
+#2  0x08048959 in Recurser::recurse (this=0xbffff11c, x=998) at ../src/Recurser.cpp:26
+#3  0x08048959 in Recurser::recurse (this=0xbffff11c, x=999) at ../src/Recurser.cpp:26
+#4  0x08048959 in Recurser::recurse (this=0xbffff11c, x=1000) at ../src/Recurser.cpp:26
+#5  0x08048a0b in main () at ../src/Recursive-V0.cpp:21
+!!!BCT-stack-end
+Program received signal SIGINT, Interrupt.
+0x0012d422 in __kernel_vsyscall ()

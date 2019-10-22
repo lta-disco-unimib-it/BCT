@@ -1,0 +1,268 @@
+
+/home/fabrizio/Workspaces/workspaceTruncatedCallsTest/RecursiveNew/Debug/RecursiveNew:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+08048698 <_init>:
+_init():
+ 8048698:	55                   	push   %ebp
+ 8048699:	89 e5                	mov    %esp,%ebp
+ 804869b:	53                   	push   %ebx
+ 804869c:	83 ec 04             	sub    $0x4,%esp
+ 804869f:	e8 00 00 00 00       	call   80486a4 <_init+0xc>
+ 80486a4:	5b                   	pop    %ebx
+ 80486a5:	81 c3 50 19 00 00    	add    $0x1950,%ebx
+ 80486ab:	8b 93 fc ff ff ff    	mov    -0x4(%ebx),%edx
+ 80486b1:	85 d2                	test   %edx,%edx
+ 80486b3:	74 05                	je     80486ba <_init+0x22>
+ 80486b5:	e8 3e 00 00 00       	call   80486f8 <__gmon_start__@plt>
+ 80486ba:	e8 81 01 00 00       	call   8048840 <frame_dummy>
+ 80486bf:	e8 4c 04 00 00       	call   8048b10 <__do_global_ctors_aux>
+ 80486c4:	58                   	pop    %eax
+ 80486c5:	5b                   	pop    %ebx
+ 80486c6:	c9                   	leave  
+ 80486c7:	c3                   	ret    
+
+Disassembly of section .plt:
+
+080486c8 <_ZNSolsEi@plt-0x10>:
+ 80486c8:	ff 35 f8 9f 04 08    	pushl  0x8049ff8
+ 80486ce:	ff 25 fc 9f 04 08    	jmp    *0x8049ffc
+ 80486d4:	00 00                	add    %al,(%eax)
+	...
+
+080486d8 <_ZNSolsEi@plt>:
+ 80486d8:	ff 25 00 a0 04 08    	jmp    *0x804a000
+ 80486de:	68 00 00 00 00       	push   $0x0
+ 80486e3:	e9 e0 ff ff ff       	jmp    80486c8 <_init+0x30>
+
+080486e8 <__cxa_atexit@plt>:
+ 80486e8:	ff 25 04 a0 04 08    	jmp    *0x804a004
+ 80486ee:	68 08 00 00 00       	push   $0x8
+ 80486f3:	e9 d0 ff ff ff       	jmp    80486c8 <_init+0x30>
+
+080486f8 <__gmon_start__@plt>:
+ 80486f8:	ff 25 08 a0 04 08    	jmp    *0x804a008
+ 80486fe:	68 10 00 00 00       	push   $0x10
+ 8048703:	e9 c0 ff ff ff       	jmp    80486c8 <_init+0x30>
+
+08048708 <_ZdlPv@plt>:
+ 8048708:	ff 25 0c a0 04 08    	jmp    *0x804a00c
+ 804870e:	68 18 00 00 00       	push   $0x18
+ 8048713:	e9 b0 ff ff ff       	jmp    80486c8 <_init+0x30>
+
+08048718 <_ZNSt8ios_base4InitC1Ev@plt>:
+ 8048718:	ff 25 10 a0 04 08    	jmp    *0x804a010
+ 804871e:	68 20 00 00 00       	push   $0x20
+ 8048723:	e9 a0 ff ff ff       	jmp    80486c8 <_init+0x30>
+
+08048728 <__libc_start_main@plt>:
+ 8048728:	ff 25 14 a0 04 08    	jmp    *0x804a014
+ 804872e:	68 28 00 00 00       	push   $0x28
+ 8048733:	e9 90 ff ff ff       	jmp    80486c8 <_init+0x30>
+
+08048738 <_ZNSt8ios_base4InitD1Ev@plt>:
+ 8048738:	ff 25 18 a0 04 08    	jmp    *0x804a018
+ 804873e:	68 30 00 00 00       	push   $0x30
+ 8048743:	e9 80 ff ff ff       	jmp    80486c8 <_init+0x30>
+
+08048748 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>:
+ 8048748:	ff 25 1c a0 04 08    	jmp    *0x804a01c
+ 804874e:	68 38 00 00 00       	push   $0x38
+ 8048753:	e9 70 ff ff ff       	jmp    80486c8 <_init+0x30>
+
+08048758 <sleep@plt>:
+ 8048758:	ff 25 20 a0 04 08    	jmp    *0x804a020
+ 804875e:	68 40 00 00 00       	push   $0x40
+ 8048763:	e9 60 ff ff ff       	jmp    80486c8 <_init+0x30>
+
+08048768 <_ZNSolsEPFRSoS_E@plt>:
+ 8048768:	ff 25 24 a0 04 08    	jmp    *0x804a024
+ 804876e:	68 48 00 00 00       	push   $0x48
+ 8048773:	e9 50 ff ff ff       	jmp    80486c8 <_init+0x30>
+
+08048778 <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@plt>:
+ 8048778:	ff 25 28 a0 04 08    	jmp    *0x804a028
+ 804877e:	68 50 00 00 00       	push   $0x50
+ 8048783:	e9 40 ff ff ff       	jmp    80486c8 <_init+0x30>
+
+08048788 <__gxx_personality_v0@plt>:
+ 8048788:	ff 25 2c a0 04 08    	jmp    *0x804a02c
+ 804878e:	68 58 00 00 00       	push   $0x58
+ 8048793:	e9 30 ff ff ff       	jmp    80486c8 <_init+0x30>
+
+08048798 <_Unwind_Resume@plt>:
+ 8048798:	ff 25 30 a0 04 08    	jmp    *0x804a030
+ 804879e:	68 60 00 00 00       	push   $0x60
+ 80487a3:	e9 20 ff ff ff       	jmp    80486c8 <_init+0x30>
+
+Disassembly of section .text:
+
+080487b0 <_start>:
+_start():
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:65
+ 80487b0:	31 ed                	xor    %ebp,%ebp
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:70
+ 80487b2:	5e                   	pop    %esi
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:71
+ 80487b3:	89 e1                	mov    %esp,%ecx
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:77
+ 80487b5:	83 e4 f0             	and    $0xfffffff0,%esp
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:78
+ 80487b8:	50                   	push   %eax
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:83
+ 80487b9:	54                   	push   %esp
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:85
+ 80487ba:	52                   	push   %edx
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:109
+ 80487bb:	68 a0 8a 04 08       	push   $0x8048aa0
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:110
+ 80487c0:	68 b0 8a 04 08       	push   $0x8048ab0
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:112
+ 80487c5:	51                   	push   %ecx
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:113
+ 80487c6:	56                   	push   %esi
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:115
+ 80487c7:	68 bc 89 04 08       	push   $0x80489bc
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:119
+ 80487cc:	e8 57 ff ff ff       	call   8048728 <__libc_start_main@plt>
+/build/buildd/eglibc-2.10.1/csu/../sysdeps/i386/elf/start.S:122
+ 80487d1:	f4                   	hlt    
+ 80487d2:	90                   	nop
+ 80487d3:	90                   	nop
+ 80487d4:	90                   	nop
+ 80487d5:	90                   	nop
+ 80487d6:	90                   	nop
+ 80487d7:	90                   	nop
+ 80487d8:	90                   	nop
+ 80487d9:	90                   	nop
+ 80487da:	90                   	nop
+ 80487db:	90                   	nop
+ 80487dc:	90                   	nop
+ 80487dd:	90                   	nop
+ 80487de:	90                   	nop
+ 80487df:	90                   	nop
+
+080487e0 <__do_global_dtors_aux>:
+__do_global_dtors_aux():
+ 80487e0:	55                   	push   %ebp
+ 80487e1:	89 e5                	mov    %esp,%ebp
+ 80487e3:	53                   	push   %ebx
+ 80487e4:	83 ec 04             	sub    $0x4,%esp
+ 80487e7:	80 3d 0c a1 04 08 00 	cmpb   $0x0,0x804a10c
+ 80487ee:	75 3f                	jne    804882f <__do_global_dtors_aux+0x4f>
+ 80487f0:	a1 10 a1 04 08       	mov    0x804a110,%eax
+ 80487f5:	bb 00 9f 04 08       	mov    $0x8049f00,%ebx
+ 80487fa:	81 eb fc 9e 04 08    	sub    $0x8049efc,%ebx
+ 8048800:	c1 fb 02             	sar    $0x2,%ebx
+ 8048803:	83 eb 01             	sub    $0x1,%ebx
+ 8048806:	39 d8                	cmp    %ebx,%eax
+ 8048808:	73 1e                	jae    8048828 <__do_global_dtors_aux+0x48>
+ 804880a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+ 8048810:	83 c0 01             	add    $0x1,%eax
+ 8048813:	a3 10 a1 04 08       	mov    %eax,0x804a110
+ 8048818:	ff 14 85 fc 9e 04 08 	call   *0x8049efc(,%eax,4)
+ 804881f:	a1 10 a1 04 08       	mov    0x804a110,%eax
+ 8048824:	39 d8                	cmp    %ebx,%eax
+ 8048826:	72 e8                	jb     8048810 <__do_global_dtors_aux+0x30>
+ 8048828:	c6 05 0c a1 04 08 01 	movb   $0x1,0x804a10c
+ 804882f:	83 c4 04             	add    $0x4,%esp
+ 8048832:	5b                   	pop    %ebx
+ 8048833:	5d                   	pop    %ebp
+ 8048834:	c3                   	ret    
+ 8048835:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+ 8048839:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+08048840 <frame_dummy>:
+frame_dummy():
+ 8048840:	55                   	push   %ebp
+ 8048841:	89 e5                	mov    %esp,%ebp
+ 8048843:	83 ec 18             	sub    $0x18,%esp
+ 8048846:	a1 04 9f 04 08       	mov    0x8049f04,%eax
+ 804884b:	85 c0                	test   %eax,%eax
+ 804884d:	74 12                	je     8048861 <frame_dummy+0x21>
+ 804884f:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8048854:	85 c0                	test   %eax,%eax
+ 8048856:	74 09                	je     8048861 <frame_dummy+0x21>
+ 8048858:	c7 04 24 04 9f 04 08 	movl   $0x8049f04,(%esp)
+ 804885f:	ff d0                	call   *%eax
+ 8048861:	c9                   	leave  
+ 8048862:	c3                   	ret    
+ 8048863:	90                   	nop
+
+08048864 <_ZN8RecurserC2Ev>:
+Recurser():
+/home/fabrizio/Workspaces/workspaceTruncatedCallsTest/RecursiveNew/Debug/../src/Recurser.cpp:10
+ 8048864:	55                   	push   %ebp
+ 8048865:	89 e5                	mov    %esp,%ebp
+ 8048867:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804886a:	c7 00 78 8b 04 08    	movl   $0x8048b78,(%eax)
+/home/fabrizio/Workspaces/workspaceTruncatedCallsTest/RecursiveNew/Debug/../src/Recurser.cpp:13
+ 8048870:	5d                   	pop    %ebp
+ 8048871:	c3                   	ret    
+
+08048872 <_ZN8RecurserC1Ev>:
+/home/fabrizio/Workspaces/workspaceTruncatedCallsTest/RecursiveNew/Debug/../src/Recurser.cpp:10
+ 8048872:	55                   	push   %ebp
+ 8048873:	89 e5                	mov    %esp,%ebp
+ 8048875:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048878:	c7 00 78 8b 04 08    	movl   $0x8048b78,(%eax)
+/home/fabrizio/Workspaces/workspaceTruncatedCallsTest/RecursiveNew/Debug/../src/Recurser.cpp:13
+ 804887e:	5d                   	pop    %ebp
+ 804887f:	c3                   	ret    
+
+08048880 <_ZN8RecurserD2Ev>:
+~Recurser():
+/home/fabrizio/Workspaces/workspaceTruncatedCallsTest/RecursiveNew/Debug/../src/Recurser.cpp:15
+ 8048880:	55                   	push   %ebp
+ 8048881:	89 e5                	mov    %esp,%ebp
+ 8048883:	83 ec 18             	sub    $0x18,%esp
+ 8048886:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048889:	c7 00 78 8b 04 08    	movl   $0x8048b78,(%eax)
+/home/fabrizio/Workspaces/workspaceTruncatedCallsTest/RecursiveNew/Debug/../src/Recurser.cpp:17
+ 804888f:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8048894:	84 c0                	test   %al,%al
+ 8048896:	74 0b                	je     80488a3 <_ZN8RecurserD2Ev+0x23>
+ 8048898:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804889b:	89 04 24             	mov    %eax,(%esp)
+ 804889e:	e8 65 fe ff ff       	call   8048708 <_ZdlPv@plt>
+ 80488a3:	c9                   	leave  
+ 80488a4:	c3                   	ret    
+_ZN8RecurserD2Ev():
+ 80488a5:	90                   	nop
+
+080488a6 <_ZN8RecurserD1Ev>:
+~Recurser():
+/home/fabrizio/Workspaces/workspaceTruncatedCallsTest/RecursiveNew/Debug/../src/Recurser.cpp:15
+ 80488a6:	55                   	push   %ebp
+ 80488a7:	89 e5                	mov    %esp,%ebp
+ 80488a9:	83 ec 18             	sub    $0x18,%esp
+ 80488ac:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80488af:	c7 00 78 8b 04 08    	movl   $0x8048b78,(%eax)
+/home/fabrizio/Workspaces/workspaceTruncatedCallsTest/RecursiveNew/Debug/../src/Recurser.cpp:17
+ 80488b5:	b8 00 00 00 00       	mov    $0x0,%eax
+ 80488ba:	84 c0                	test   %al,%al
+ 80488bc:	74 0b                	je     80488c9 <_ZN8RecurserD1Ev+0x23>
+ 80488be:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80488c1:	89 04 24             	mov    %eax,(%esp)
+ 80488c4:	e8 3f fe ff ff       	call   8048708 <_ZdlPv@plt>
+ 80488c9:	c9                   	leave  
+ 80488ca:	c3                   	ret    
+_ZN8RecurserD1Ev():
+ 80488cb:	90                   	nop
+
+080488cc <_ZN8RecurserD0Ev>:
+~Recurser():
+/home/fabrizio/Workspaces/workspaceTruncatedCallsTest/RecursiveNew/Debug/../src/Recurser.cpp:15
+ 80488cc:	55                   	push   %ebp
+ 80488cd:	89 e5                	mov    %esp,%ebp
+ 80488cf:	83 ec 18             	sub    $0x18,%esp
+ 80488d2:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80488d5:	c7 00 78 8b 04 08    	movl   $0x8048b78,(%eax)
+/home/fabrizio/Workspaces/workspaceTruncatedCallsTest/RecursiveNew/Debug/../src/Recurser.cpp:17
+ 80488db:	b8 01 00 00 00       	mov    $0x1,%eax
+ 80488e0:	84 c0                	test   %al,%al
+ 80488e2:	74 0b                	je     80488ef <_ZN8RecurserD0Ev+0x23>
+ 80488e4:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80488e7:	89 04 24             	mov    %e

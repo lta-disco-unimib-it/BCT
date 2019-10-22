@@ -1,0 +1,283 @@
+#############################################################
+# Copyright (c) 2005, 2006 IBM Corporation and others. 
+# All rights reserved.   This program and the accompanying materials 
+# are made available under the terms of the Eclipse Public License v1.0 
+# which accompanies this distribution, and is available at 
+# http://www.eclipse.org/legal/epl-v10.html         
+# $Id: makefile.os400,v 1.4 2006/03/31 21:17:36 nmehrega Exp $ 
+#  
+# Contributors: 
+# IBM - Initial contribution
+#############################################################
+
+#
+# Makefile for OS400 for the BCIEngProbe
+#
+# BCIEngProbe on an AS400 is a service program that will
+# be loaded by ProbeAgentExtension (based on config information in a RAC plugin)
+# which, in turn, is loaded by piAgent.
+#
+# This makefile is a copy of the one for ProbeAgentExtension,
+# modified to build BCIEngProbe instead.
+
+# 
+# RAA make
+CCC=icc
+CC=icc
+
+# Compiler used to create dependence files
+CCCDEP=ixlc
+
+# Utility to create service program. ld for service program creating. qar for binding directory creating.
+LD=ld
+AR=qar
+
+#define the output library for module
+#BUILD_LIB=HYADESDC_B
+
+#define the output library for service programs
+#HYADES_LIB=HYADESDC
+
+# Suppress association of suffix .c with suffix .y by stating
+# new order of evaluation of suffixes
+.SUFFIXES:
+.SUFFIXES: .h .hpp .cpp .c .o
+
+#
+#  C++ flags
+#
+#CCCFLAGS = -g -qTERASPACE='*YES *TSIFC' -qSTGMDL=*TERASPACE -qDTAMDL=*LLP64 -qTGTRLS=V5R1M0 -qSHOWUSR
+CCCFLAGS = -qTERASPACE=*YES -qTGTRLS=V5R1M0 -qSHOWUSR
+
+#
+#  C flags.
+#
+#CCFLAGS = -g -qTERASPACE='*YES *TSIFC' -qSTGMDL=*TERASPACE -qDTAMDL=*LLP64 -qTGTRLS=V5R1M0 -qSHOWUSR
+CCFLAGS = -qTERASPACE=*YES -qTGTRLS=V5R1M0 -qSHOWUSR
+
+#
+#  LD flags
+#LDFLAGS = -qDUPPROC -qDUPVAR -qSTGMDL=*TERASPACE
+LDFLAGS = -qDUPPROC -qDUPVAR -qTGTRLS=V5R1M0
+
+#
+#
+#  AR flags
+#
+ARFLAGS = -cuv
+
+#--------------------------------------------------------------
+# OUTPUT directories
+#
+#   MODULE_LIB   : the lib where the modules are built to
+#   PGM_LIB      : the lib where the PGM and SRVPGM are built to
+#
+# The compiler picks up the environment variable OUTPUTDIR
+# to decide what library to build object files into. MODULE_LIB
+# is used to set OUTPUTDIR, and then OUTPUTDIR is exported as
+# and environment variable.
+#
+# In the rule that builds the shared library from the collected object
+# files, OUTPUTDIR gets changed to PGMOUTPUTDIR and re-exported.
+# PGMOUTPUTDIR is set from PGM_LIB.
+#
+#--------------------------------------------------------------
+MODULE_LIB = PROBEA_LIB
+PGM_LIB = HYADESDC			# N.M: Changed the library name from IBMRAC
+
+#--------------------------------------------------------------
+# Defines
+#--------------------------------------------------------------
+
+# PLATFORM_DEFINES is the stuff you need for BCI/Common/CommonDef.h:
+# AS400_ARCH: cpu architecture, including big-endianness
+# _UNIX_: common define for all unix-like systems (vs. windows)
+# OS400: specific flavor of unix
+
+PLATFORM_DEFINES=-DAS400_ARCH -D_UNIX_ -DOS400
+
+DEFINES=-DENW -DSQLUNIX -D'__OS400_USE_LONGLONG_JAVALONG' $(PLATFORM_DEFINES)
+LDDEFINES=
+
+BCIENGP_DIR = \
+	.
+
+#
+BCIENGP_INCLUDES = \
+	-I./BCIEng -I./BCIEng/BCIEngJ -I./BCIEng/BCIEngProbe -I./Common -I./JClass
+
+#--------------------------------------------------------------
+#  Target names
+#--------------------------------------------------------------
+
+#
+# Source file list - ProbeAgentExtension
+#
+BCIENGP_C_RAW = \
+	BCIEng/InsSet.cpp \
+	BCIEng/Module.cpp \
+	BCIEng/BCIEngJ/ExtRefJ_Interface.cpp \
+	BCIEng/BCIEngJ/ExtRefJ_StatMethod.cpp \
+	BCIEng/BCIEngJ/JVMInsSet.cpp \
+	BCIEng/BCIEngJ/ModuleJ.cpp \
+	BCIEng/BCIEngProbe/BCIEngProbe.cpp \
+	BCIEng/BCIEngProbe/BCIEngProbeInterface.cpp \
+	Common/Command.cpp \
+	Common/JavaHelpers.cpp \
+	JClass/JClassBuilder.cpp \
+	JClass/JClassFile.cpp \
+	JClass/JFileStream.cpp \
+	JClass/JMemStream.cpp \
+	JClass/JStream.cpp
+
+BCIENGP_C = \
+	InsSet.cpp \
+	Module.cpp \
+	ExtRefJ_Interface.cpp \
+	ExtRefJ_StatMethod.cpp \
+	JVMInsSet.cpp \
+	ModuleJ.cpp \
+	BCIEngProbe.cpp \
+	BCIEngProbeInterface.cpp \
+	Command.cpp \
+	JavaHelpers.cpp \
+	JClassBuilder.cpp \
+	JClassFile.cpp \
+	JFileStream.cpp \
+	JMemStream.cpp \
+	JStream.cpp
+
+BCIENGP_C_OBJ = $(BCIENGP_C:.cpp=.o)
+
+#
+# Final include list
+# Refers to the BCIEng directory for BCIEngInterface.h
+#
+INCLUDES = $(BCIENGP_INCLUDES)
+
+#--< Parts list for Makedepend >-------------------------------
+SRC_LIST = \
+  $(BCIENGP_C)
+
+# define the name mapping file for long IFS name to short name used in QSYS.LIB file system
+NAMEMAPPING=./namemapping.os400
+
+#define the output library for module
+MODULEOUTPUTDIR = $(MODULE_LIB)
+
+#define the output library for service programs
+PGMOUTPUTDIR = $(PGM_LIB)
+
+#set default working output library for iseries gnu utilities icc, ld and qar
+OUTPUTDIR = $(MODULEOUTPUTDIR)
+export OUTPUTDIR
+
+# define the bind directories for service programs. icc will prepend LIB before the name
+# automatically, so make sure it is short than 8 chars.
+BndDirForBCIEngP=BCIENGP
+
+# No server modules - we aren't making any executables, only service programs
+
+# RAA names for srvpgm and pgm
+BCIENGP_EXEC = \
+  BCIEngProbe.so
+
+default: $(BCIENGP_EXEC)
+
+#-----------------------------------------------------------------------------
+# Rule to copy sources to this directory.
+# Also creates the library that the object files compile into
+#-----------------------------------------------------------------------------
+
+$(BCIENGP_C) : $(BCIENGP_C_RAW)
+	cp $(BCIENGP_C_RAW) .
+	-system CRTLIB LIB\($(MODULEOUTPUTDIR)\)
+
+#-----------------------------------------------------------------------------
+# Create service programs and programs
+#
+# Note: The service programs and programs are built into different lib,
+#       need to change OUTPUTDIR before each AR or LD call.
+#
+#-----------------------------------------------------------------------------
+
+BCIEngProbe.so: $(notdir $(BCIENGP_C_OBJ))
+	$(AR) $(ARFLAGS) lib$(BndDirForBCIEngP).a $(notdir $(BCIENGP_C_OBJ))
+	system ADDBNDDIRE $(MODULEOUTPUTDIR)/lib$(BndDirForBCIEngP) HYADESDC/HCBND
+	system ADDBNDDIRE $(MODULEOUTPUTDIR)/lib$(BndDirForBCIEngP) HYADESDC/HCCLS
+	system ADDBNDDIRE $(MODULEOUTPUTDIR)/lib$(BndDirForBCIEngP) HYADESDC/HCCLCO
+	-system CRTLIB $(PGMOUTPUTDIR)
+	unset OUTPUTDIR;\
+	export OUTPUTDIR=$(PGMOUTPUTDIR);\
+	$(LD) -v $(LDFLAGS) $(LDDEFINES) -l$(BndDirForBCIEngP) -o $(basename $@).so $(notdir $(BCIENGP_C_OBJ))
+
+#--------------------------------------------------------------------------------------
+# Create modules
+#--------------------------------------------------------------------------------------
+
+.c.o:
+	if [ ! -e $@ ]; then \
+	unset OUTPUTMODULE; \
+	export OUTPUTMODULE="`grep -h "!$(basename $@)!" $(NAMEMAPPING)|cut -f 3 -d "!"`" ; \
+	fi; \
+	$(CC) -cv $(CCFLAGS) $(DEFINES) $(INCLUDES) $<
+
+# Compile .cpp to get .o
+.cpp.o:
+	if [ ! -e $@ ]; then \
+	unset OUTPUTMODULE; \
+	export OUTPUTMODULE="`grep -h "!$(basename $@)!" $(NAMEMAPPING)|cut -f 3 -d "!"`" ; \
+	fi; \
+	$(CCC) -cv $(CCCFLAGS) $(DEFINES) $(INCLUDES) $<
+
+#--------------------------------------------------------------
+# Nothing to do for "package" - that happens when you build ProbeAgentExtension
+#--------------------------------------------------------------
+package: 
+
+#--------------------------------------------------------------
+#  clean - Reset output files for full rebuild
+#--------------------------------------------------------------
+clean:
+	rm -f *.a *.o *.u *.log *.so $(BCIENGP_C)
+
+#--------------------------------------------------------------
+#  depend - Generate dependencies for incremental build
+#            - Need to generate headers before scan
+#--------------------------------------------------------------
+# generate the dependency list for .c and .cpp if the shell environment variable UPDATEDEPEND defined
+
+# define the suffix
+TMPExtension=.d
+DEPExtension=.u
+
+# define the dependency list for each source
+DEPS=$(addsuffix $(DEPExtension), $(notdir $(basename $(SRC_LIST))))
+
+# define the tempory library and module for ixlc to generate the dependency list
+TMPLib=$(OUTPUTDIR).lib
+TMPMod=IXLCTMP.MODULE
+
+ifdef UPDATEDEPEND
+depend: $(DEPS)
+
+# CRTCMOD command returns different format of dependency file
+%.u : %.c
+	$(CCCDEP) -c -t -o/qsys.lib/$(TMPLib)/$(TMPMod) -M$(CURDIR)/$(basename $@)$(TMPExtension) $(DEFINES) $(INCLUDES)  $<
+	grep -v '/QIBM/include' $(basename $@)$(TMPExtension) | sed 's/.*:/$(basename $@)\.o:/g' >$@
+	rm $(CURDIR)/$(basename $@)$(TMPExtension)
+
+%.u : %.cpp
+	$(CCCDEP) -c -t -o/qsys.lib/$(TMPLib)/$(TMPMod) -M$(CURDIR)/$(basename $@)$(TMPExtension) $(DEFINES) $(INCLUDES)  $<
+	grep -v '/QIBM/include' $(basename $@)$(TMPExtension) | sed 's/.*\.o/$(basename $@)\.o/g' >$@
+	rm $(CURDIR)/$(basename $@)$(TMPExtension)
+endif
+
+#--------------------------------------------------------------
+#  Source dependencies, generated by depend target
+#--------------------------------------------------------------
+-include $(DEPS)
+
+
+# DO NOT DELETE
+

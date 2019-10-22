@@ -1,0 +1,24 @@
+#
+#Wed Feb 05 14:20:03 CET 2014
+daikon.inv.binary.twoSequence.PairwiseIntGreaterEqual.enabled=true
+daikon.inv.unary.sequence.EltOneOf.size=3
+daikon.inv.binary.twoSequence.SeqSeqStringGreaterEqual.enabled=true
+daikon.Daikon.guardNulls=always
+daikon.inv.binary.twoSequence.SeqSeqIntLessThan.enabled=true
+daikon.inv.unary.sequence.OneOfFloatSequence.size=3
+daikon.PptTopLevel.pairwise_implications=true
+daikon.inv.unary.sequence.OneOfSequence.size=3
+daikon.inv.unary.sequence.EltOneOfFloat.size=3
+daikon.inv.unary.scalar.OneOfFloat.size=3
+daikon.inv.binary.twoSequence.PairwiseFloatGreaterThan.enabled=true
+daikon.inv.binary.twoSequence.SeqSeqFloatLessEqual.enabled=true
+daikon.inv.binary.twoSequence.PairwiseIntLessEqual.enabled=true
+daikon.inv.binary.twoSequence.PairwiseFloatLessEqual.enabled=true
+daikon.inv.binary.twoSequence.SeqSeqFloatLessThan.enabled=true
+daikon.inv.binary.twoSequence.SeqSeqIntGreaterThan.enabled=true
+daikon.inv.binary.twoSequence.PairwiseIntGreaterThan.enabled=true
+daikon.inv.unary.scalar.OneOfScalar.size=3
+daikon.inv.binary.twoString.StringLessThan.enabled=true
+daikon.inv.binary.twoSequence.PairwiseFloatGreaterEqual.enabled=true
+daikon.inv.unary.string.OneOfString.size=3
+daikon.inv.binary.twoSequence.SeqSeqStringLessEqual.enabled=true

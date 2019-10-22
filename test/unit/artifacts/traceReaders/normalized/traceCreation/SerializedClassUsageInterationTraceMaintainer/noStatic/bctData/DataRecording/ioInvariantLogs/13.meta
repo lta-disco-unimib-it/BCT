@@ -1,0 +1,9 @@
+timestamp=1297088926379
+tests=*program.ClassA.<init>,
+context=program.ProgramForTesting:54,
+#
+timestamp=1297088926384
+calledObjectId=1345041684
+tests=*program.ClassA.<init>,
+context=program.ProgramForTesting:54,
+#

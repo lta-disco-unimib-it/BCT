@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probekit>
+  <probe>
+    <target className="*" method="*" package="probes*" signature="*" type="exclude"/>
+    <target className="*" method="*" package="check*" signature="*" type="exclude"/>
+    <import text="probes.InteractionCheckerProbe"/>
+    <import text="probes.IoCheckerProbe"/>
+    <fragmentAtClassScope></fragmentAtClassScope>
+    <fragment type="entry">
+      <data name="cName" type="className"/>
+      <data name="argsPassed" type="args"/>
+      <data name="methodS" type="methodSig"/>
+      <data name="theMethodName" type="methodName"/>
+      <code>try{
+
+	IoCheckerProbe.checkEnter(cName,theMethodName,methodS,argsPassed);
+	InteractionCheckerProbe.checkEnter(cName,theMethodName,methodS,argsPassed);
+	
+} catch ( Exception e ){
+ 	System.out.println(&quot;EXC ENTER &quot;+e.getMessage());
+ 	e.printStackTrace();
+}</code>
+    </fragment>
+    <fragment type="exit">
+      <data name="cName" type="className"/>
+      <data name="argsPassed" type="args"/>
+      <data name="methodS" type="methodSig"/>
+      <data name="theMethodName" type="methodName"/>
+      <data name="ret" type="returnedObject"/>
+      <code>try{
+	IoCheckerProbe.checkExit(cName,theMethodName,methodS,argsPassed,ret);
+	InteractionCheckerProbe.checkExit(cName,theMethodName,methodS,argsPassed,ret);
+} catch ( Exception e ){
+ 	System.out.println(&quot;EXC EXIT&quot;+e.getMessage());
+}</code>
+    </fragment>
+  </probe>
+</probekit>

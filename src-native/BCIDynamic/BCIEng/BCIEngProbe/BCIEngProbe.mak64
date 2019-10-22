@@ -1,0 +1,495 @@
+#############################################################
+# Copyright (c) 2005, 2006 IBM Corporation and others. 
+# All rights reserved.   This program and the accompanying materials 
+# are made available under the terms of the Eclipse Public License v1.0 
+# which accompanies this distribution, and is available at 
+# http://www.eclipse.org/legal/epl-v10.html         
+# $Id: BCIEngProbe.mak64,v 1.1 2006/05/19 21:06:03 rsmith Exp $ 
+#  
+# Contributors: 
+# IBM - Initial contribution
+#############################################################
+
+
+# Microsoft Developer Studio Generated NMAKE File, Based on BCIEngProbe.dsp
+!IF "$(CFG)" == ""
+CFG=BCIEngProbe - IA64 Debug
+!MESSAGE No configuration specified. Defaulting to BCIEngProbe - IA64 Debug.
+!ENDIF
+
+!IF "$(CFG)" != "BCIEngProbe - IA64 Release" && "$(CFG)" != "BCIEngProbe - IA64 Debug" && "$(CFG)" != "BCIEngProbe - X64 Release" && "$(CFG)" != "BCIEngProbe - X64 Debug"
+!MESSAGE Invalid configuration "$(CFG)" specified.
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE
+!MESSAGE NMAKE /f "BCIEngProbe.mak64" CFG="BCIEngProbe - IA64 Debug"
+!MESSAGE
+!MESSAGE Possible choices for configuration are:
+!MESSAGE
+!MESSAGE "BCIEngProbe - IA64 Release"
+!MESSAGE "BCIEngProbe - IA64 Debug"
+!MESSAGE "BCIEngProbe - X64 Release"
+!MESSAGE "BCIEngProbe - X64 Debug"
+!MESSAGE
+!ERROR An invalid configuration is specified.
+!ENDIF
+
+!IF "$(OS)" == "Windows_NT"
+NULL=
+!ELSE
+NULL=nul
+!ENDIF
+
+!IF  "$(CFG)" == "BCIEngProbe - IA64 Release"
+
+OUTDIR=.\Release
+INTDIR=.\Release
+# Begin Custom Macros
+OutDir=.\Release
+# End Custom Macros
+
+!IF "$(RECURSE)" == "0"
+
+ALL : "$(OUTDIR)\BCIEngProbe.dll"
+
+!ELSE
+
+ALL : "BCIEngJ - IA64 Release" "$(OUTDIR)\BCIEngProbe.dll"
+
+!ENDIF
+
+!IF "$(RECURSE)" == "1"
+CLEAN :"BCIEngJ - IA64 ReleaseCLEAN"
+!ELSE
+CLEAN :
+!ENDIF
+	-@erase "$(INTDIR)\BCIEngProbe.obj"
+	-@erase "$(INTDIR)\BCIEngProbeInterface.obj"
+	-@erase "$(INTDIR)\vc80.idb"
+	-@erase "$(INTDIR)\vc80.pdb"
+	-@erase "$(OUTDIR)\BCIEngProbe.dll"
+	-@erase "$(OUTDIR)\BCIEngProbe.exp"
+	-@erase "$(OUTDIR)\BCIEngProbe.lib"
+	-@erase "$(OUTDIR)\BCIEngProbe.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=cl.exe
+CPP_PROJ=/nologo /MT /W3 /EHsc /Zi /O2 /I "..\..\BCIEng\\" /I "..\..\BCIEng\BCIEngJ" /I "..\..\JClass" /I "..\..\common" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"$(INTDIR)\BCIEngProbe.pch" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /c
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /win32
+RSC=rc.exe
+
+LINK32=link.exe
+LINK32_FLAGS=kernel32.lib bciengj.lib bufferoverflowU.lib /nologo /dll /incremental:no /pdb:"$(OUTDIR)\BCIEngProbe.pdb" /debug /out:"$(OUTDIR)\BCIEngProbe.dll" /implib:"$(OUTDIR)\BCIEngProbe.lib" /libpath:"..\..\jclass\release" /libpath:"..\..\bcieng\bciengj\release" /machine:IA64
+LINK32_OBJS= \
+	"$(INTDIR)\BCIEngProbe.obj" \
+	"$(INTDIR)\BCIEngProbeInterface.obj" \
+	"..\BCIEngJ\Release\BCIEngJ.lib"
+
+"$(OUTDIR)\BCIEngProbe.dll" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "BCIEngProbe - IA64 Debug"
+
+OUTDIR=.\Debug
+INTDIR=.\Debug
+# Begin Custom Macros
+OutDir=.\Debug
+# End Custom Macros
+
+!IF "$(RECURSE)" == "0"
+
+ALL : "$(OUTDIR)\BCIEngProbe.dll"
+
+!ELSE
+
+ALL : "BCIEngJ - IA64 Debug" "$(OUTDIR)\BCIEngProbe.dll"
+
+!ENDIF
+
+!IF "$(RECURSE)" == "1"
+CLEAN :"BCIEngJ - IA64 DebugCLEAN"
+!ELSE
+CLEAN :
+!ENDIF
+	-@erase "$(INTDIR)\BCIEngProbe.obj"
+	-@erase "$(INTDIR)\BCIEngProbe.sbr"
+	-@erase "$(INTDIR)\BCIEngProbeInterface.obj"
+	-@erase "$(INTDIR)\BCIEngProbeInterface.sbr"
+	-@erase "$(INTDIR)\vc80.idb"
+	-@erase "$(INTDIR)\vc80.pdb"
+	-@erase "$(OUTDIR)\BCIEngProbe.dll"
+	-@erase "$(OUTDIR)\BCIEngProbe.exp"
+	-@erase "$(OUTDIR)\BCIEngProbe.lib"
+	-@erase "$(OUTDIR)\BCIEngProbe.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=cl.exe
+CPP_PROJ=/nologo /MDd /W3 /Gm /EHsc /Zi /Od /I "..\..\BCIEng\\" /I "..\..\BCIEng\BCIEngJ" /I "..\..\JClass" /I "..\..\common" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /FR"$(INTDIR)\\" /Fp"$(INTDIR)\BCIEngProbe.pch" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /GZ /c
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /win32
+RSC=rc.exe
+
+LINK32=link.exe
+LINK32_FLAGS=bciengj.lib kernel32.lib bufferoverflowU.lib /nologo /dll /incremental:no /pdb:"$(OUTDIR)\BCIEngProbe.pdb" /debug /out:"$(OUTDIR)\BCIEngProbe.dll" /implib:"$(OUTDIR)\BCIEngProbe.lib" /libpath:"..\..\jclass\debug" /libpath:"..\..\bcieng\bciengj\debug" /machine:IA64
+LINK32_OBJS= \
+	"$(INTDIR)\BCIEngProbe.obj" \
+	"$(INTDIR)\BCIEngProbeInterface.obj" \
+	"..\BCIEngJ\Debug\BCIEngJ.lib"
+
+"$(OUTDIR)\BCIEngProbe.dll" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "BCIEngProbe - X64 Release"
+
+OUTDIR=.\Release
+INTDIR=.\Release
+# Begin Custom Macros
+OutDir=.\Release
+# End Custom Macros
+
+!IF "$(RECURSE)" == "0"
+
+ALL : "$(OUTDIR)\BCIEngProbe.dll"
+
+!ELSE
+
+ALL : "BCIEngJ - X64 Release" "$(OUTDIR)\BCIEngProbe.dll"
+
+!ENDIF
+
+!IF "$(RECURSE)" == "1"
+CLEAN :"BCIEngJ - X64 ReleaseCLEAN"
+!ELSE
+CLEAN :
+!ENDIF
+	-@erase "$(INTDIR)\BCIEngProbe.obj"
+	-@erase "$(INTDIR)\BCIEngProbeInterface.obj"
+	-@erase "$(INTDIR)\vc80.idb"
+	-@erase "$(INTDIR)\vc80.pdb"
+	-@erase "$(OUTDIR)\BCIEngProbe.dll"
+	-@erase "$(OUTDIR)\BCIEngProbe.exp"
+	-@erase "$(OUTDIR)\BCIEngProbe.lib"
+	-@erase "$(OUTDIR)\BCIEngProbe.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=cl.exe
+CPP_PROJ=/nologo /MT /W3 /EHsc /Zi /O2 /I "..\..\BCIEng\\" /I "..\..\BCIEng\BCIEngJ" /I "..\..\JClass" /I "..\..\common" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"$(INTDIR)\BCIEngProbe.pch" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /c
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /win32
+RSC=rc.exe
+
+LINK32=link.exe
+LINK32_FLAGS=kernel32.lib bciengj.lib bufferoverflowU.lib /nologo /dll /incremental:no /pdb:"$(OUTDIR)\BCIEngProbe.pdb" /debug /out:"$(OUTDIR)\BCIEngProbe.dll" /implib:"$(OUTDIR)\BCIEngProbe.lib" /libpath:"..\..\jclass\release" /libpath:"..\..\bcieng\bciengj\release" /machine:AMD64
+LINK32_OBJS= \
+	"$(INTDIR)\BCIEngProbe.obj" \
+	"$(INTDIR)\BCIEngProbeInterface.obj" \
+	"..\BCIEngJ\Release\BCIEngJ.lib"
+
+"$(OUTDIR)\BCIEngProbe.dll" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "BCIEngProbe - X64 Debug"
+
+OUTDIR=.\Debug
+INTDIR=.\Debug
+# Begin Custom Macros
+OutDir=.\Debug
+# End Custom Macros
+
+!IF "$(RECURSE)" == "0"
+
+ALL : "$(OUTDIR)\BCIEngProbe.dll"
+
+!ELSE
+
+ALL : "BCIEngJ - X64 Debug" "$(OUTDIR)\BCIEngProbe.dll"
+
+!ENDIF
+
+!IF "$(RECURSE)" == "1"
+CLEAN :"BCIEngJ - X64 DebugCLEAN"
+!ELSE
+CLEAN :
+!ENDIF
+	-@erase "$(INTDIR)\BCIEngProbe.obj"
+	-@erase "$(INTDIR)\BCIEngProbe.sbr"
+	-@erase "$(INTDIR)\BCIEngProbeInterface.obj"
+	-@erase "$(INTDIR)\BCIEngProbeInterface.sbr"
+	-@erase "$(INTDIR)\vc80.idb"
+	-@erase "$(INTDIR)\vc80.pdb"
+	-@erase "$(OUTDIR)\BCIEngProbe.dll"
+	-@erase "$(OUTDIR)\BCIEngProbe.exp"
+	-@erase "$(OUTDIR)\BCIEngProbe.lib"
+	-@erase "$(OUTDIR)\BCIEngProbe.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=cl.exe
+CPP_PROJ=/nologo /MDd /W3 /Gm /EHsc /Zi /Od /I "..\..\BCIEng\\" /I "..\..\BCIEng\BCIEngJ" /I "..\..\JClass" /I "..\..\common" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /FR"$(INTDIR)\\" /Fp"$(INTDIR)\BCIEngProbe.pch" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /GZ /c
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $<
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /win32
+RSC=rc.exe
+
+LINK32=link.exe
+LINK32_FLAGS=bciengj.lib kernel32.lib bufferoverflowU.lib /nologo /dll /incremental:no /pdb:"$(OUTDIR)\BCIEngProbe.pdb" /debug /out:"$(OUTDIR)\BCIEngProbe.dll" /implib:"$(OUTDIR)\BCIEngProbe.lib" /libpath:"..\..\jclass\debug" /libpath:"..\..\bcieng\bciengj\debug" /machine:AMD64
+LINK32_OBJS= \
+	"$(INTDIR)\BCIEngProbe.obj" \
+	"$(INTDIR)\BCIEngProbeInterface.obj" \
+	"..\BCIEngJ\Debug\BCIEngJ.lib"
+
+"$(OUTDIR)\BCIEngProbe.dll" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ENDIF
+
+
+!IF "$(CFG)" == "BCIEngProbe - IA64 Release" || "$(CFG)" == "BCIEngProbe - IA64 Debug" || "$(CFG)" == "BCIEngProbe - X64 Release" || "$(CFG)" == "BCIEngProbe - X64 Debug"
+SOURCE=.\BCIEngProbe.cpp
+
+!IF  "$(CFG)" == "BCIEngProbe - IA64 Release"
+
+
+"$(INTDIR)\BCIEngProbe.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "BCIEngProbe - IA64 Debug"
+
+
+"$(INTDIR)\BCIEngProbe.obj"	"$(INTDIR)\BCIEngProbe.sbr" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "BCIEngProbe - X64 Release"
+
+
+"$(INTDIR)\BCIEngProbe.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "BCIEngProbe - X64 Debug"
+
+
+"$(INTDIR)\BCIEngProbe.obj"	"$(INTDIR)\BCIEngProbe.sbr" : $(SOURCE) "$(INTDIR)"
+
+
+!ENDIF
+
+SOURCE=.\BCIEngProbeInterface.cpp
+
+!IF  "$(CFG)" == "BCIEngProbe - IA64 Release"
+
+
+"$(INTDIR)\BCIEngProbeInterface.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "BCIEngProbe - IA64 Debug"
+
+
+"$(INTDIR)\BCIEngProbeInterface.obj"	"$(INTDIR)\BCIEngProbeInterface.sbr" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "BCIEngProbe - X64 Release"
+
+
+"$(INTDIR)\BCIEngProbeInterface.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "BCIEngProbe - X64 Debug"
+
+
+"$(INTDIR)\BCIEngProbeInterface.obj"	"$(INTDIR)\BCIEngProbeInterface.sbr" : $(SOURCE) "$(INTDIR)"
+
+
+!ENDIF
+
+!IF  "$(CFG)" == "BCIEngProbe - IA64 Release"
+
+"BCIEngJ - IA64 Release" :
+   cd "..\BCIEngJ"
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngJ.mak64 CFG="BCIEngJ - IA64 Release"
+   cd "..\BCIEngProbe"
+
+"BCIEngJ - IA64 ReleaseCLEAN" :
+   cd "..\BCIEngJ"
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngJ.mak64 CFG="BCIEngJ - IA64 Release" RECURSE=1 CLEAN
+   cd "..\BCIEngProbe"
+
+!ELSEIF  "$(CFG)" == "BCIEngProbe - IA64 Debug"
+
+"BCIEngJ - IA64 Debug" :
+   cd "..\BCIEngJ"
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngJ.mak64 CFG="BCIEngJ - IA64 Debug"
+   cd "..\BCIEngProbe"
+
+"BCIEngJ - IA64 DebugCLEAN" :
+   cd "..\BCIEngJ"
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngJ.mak64 CFG="BCIEngJ - IA64 Debug" RECURSE=1 CLEAN
+   cd "..\BCIEngProbe"
+
+!ELSEIF  "$(CFG)" == "BCIEngProbe - X64 Release"
+
+"BCIEngJ - X64 Release" :
+   cd "..\BCIEngJ"
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngJ.mak64 CFG="BCIEngJ - X64 Release"
+   cd "..\BCIEngProbe"
+
+"BCIEngJ - X64 ReleaseCLEAN" :
+   cd "..\BCIEngJ"
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngJ.mak64 CFG="BCIEngJ - X64 Release" RECURSE=1 CLEAN
+   cd "..\BCIEngProbe"
+
+!ELSEIF  "$(CFG)" == "BCIEngProbe - X64 Debug"
+
+"BCIEngJ - X64 Debug" :
+   cd "..\BCIEngJ"
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngJ.mak64 CFG="BCIEngJ - X64 Debug"
+   cd "..\BCIEngProbe"
+
+"BCIEngJ - X64 DebugCLEAN" :
+   cd "..\BCIEngJ"
+   $(MAKE) /$(MAKEFLAGS) /F .\BCIEngJ.mak64 CFG="BCIEngJ - X64 Debug" RECURSE=1 CLEAN
+   cd "..\BCIEngProbe"
+
+!ENDIF
+
+
+!ENDIF
+

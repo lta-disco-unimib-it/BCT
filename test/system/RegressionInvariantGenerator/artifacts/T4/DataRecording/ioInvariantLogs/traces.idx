@@ -1,0 +1,4 @@
+packageA.A.m(()I)=0.dtrace
+packageB.B.m(()I)=1.dtrace
+packageC.C.m(()I)=2.dtrace
+packageD.D.m(()I)=3.dtrace

@@ -1,0 +1,10 @@
+
+program.ClassA.<init>((I)V):::ENTER
+parameter[0].intValue()
+1
+1
+
+program.ClassA.<init>((I)V):::EXIT1
+parameter[0].intValue()
+1
+1

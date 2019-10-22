@@ -1,0 +1,75 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "BCIEng"=..\..\BCIEng.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    BCIEng
+    ..\..
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "BCIEngJ"=..\BCIEngJ.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    BCIEngJ
+    ..
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "BciEngJTest"=.\BciEngJTest.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    BciEngJTest
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name BCIEng
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name BCIEngJ
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    BCIEngJTest
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

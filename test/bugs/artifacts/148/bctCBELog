@@ -1,0 +1,104 @@
+<CommonBaseEvent creationTime="2009-11-09T17:42:33.499Z" localInstanceId="BCTMODELVIOLATION-0" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>net.n3.nanoxml.StdXMLReader.&lt;init&gt;:178</values>
+		<values>net.n3.nanoxml.StdXMLReader.fileReader:37</values>
+		<values>tests.RVecChildNamed3_wy_v2.main:45</values>
+		<values>tests.NanoRVecChildNamed3_wy_v2Tests.test0:18</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0:-2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke:39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke:25</values>
+		<values>java.lang.reflect.Method.invoke:597</values>
+		<values>junit.framework.TestCase.runTest:164</values>
+		<values>junit.framework.TestCase.runBare:130</values>
+		<values>junit.framework.TestResult$1.protect:106</values>
+		<values>junit.framework.TestResult.runProtected:124</values>
+		<values>junit.framework.TestResult.run:109</values>
+		<values>junit.framework.TestCase.run:120</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run:130</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run:38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run:386</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>net.n3.nanoxml.StdXMLReader.fileReader((Ljava.lang.String;)Lnet.n3.nanoxml.IXMLReader;)</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>FSA</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>java.lang.Object.&lt;init&gt;(()V)</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>UnexpectedEvent</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentStates" type="stringArray">
+		<values>q1</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.28-16-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="18945@laptop" subComponent="util.cbe.CBEEventExporterUtil" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" component="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" componentIdType="Application" executionEnvironment="Linux_i386#2.6.28-16-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="18945@laptop" subComponent="net.n3.nanoxml.StdXMLReader.fileReader:37" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2009-11-09T17:42:34.197Z" localInstanceId="BCTMODELVIOLATION-1" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>net.n3.nanoxml.StdXMLReader.&lt;init&gt;:186</values>
+		<values>net.n3.nanoxml.StdXMLReader.fileReader:37</values>
+		<values>tests.RVecChildNamed3_wy_v2.main:45</values>
+		<values>tests.NanoRVecChildNamed3_wy_v2Tests.test0:18</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0:-2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke:39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke:25</values>
+		<values>java.lang.reflect.Method.invoke:597</values>
+		<values>junit.framework.TestCase.runTest:164</values>
+		<values>junit.framework.TestCase.runBare:130</values>
+		<values>junit.framework.TestResult$1.protect:106</values>
+		<values>junit.framework.TestResult.runProtected:124</values>
+		<values>junit.framework.TestResult.run:109</values>
+		<values>junit.framework.TestCase.run:120</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>junit.framework.TestSuite.runTest:230</values>
+		<values>junit.framework.TestSuite.run:225</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run:130</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run:38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests:673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run:386</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main:196</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>java.io.LineNumberReader.&lt;init&gt;((Ljava.io.Reader;)V):::ENTER</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>IO</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>parameter[0].sd.leftoverChar.charValue() == &quot;\000&quot;</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>NotValid</values>
+	</extendedDataElements>
+	<extendedDataElements name="ParametersStates" type="string">
+		<values>Parameters : &#xA;parameter[0].sd.channelsAvailable.booleanValue()&#xA;1&#xA;1&#xA;parameter[0].sd.bb.bigEndian.booleanValue()&#xA;1&#xA;1&#xA;parameter[0].sd.MIN_BYTE_BUFFER_SIZE.intValue()&#xA;32&#xA;1&#xA;parameter[0].sd.cs.extendedProvider&#xA;null&#xA;1&#xA;parameter[0].sd.bb.capacity.intValue()&#xA;8192&#xA;1&#xA;parameter[0].sd.bb.offset.intValue()&#xA;0&#xA;1&#xA;parameter[0].sd.decoder.averageCharsPerByte.floatValue()&#xA;1.0&#xA;1&#xA;parameter[0].sd.cs.extendedProviderProbed.booleanValue()&#xA;0&#xA;1&#xA;parameter[0].sd.$assertionsDisabled.booleanValue()&#xA;1&#xA;1&#xA;parameter[0].sd.decoder.ST_FLUSHED.intValue()&#xA;3&#xA;1&#xA;parameter[0].skipBuffer&#xA;null&#xA;1&#xA;parameter[0].sd.decoder.ST_END.intValue()&#xA;2&#xA;1&#xA;parameter[0].sd.ch&#xA;null&#xA;1&#xA;parameter[0].sd.isOpen.booleanValue()&#xA;1&#xA;1&#xA;parameter[0].sd.decoder.$assertionsDisabled.booleanValue()&#xA;1&#xA;1&#xA;parameter[0].lock.in.channel&#xA;null&#xA;1&#xA;parameter[0].sd.cs.extendedProviderLock&#xA;!NULL&#xA;1&#xA;parameter[0].sd.cs.defaultCharset&#xA;@parameter[0].sd.cs&#xA;1&#xA;parameter[0].lock.skipBuffer&#xA;null&#xA;1&#xA;parameter[0].sd.bb.address.longValue()&#xA;0&#xA;1&#xA;parameter[0].sd.leftoverChar.charValue()&#xA;&quot;?&quot;&#xA;1&#xA;parameter[0].sd.cs.aliasSet&#xA;null&#xA;1&#xA;parameter[0].lock.in.SKIP_BUFFER_SIZE.intValue()&#xA;2048&#xA;1&#xA;parameter[0].sd.cs.bugLevel.toString()&#xA;&quot;&quot;&#xA;1&#xA;parameter[0].lock.SKIP_BUFFER_SIZE.intValue()&#xA;2048&#xA;1&#xA;parameter[0].sd.lock&#xA;@parameter[0]&#xA;1&#xA;parameter[0].sd.bb.mark.intValue()&#xA;-1&#xA;1&#xA;parameter[0].lock.in.skipBuffer&#xA;null&#xA;1&#xA;parameter[0].sd.decoder.maxCharsPerByte.floatValue()&#xA;1.0&#xA;1&#xA;parameter[0].lock.pos.intValue()&#xA;1&#xA;1&#xA;parameter[0].sd.decoder.replacement.toString()&#xA;&quot;�&quot;&#xA;1&#xA;parameter[0].sd.skipBuffer&#xA;null&#xA;1&#xA;parameter[0].sd.bb.nativeByteOrder.booleanValue()&#xA;0&#xA;1&#xA;parameter[0].sd.DEFAULT_BYTE_BUFFER_SIZE.intValue()&#xA;8192&#xA;1&#xA;parameter[0].sd.decoder.unmappableCharacterAction&#xA;@parameter[0].sd.decoder.malformedInputAction&#xA;1&#xA;parameter[0].sd.decoder.ST_RESET.intValue()&#xA;0&#xA;1&#xA;parameter[0].sd.haveLeftoverChar.booleanValue()&#xA;0&#xA;1&#xA;parameter[0].sd.decoder.state.intValue()&#xA;0&#xA;1&#xA;parameter[0].sd.cs.name.toString()&#xA;&quot;UTF-8&quot;&#xA;1&#xA;parameter[0].sd.bb.limit.intValue()&#xA;0&#xA;1&#xA;parameter[0].maxSkipBufferSize.intValue()&#xA;8192&#xA;1&#xA;parameter[0].sd.decoder.ST_CODING.intValue()&#xA;1&#xA;1&#xA;parameter[0].sd.maxSkipBufferSize.intValue()&#xA;8192&#xA;1&#xA;parameter[0].sd.decoder.charset&#xA;@parameter[0].sd.cs&#xA;1&#xA;parameter[0].sd.bb.position.intValue()&#xA;0&#xA;1&#xA;parameter[0].sd.bb.isReadOnly.booleanValue()&#xA;0&#xA;1&#xA;parameter[0].sd.in&#xA;@parameter[0].lock&#xA;1&#xA;</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.28-16-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="18945@laptop" subComponent="util.cbe.CBEEventExporterUtil" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" component="org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main" componentIdType="Application" executionEnvironment="Linux_i386#2.6.28-16-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="18945@laptop" subComponent="net.n3.nanoxml.StdXMLReader.&lt;init&gt;:186" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>

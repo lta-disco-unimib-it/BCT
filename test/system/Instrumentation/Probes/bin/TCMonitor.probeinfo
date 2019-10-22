@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probekit>
+  <probe>
+    <target className="*Test" method="test*" package="test" signature="*" type="include"/>
+    <target className="*" method="*" package="*" signature="*" type="exclude"/>
+    <import text="probes.TCObserverProbeInstrumented"/>
+  </probe>
+</probekit>

@@ -1,0 +1,3 @@
+COMPONENT	ModifiedFunctions
+INCLUDE	.*	.*	_ZN7workers10WorkersMap9getSalaryESs
+INCLUDE	.*	.*	_ZN7workers10WorkersMap16getAverageSalaryESt4listISsSaISsEE

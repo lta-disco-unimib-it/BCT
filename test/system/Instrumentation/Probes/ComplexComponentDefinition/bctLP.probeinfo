@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probekit id="bctComponentLogger" version="">
+  <probe>
+    <target className="*" method="*" package="componentPackage*" signature="*" type="include"/>
+    <target className="*" method="*" package="*" signature="*" type="exclude"/>
+    <fragmentAtClassScope></fragmentAtClassScope>
+  </probe>
+</probekit>

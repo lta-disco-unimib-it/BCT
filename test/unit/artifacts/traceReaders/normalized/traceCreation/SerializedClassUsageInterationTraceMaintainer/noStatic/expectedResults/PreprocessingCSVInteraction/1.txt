@@ -1,0 +1,2 @@
+program.ClassA.<init>((Lprogram.ClassB;)V)
+|

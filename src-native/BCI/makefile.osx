@@ -1,0 +1,86 @@
+#**********************************************************************
+# Copyright (c) 2005, 2006 IBM Corporation and others. 
+# All rights reserved.   This program and the accompanying materials 
+# are made available under the terms of the Eclipse Public License v1.0 
+# which accompanies this distribution, and is available at 
+# http://www.eclipse.org/legal/epl-v10.html         
+# $Id: makefile.osx,v 1.1.2.1 2010-05-04 08:09:04 pastore Exp $ 
+#  
+# Contributors: 
+# IBM - Initial contribution
+#**********************************************************************
+
+#####
+# How to use this makefile:
+# 1. Read the README.txt in this directory
+# 2. The default target will leave the results in ./Debug or ./Release,
+#    as appropriate for the flavor of build you do.
+# 3. The "package" target will zip up the necessary pieces for easy transport.
+#####
+alias uname="echo Linux x86_64"
+ENVIRON = linux
+ARCH=X86_64
+include makefile.include
+include Common/Makefile.include
+
+#####
+# Some parameters specific to packaging up the final results.
+# Perhaps some of this should be in Common/Makefile.include?
+#####
+ifdef debug
+  OUTDIR=Debug
+else
+  OUTDIR=Release
+endif
+ifndef ZIP
+  ZIP=jar cMf
+endif
+ifndef ZIP_EXT
+  ZIP_EXT=zip
+endif
+CP=cp -f
+
+all : $(OUTDIR) $(OUTDIR)/probeinstrumenter $(OUTDIR)/BCIEngProbe$(SHLIB_EXT)
+
+$(OUTDIR)/probeinstrumenter :
+	cd BCIEng/BCIEngProbe/ProbeInstrumenter; \
+	$(MAKE) $(MAKEFILE_NAME) probeinstrumenter
+	$(CP) BCIEng/BCIEngProbe/ProbeInstrumenter/probeinstrumenter $(OUTDIR)
+	
+#
+# Make the shared library.
+# To do this we have to extract all the *.o files from the archives
+# and pass them to the linker.
+#
+
+$(OUTDIR)/BCIEngProbe$(SHLIB_EXT) : $(OUTDIR)/probeinstrumenter
+	rm -rf $(OUTDIR)/otemp
+	mkdir -p $(OUTDIR)/otemp
+	cd $(OUTDIR)/otemp ; $(AR) x ../../BCIEng/libBCIEng.a
+	cd $(OUTDIR)/otemp ; $(AR) x ../../BCIEng/BCIEngJ/libBCIEngJ.a
+	cd $(OUTDIR)/otemp ; $(AR) x ../../Common/libCommon.a
+	cd $(OUTDIR)/otemp ; $(AR) x ../../JClass/libJClassStat.a
+	cd $(OUTDIR)/otemp ; $(AR) x ../../BCIEng/BCIEngProbe/libBCIEngProbe.a
+	$(LINK_CXX_SHLIB) $(CXX_SHLIB_FLAG) -o $@ $(OUTDIR)/otemp/*.o $(SHLIB_CXX_LIBS) $(SHLIB_FINAL_FLAGS)
+	rm -rf $(OUTDIR)/otemp
+
+clean : 
+	cd Common; $(MAKE) $(MAKEFILE_NAME) $@
+	cd JClass; $(MAKE) $(MAKEFILE_NAME) $@
+	cd BCIEng; $(MAKE) $(MAKEFILE_NAME) $@
+	cd BCIEng/BCIEngProbe/ProbeInstrumenter; $(MAKE) $(MAKEFILE_NAME) clean
+	rm -rf $(OUTDIR)
+
+# N.M: I removed the clobber target and added everything in there to clean
+
+$(OUTDIR):
+	mkdir $(OUTDIR)
+	
+###
+# This is a bit over-engineered at the moment because there
+# is only one file, but there is something to be said for
+# consistency. And maybe it will get more complex later. :-)
+###
+package: all
+	cd $(OUTDIR); $(ZIP) ../probekit.$(ZIP_EXT) probeinstrumenter BCIEngProbe.so
+

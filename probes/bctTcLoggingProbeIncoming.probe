@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probekit>
+  <probe>
+    <import text="probes.TcInteractionLoggerProbe"/>
+    <import text="probes.TcIoLoggerProbe"/>
+    <fragment type="exit">
+      <data name="className" type="className"/>
+      <data name="args" type="args"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="methodName" type="methodName"/>
+      <data name="returnedObject" type="returnedObject"/>
+      <code>try{
+   TcIoLoggerProbe.ioLogExit(className,methodName,methodSig,args,returnedObject);
+   TcInteractionLoggerProbe.intLogExit(className,methodName,methodSig,args);
+
+} catch ( Exception e ){
+ 	System.out.println(&quot;EXC &quot;+e.getMessage());
+}</code>
+    </fragment>
+    <fragment type="entry">
+      <data name="className" type="className"/>
+      <data name="args" type="args"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="methodName" type="methodName"/>
+      <code>try{
+   TcIoLoggerProbe.ioLogEnter(className,methodName,methodSig,args);
+   TcInteractionLoggerProbe.intLogEnter(className,methodName,methodSig,args);
+} catch ( Exception e ){
+ 	System.out.println(&quot;EXC &quot;+e.getMessage());
+ 	e.printStackTrace();
+}</code>
+    </fragment>
+  </probe>
+</probekit>

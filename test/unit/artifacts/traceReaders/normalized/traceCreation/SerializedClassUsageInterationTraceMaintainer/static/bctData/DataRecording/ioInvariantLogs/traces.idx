@@ -1,0 +1,14 @@
+program.ProgramForStaticTesting.main(([Ljava.lang.String;)V)=0.dtrace
+program.ClassB.<init>(()V)=1.dtrace
+program.ClassC.<init>(()V)=2.dtrace
+program.ClassD.<init>(()V)=3.dtrace
+program.StaticClassA.<clinit>(()V)=4.dtrace
+program.StaticClassA.internalConstructor(()V)=5.dtrace
+program.StaticClassA.methodC(()V)=6.dtrace
+program.StaticClassA.methodD((Lprogram.ClassB;)V)=7.dtrace
+program.StaticClassA.methodA((Lprogram.ClassB;)V)=8.dtrace
+program.ClassB.methodBA(()V)=9.dtrace
+program.ClassB.methodBB((I)V)=10.dtrace
+program.StaticClassA.methodE(()V)=11.dtrace
+program.StaticClassB.methodBA(()V)=12.dtrace
+program.StaticClassB.methodBB((I)V)=13.dtrace

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probekit>
+  <probe>
+    <target className="*" method="*" package="packageC*" signature="*" type="include"/>
+    <target className="*" method="*" package="*" signature="*" type="exclude"/>
+    <import text="probes.InteractionLoggerProbe"/>
+    <import text="probes.IoLoggerProbe"/>
+    <import text="probes.ComponentCallStack"/>
+    <fragmentAtClassScope>int id = 0;</fragmentAtClassScope>
+    <fragment type="exit">
+      <data name="className" type="className"/>
+      <data name="args" type="args"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="methodName" type="methodName"/>
+      <data name="returnedObject" type="returnedObject"/>
+      <code>try{
+    ComponentCallStack s = ComponentCallStack.getInstance();
+   s.pop();
+   if ( bctComponentLogger1_probe.Probe_0.class == s.lastElement() ){
+   	   return;
+	}
+   IoLoggerProbe.ioLogExit(className,methodName,methodSig,args,returnedObject);
+   InteractionLoggerProbe.intLogExit(className,methodName,methodSig,args);
+
+	} catch ( Exception e ){
+ 	System.out.println(&quot;BCT COMPONENT LOGGER EXCEPTION: &quot;+e.getMessage());
+ 	e.printStackTrace();
+}</code>
+    </fragment>
+    <fragment type="entry">
+      <data name="className" type="className"/>
+      <data name="args" type="args"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="methodName" type="methodName"/>
+      <code>try{
+		
+      ComponentCallStack s = ComponentCallStack.getInstance();
+	   if ( bctComponentLogger1_probe.Probe_0.class == s.lastElement() ){
+		   s.push( bctComponentLogger1_probe.Probe_0.class );
+	   	   return;
+		}
+	   s.push( bctComponentLogger1_probe.Probe_0.class );
+   IoLoggerProbe.ioLogEnter(className,methodName,methodSig,args);
+   InteractionLoggerProbe.intLogEnter(className,methodName,methodSig,args);
+} catch ( Exception e ){
+ 	System.out.println(&quot;BCT COMPONENT LOGGER EXCEPTION: &quot;+e.getMessage());
+ 	e.printStackTrace();
+}</code>
+    </fragment>
+  </probe>
+  <probe>
+    <import text="probes.IoLoggerProbe"/>
+    <import text="probes.InteractionLoggerProbe"/>
+    <fragmentAtClassScope>int id = 1;</fragmentAtClassScope>
+    <fragment type="afterCall">
+      <data name="className" type="className"/>
+      <data name="args" type="args"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="methodName" type="methodName"/>
+      <data name="returnedObject" type="returnedObject"/>
+      <code>try{
+      ComponentCallStack.getInstance().pop();
+   IoLoggerProbe.ioLogExit(className,methodName,methodSig,args,returnedObject);
+   InteractionLoggerProbe.intLogExit(className,methodName,methodSig,args);
+} catch ( Exception e ){
+ 	System.out.println(&quot;BCT COMPONENT LOGGER EXCEPTION: &quot;+e.getMessage());
+ 	e.printStackTrace();
+}</code>
+    </fragment>
+    <fragment type="beforeCall">
+      <data name="className" type="className"/>
+      <data name="args" type="args"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="methodName" type="methodName"/>
+      <code>try{
+	
+       ComponentCallStack s = ComponentCallStack.getInstance();
+	   s.push( bctComponentLogger1_probe.Probe_1.class );
+      
+	IoLoggerProbe.ioLogEnter(className,methodName,methodSig,args);
+   InteractionLoggerProbe.intLogEnter(className,methodName,methodSig,args);
+} catch ( Exception e ){
+ 	System.out.println(&quot;BCT COMPONENT LOGGER EXCEPTION: &quot;+e.getMessage());
+ 	e.printStackTrace();
+}</code>
+    </fragment>
+  </probe>
+</probekit>

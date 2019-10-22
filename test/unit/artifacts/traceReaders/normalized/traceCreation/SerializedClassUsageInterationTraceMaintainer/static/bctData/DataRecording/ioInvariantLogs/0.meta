@@ -1,0 +1,6 @@
+timestamp=1297095688099
+tests=*program.ProgramForStaticTesting.main,
+#
+timestamp=1297095688134
+tests=*program.ProgramForStaticTesting.main,
+#

@@ -1,0 +1,92 @@
+// This probe monitor all calls, also the one within components boundaries 
+/* probekit /BCT_new/probes/bctComponentLogger.probe
+*/
+// "imports" specifications for probes (if any):
+import probes.LoggerProbe; // from unnamed_probe
+
+class bctLPAllPROBENUM {
+	// Class for probe unnamed_probe
+	public static class Probe_0 {
+		// Fragment at class scope
+		int id = 1;
+		public static void _afterCall (
+				Object /*returnedObject*/ returnedObject,
+				String /*className*/ className,
+				String /*methodName*/ methodName,
+				String /*methodSig*/ methodSig,
+				Object[] /*args*/ args      ) {
+			// Internal signature for this method: (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+//			------------------ begin user-written fragment code ----------------
+			try{
+				
+				
+				LoggerProbe.exit(className,methodName,methodSig,args,returnedObject);
+				
+			} catch ( Throwable e ){
+				System.err.println("BCT COMPONENT LOGGER ERROR/EXCEPTION: "+e.getMessage());
+				e.printStackTrace();
+			}
+//			------------------- end user-written fragment code -----------------
+		}
+		public static void _beforeCall (
+				String /*className*/ className,
+				String /*methodName*/ methodName,
+				String /*methodSig*/ methodSig,
+				Object[] /*args*/ args      ) {
+			// Internal signature for this method: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+			try{
+				//System.out.println("#"+Thread.currentThread().getId()+"#"+"CALLENTER"+bctLPPROBENUM.class);
+				
+
+				LoggerProbe.enter(className,methodName,methodSig,args);
+			} catch ( Throwable e ){
+				System.err.println("BCT COMPONENT LOGGER ERROR/EXCEPTION: "+e.getMessage());
+				e.printStackTrace();
+			}
+
+		}
+	}
+	// Class for probe unnamed_probe
+	public static class Probe_1 {
+		// Fragment at class scope
+		int id = 0;
+		public static void _exit (
+				Object /*returnedObject*/ returnedObject,
+				String /*className*/ className,
+				String /*methodName*/ methodName,
+				String /*methodSig*/ methodSig,
+				Object[] /*args*/ args      ) {
+			// Internal signature for this method: (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+			try{
+				
+				LoggerProbe.exit(className,methodName,methodSig,args,returnedObject);
+
+			} catch ( Throwable e ){
+				System.err.println("BCT COMPONENT LOGGER ERROR/EXCEPTION: "+e.getMessage());
+				e.printStackTrace();
+			}
+
+		}
+		
+		
+		public static void _entry (
+				String /*className*/ className,
+				String /*methodName*/ methodName,
+				String /*methodSig*/ methodSig,
+				Object[] /*args*/ args      ) {
+			// Internal signature for this method: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+			try{
+
+				
+				LoggerProbe.enter(className,methodName,methodSig,args);
+			} catch ( Throwable e ){
+				System.err.println("BCT COMPONENT LOGGER ERROR/EXCEPTION: "+e.getMessage());
+				e.printStackTrace();
+			}
+
+		}
+	}
+}

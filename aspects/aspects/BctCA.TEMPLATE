@@ -1,0 +1,170 @@
+package aspects;
+
+import org.codehaus.aspectwerkz.joinpoint.ConstructorRtti;
+import org.codehaus.aspectwerkz.joinpoint.JoinPoint;
+import org.codehaus.aspectwerkz.joinpoint.MethodRtti;
+
+import probes.ComponentCallStack;
+
+import check.AspectFlowChecker;
+import check.Checker;
+import check.InteractionInvariantHandler;
+
+
+import util.ClassNameAndDefinitionFormatter;
+
+public class BctCAASPECTNUM {
+
+	public static class Exec {
+
+		public void checkEntry(final JoinPoint joinPoint) {
+			
+			//System.out.println("ENTER "+BctLA0.Exec.class.getName()+" "+getSignature(joinPoint));
+			try {	
+				ComponentCallStack s = ComponentCallStack.getInstance();
+				if ( BctCAASPECTNUM.Exec.class == s.lastElement() ){
+					s.push( BctCAASPECTNUM.Exec.class );
+					return;
+				}
+				s.push( BctCAASPECTNUM.Exec.class );
+
+				Checker.checkIoEnter(getSignature(joinPoint), getParameters(joinPoint));
+				processEvent(joinPoint, InteractionInvariantHandler.ENTER);
+
+
+			} catch ( Exception e ){
+				e.printStackTrace();
+			}
+
+		}
+
+		public void checkExit(final JoinPoint joinPoint) {
+			
+			
+			
+			
+			//System.out.println("EXIT "+BctLA0.Exec.class.getName()+" "+getSignature(joinPoint));
+			try {
+				ComponentCallStack s = ComponentCallStack.getInstance();
+				s.pop();
+				if ( BctCAASPECTNUM.Exec.class == s.lastElement() ){
+					return;
+				}
+
+
+				Object[] parameters;
+
+				if (joinPoint.getRtti() instanceof MethodRtti) {
+					MethodRtti rtti = (MethodRtti) joinPoint.getRtti();
+					parameters  = rtti.getParameterValues();
+					if ( rtti.getReturnType() != void.class ){
+						Checker.checkIoExit(getSignature(joinPoint), parameters, rtti.getReturnValue() );
+					} else {
+						Checker.checkIoExit(getSignature(joinPoint), parameters );
+					}
+				} else {
+					//Constructor
+					Checker.checkIoExit(getSignature(joinPoint), new Object[0] );
+				}
+
+				processEvent(joinPoint, InteractionInvariantHandler.EXIT);
+
+			} catch ( Exception e ){
+				e.printStackTrace();
+			}
+
+		}
+
+	}
+
+	public static class Call {
+
+		public void checkEntry(final JoinPoint joinPoint) {
+			//System.out.println("ENTER "+BctLA0.Call.class.getName()+" "+getSignature(joinPoint));
+			try {	
+				ComponentCallStack s = ComponentCallStack.getInstance();
+				s.push( BctCAASPECTNUM.Call.class );
+
+				Checker.checkIoEnter(getSignature(joinPoint), getParameters(joinPoint));
+				processEvent(joinPoint, InteractionInvariantHandler.ENTER);
+
+			} catch ( Exception e ){
+				e.printStackTrace();
+			}
+
+		}
+
+		public void checkExit(final JoinPoint joinPoint) {
+			//System.out.println("EXIT "+BctLA0.Call.class.getName()+" "+getSignature(joinPoint));
+			try {
+				ComponentCallStack.getInstance().pop();
+
+				Object[] parameters;
+
+				if (joinPoint.getRtti() instanceof MethodRtti) {
+					MethodRtti rtti = (MethodRtti) joinPoint.getRtti();
+					parameters  = rtti.getParameterValues();
+					if ( rtti.getReturnType() != void.class ){
+						Checker.checkIoExit(getSignature(joinPoint), parameters, rtti.getReturnValue() );
+					} else {
+						Checker.checkIoExit(getSignature(joinPoint), parameters );
+					}
+				} else {
+					//Constructor
+					Checker.checkIoExit(getSignature(joinPoint), new Object[0] );
+				}
+				processEvent(joinPoint, InteractionInvariantHandler.EXIT);
+
+
+			} catch ( Exception e ){
+				e.printStackTrace();
+			}
+
+		}
+
+
+	}
+
+
+	private static String getSignature(JoinPoint joinPoint){
+		String signature = null;
+		if ( joinPoint.getRtti() instanceof MethodRtti ) {
+			MethodRtti rtti = (MethodRtti)joinPoint.getRtti();
+			signature = ClassNameAndDefinitionFormatter.estractMethodSignature(joinPoint.getTargetClass().getName(),rtti.getName(), rtti.getReturnType(), rtti.getParameterTypes());
+		}
+		else {
+			ConstructorRtti rtti = (ConstructorRtti)joinPoint.getRtti();
+			signature = ClassNameAndDefinitionFormatter.estractConstructorSignature(rtti.getName(), rtti.getParameterTypes());
+		}
+		return signature;
+	}
+
+
+	private static Object[] getParameters(JoinPoint joinPoint){
+		if (joinPoint.getRtti() instanceof MethodRtti) {
+			MethodRtti rtti = (MethodRtti) joinPoint.getRtti();
+			return rtti.getParameterValues();
+		} else {
+			return new Object[0];
+		}
+	}
+
+	private static void processEvent(JoinPoint joinPoint, InteractionInvariantHandler.MethodCallType eventType) {
+		String signature = null;
+		if ( joinPoint.getRtti() instanceof MethodRtti ) {
+			MethodRtti rtti = (MethodRtti)joinPoint.getRtti();
+			signature = ClassNameAndDefinitionFormatter.estractMethodSignature(joinPoint.getTargetClass().getName(),rtti.getName(),rtti.getReturnType(),rtti.getParameterTypes());
+		}
+		else {
+			ConstructorRtti rtti = (ConstructorRtti)joinPoint.getRtti();
+			signature = ClassNameAndDefinitionFormatter.estractConstructorSignature(rtti.getName(),rtti.getParameterTypes());
+		}
+		long threadID = Thread.currentThread().getId();
+
+
+		if ( eventType.equals(InteractionInvariantHandler.ENTER))
+			Checker.checkInteractionEnter(signature, threadID );
+		else
+			Checker.checkInteractionExit(signature, threadID );
+	}
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probekit>
+  <probe>
+    <target className="*Test" method="test*" package="test" signature="*" type="include"/>
+    <target className="*" method="*" package="*" signature="*" type="exclude"/>
+    <import text="probes.TCObserverProbeInstrumented"/>
+    <fragment type="exit">
+      <data name="className" type="className"/>
+      <data name="methodName" type="methodName"/>
+      <data name="methodSig" type="methodSig"/>
+      <code>try{
+   TCObserverProbeInstrumented.exit(className,methodName,methodSig);
+} catch ( Exception e ){
+ 	System.out.println(&quot;EXC &quot;+e.getMessage());
+}</code>
+    </fragment>
+    <fragment type="entry">
+      <data name="className" type="className"/>
+      <data name="methodName" type="methodName"/>
+      <data name="methodSig" type="methodSig"/>
+      <code>try{
+   TCObserverProbeInstrumented.enter(className,methodName,methodSig);
+} catch ( Exception e ){
+ 	System.out.println(&quot;EXC &quot;+e.getMessage());
+}</code>
+    </fragment>
+  </probe>
+</probekit>

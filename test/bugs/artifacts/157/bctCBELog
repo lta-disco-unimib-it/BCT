@@ -1,0 +1,88 @@
+
+<CommonBaseEvent creationTime="2009-12-26T18:24:24.137Z" globalInstanceId="1261851651334@3782@amon.disco.unimib.it@329" localInstanceId="BCTMODELVIOLATION-1261851651334@3782@amon.disco.unimib.it@329" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>org.eclipse.hyades.probekit.ProbeInstrumenterDriver.instrumentItems:318</values>
+		<values>org.eclipse.hyades.probekit.editor.internal.core.instrument.InstrumentOperation.instrument:151</values>
+		<values>org.eclipse.hyades.probekit.editor.internal.core.instrument.InstrumentOperation.run:404</values>
+		<values>org.eclipse.hyades.probekit.editor.internal.ui.instrument.InstrumentRunnableWithProgress.run:69</values>
+		<values>org.eclipse.jface.operation.ModalContext$ModalContextThread.run:113</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>org.eclipse.hyades.probekit.ProbeInstrumenterDriver.instrumentItems((Ljava.io.File;[Ljava.lang.String;Z)I):::EXIT</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>IO</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>returnValue != null</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>NotValid</values>
+	</extendedDataElements>
+	<extendedDataElements name="ParametersStates" type="string">
+		<values>parameter[0].fs.cache.millisUntilExpiration.longValue()&#xA;30000&#xA;1&#xA;parameter[0].fs.javaHomePrefixCache.millisUntilExpiration.longValue()&#xA;30000&#xA;1&#xA;parameter[0].fs.BA_DIRECTORY.intValue()&#xA;4&#xA;1&#xA;parameter[0].fs.javaHome.toString()&#xA;&quot;/opt/sun-jdk-1.5.0.18/jre&quot;&#xA;1&#xA;parameter[0].fs.slash.charValue()&#xA;&quot;/&quot;&#xA;1&#xA;parameter[0].fs.cache.queryOverflow.intValue()&#xA;300&#xA;1&#xA;parameter[0].fs.colon.charValue()&#xA;&quot;:&quot;&#xA;1&#xA;parameter[0].fs.javaHomePrefixCache.queryOverflow.intValue()&#xA;300&#xA;1&#xA;parameter[0].fs.BA_HIDDEN.intValue()&#xA;8&#xA;1&#xA;parameter[0].separator.toString()&#xA;&quot;/&quot;&#xA;1&#xA;parameter[0].fs.javaHomePrefixCache.MAX_ENTRIES.intValue()&#xA;200&#xA;1&#xA;parameter[0].pathSeparatorChar.charValue()&#xA;&quot;:&quot;&#xA;1&#xA;parameter[0].$assertionsDisabled.booleanValue()&#xA;1&#xA;1&#xA;parameter[0].serialVersionUID.longValue()&#xA;301077366599181567&#xA;1&#xA;parameter[0].prefixLength.intValue()&#xA;1&#xA;1&#xA;parameter[0].fs.useCanonCaches.booleanValue()&#xA;1&#xA;1&#xA;parameter[0].fs.cache.MAX_ENTRIES.intValue()&#xA;200&#xA;1&#xA;parameter[0].fs.javaHomePrefixCache.queryCount.intValue()&#xA;66&#xA;1&#xA;parameter[0].pathSeparator.toString()&#xA;&quot;:&quot;&#xA;1&#xA;parameter[0].fs.BA_REGULAR.intValue()&#xA;2&#xA;1&#xA;parameter[0].fs.cache.queryCount.intValue()&#xA;125&#xA;1&#xA;parameter[0].fs.useCanonPrefixCache.booleanValue()&#xA;1&#xA;1&#xA;parameter[0].path.toString()&#xA;&quot;/home/pastore/Experiments/ProbekitNew/workspaceExperiment/Probes/src/monitoring.probescript&quot;&#xA;1&#xA;parameter[0].fs.BA_EXISTS.intValue()&#xA;1&#xA;1&#xA;parameter[0].fs.$assertionsDisabled.booleanValue()&#xA;1&#xA;1&#xA;parameter[0].separatorChar.charValue()&#xA;&quot;/&quot;&#xA;1&#xA;parameter[1]&#xA;!NULL&#xA;1&#xA;parameter[2].booleanValue()&#xA;1&#xA;1&#xA;</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_amd64#2.6.18-gentoo-r6" location="amon.disco.unimib.it/127.0.0.1" locationType="IPV4" processId="3782@amon.disco.unimib.it" subComponent="util.cbe.CBEEventExporterUtil" threadId="25" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.jface.operation.ModalContext$ModalContextThread.run" component="org.eclipse.jface.operation.ModalContext$ModalContextThread.run" componentIdType="Application" executionEnvironment="Linux_amd64#2.6.18-gentoo-r6" location="amon.disco.unimib.it/127.0.0.1" locationType="IPV4" processId="3782@amon.disco.unimib.it" subComponent="org.eclipse.hyades.probekit.ProbeInstrumenterDriver.instrumentItems:318" threadId="25" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2009-12-22T10:06:17.523Z" globalInstanceId="1261476334630@10867@amon.disco.unimib.it@66" localInstanceId="BCTMODELVIOLATION-1261476334630@10867@amon.disco.unimib.it@66" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>org.eclipse.tptp.platform.probekit.util.ProbeResourceBundle.removeResourceAssociations:812</values>
+		<values>org.eclipse.tptp.platform.probekit.builder.ProbeBuilder$CleanVisitor.visit:487</values>
+		<values>org.eclipse.core.internal.resources.Resource$2.visit:105</values>
+		<values>org.eclipse.core.internal.resources.Resource$1.visitElement:57</values>
+		<values>org.eclipse.core.internal.watson.ElementTreeIterator.doIteration:81</values>
+		<values>org.eclipse.core.internal.watson.ElementTreeIterator.doIteration:85</values>
+		<values>org.eclipse.core.internal.watson.ElementTreeIterator.doIteration:85</values>
+		<values>org.eclipse.core.internal.watson.ElementTreeIterator.iterate:126</values>
+		<values>org.eclipse.core.internal.resources.Resource.accept:67</values>
+		<values>org.eclipse.core.internal.resources.Resource.accept:103</values>
+		<values>org.eclipse.core.internal.resources.Resource.accept:87</values>
+		<values>org.eclipse.tptp.platform.probekit.builder.ProbeBuilder.clean:103</values>
+		<values>org.eclipse.core.internal.events.BuildManager$2.run:626</values>
+		<values>org.eclipse.core.runtime.SafeRunner.run:37</values>
+		<values>org.eclipse.core.internal.events.BuildManager.basicBuild:166</values>
+		<values>org.eclipse.core.internal.events.BuildManager.basicBuild:197</values>
+		<values>org.eclipse.core.internal.events.BuildManager$1.run:246</values>
+		<values>org.eclipse.core.runtime.SafeRunner.run:37</values>
+		<values>org.eclipse.core.internal.events.BuildManager.basicBuild:249</values>
+		<values>org.eclipse.core.internal.events.BuildManager.basicBuildLoop:302</values>
+		<values>org.eclipse.core.internal.events.BuildManager.build:334</values>
+		<values>org.eclipse.core.internal.resources.Workspace.build:328</values>
+		<values>org.eclipse.ui.internal.ide.dialogs.CleanDialog.doClean:236</values>
+		<values>org.eclipse.ui.internal.ide.dialogs.CleanDialog$1.runInWorkspace:127</values>
+		<values>org.eclipse.core.internal.resources.InternalWorkspaceJob.run:38</values>
+		<values>org.eclipse.core.internal.jobs.Worker.run:55</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>org.eclipse.core.resources.IResource.getPersistentProperty((Lorg.eclipse.core.runtime.QualifiedName;)Ljava.lang.String;):::EXIT</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>IO</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>returnValue != null</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>NotValid</values>
+	</extendedDataElements>
+	<extendedDataElements name="ParametersStates" type="string">
+		<values>parameter[0].localName.toString()&#xA;&quot;probeinfo&quot;&#xA;1&#xA;parameter[0].qualifier.toString()&#xA;&quot;org.eclipse.tptp.platform.probekit.bundle&quot;&#xA;1&#xA;</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_amd64#2.6.18-gentoo-r6" location="amon.disco.unimib.it/127.0.0.1" locationType="IPV4" processId="10867@amon.disco.unimib.it" subComponent="util.cbe.CBEEventExporterUtil" threadId="21" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.core.internal.jobs.Worker.run" component="org.eclipse.core.internal.jobs.Worker.run" componentIdType="Application" executionEnvironment="Linux_amd64#2.6.18-gentoo-r6" location="amon.disco.unimib.it/127.0.0.1" locationType="IPV4" processId="10867@amon.disco.unimib.it" subComponent="org.eclipse.tptp.platform.probekit.util.ProbeResourceBundle.removeResourceAssociations:812" threadId="21" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>

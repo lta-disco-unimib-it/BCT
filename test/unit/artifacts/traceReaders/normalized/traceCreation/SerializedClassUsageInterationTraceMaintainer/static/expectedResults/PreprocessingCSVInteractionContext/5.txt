@@ -1,0 +1,4 @@
+program.ProgramForStaticTesting:11
+program.StaticClassA:15
+program.StaticClassA:15
+|

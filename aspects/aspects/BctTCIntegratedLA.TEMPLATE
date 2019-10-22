@@ -1,0 +1,170 @@
+package aspects;
+
+import org.codehaus.aspectwerkz.joinpoint.ConstructorRtti;
+import org.codehaus.aspectwerkz.joinpoint.JoinPoint;
+import org.codehaus.aspectwerkz.joinpoint.MethodRtti;
+import tools.ExecutionTokenMetaData;
+import java.util.ArrayList;
+import probes.ComponentCallStack;
+import util.TcMetaInfoHandler;
+
+import recorders.LoggingActionRecorder;
+
+
+import util.ClassNameAndDefinitionFormatter;
+
+public class BctTCIntegratedLAASPECTNUM {
+
+  private final static int ENTER = 0;
+
+  private final static int EXIT = 1;
+
+  public static class Exec {
+
+	  public void logEntry(final JoinPoint joinPoint) {
+		  //System.out.println("ENTER "+BctLA0.Exec.class.getName()+" "+getSignature(joinPoint));
+		  try {	
+			  ComponentCallStack s = ComponentCallStack.getInstance();
+			  if ( BctTCIntegratedLAASPECTNUM.Exec.class == s.lastElement() ){
+				  s.push( BctTCIntegratedLAASPECTNUM.Exec.class );
+				  //System.out.println("ENTER#"+BctLA0.Exec.class.getName()+" "+getSignature(joinPoint));
+				  return;
+			  }
+			  
+			  s.push( BctTCIntegratedLAASPECTNUM.Exec.class );
+			  logIOInteraction(joinPoint, ENTER);
+			  
+		  } catch ( Exception e ){
+			  e.printStackTrace();
+		  }
+
+	  }
+
+	  public void logExit(final JoinPoint joinPoint) {
+		  //System.out.println("EXIT "+BctLA0.Exec.class.getName()+" "+getSignature(joinPoint));
+		  try {
+			  ComponentCallStack s = ComponentCallStack.getInstance();
+			  if ( s.lastElement() != BctTCIntegratedLAASPECTNUM.Exec.class )
+				  System.out.println("POPERROR "+BctTCIntegratedLAASPECTNUM.Exec.class.getName()+" "+getSignature(joinPoint));
+			  
+			  s.pop();
+			  if ( BctTCIntegratedLAASPECTNUM.Exec.class == s.lastElement() ){
+				  //System.out.println("EXIT#"+BctLA0.Exec.class.getName()+" "+getSignature(joinPoint));
+				  return;
+			  }
+			  logIOInteraction(joinPoint, EXIT);
+			  
+		  } catch ( Exception e ){
+			  e.printStackTrace();
+		  }
+
+	  }
+
+  }
+
+  public static class Call {
+
+	  public void logEntry(final JoinPoint joinPoint) {
+		  //System.out.println("ENTER "+BctLA0.Call.class.getName()+" "+getSignature(joinPoint));
+		  try {	
+			  ComponentCallStack s = ComponentCallStack.getInstance();
+			  s.push( BctTCIntegratedLAASPECTNUM.Call.class );
+			  logIOInteraction(joinPoint, ENTER);
+			  
+		  } catch ( Exception e ){
+			  e.printStackTrace();
+		  }
+
+	  }
+
+	  public void logExit(final JoinPoint joinPoint) {
+		  //System.out.println("EXIT "+BctLA0.Call.class.getName()+" "+getSignature(joinPoint));
+		  try {
+			  ComponentCallStack.getInstance().pop();
+			  logIOInteraction(joinPoint, EXIT);
+			  
+			  
+		  } catch ( Exception e ){
+			  e.printStackTrace();
+		  }
+
+	  }
+	  
+	  
+  }
+  
+  
+  private static String getSignature(JoinPoint joinPoint){
+	  String signature = null;
+	    if ( joinPoint.getRtti() instanceof MethodRtti ) {
+	      MethodRtti rtti = (MethodRtti)joinPoint.getRtti();
+	      signature = ClassNameAndDefinitionFormatter.estractMethodSignature(joinPoint.getTargetClass().getName(),rtti.getName(), rtti.getReturnType(), rtti.getParameterTypes());
+	    }
+	    else {
+	      ConstructorRtti rtti = (ConstructorRtti)joinPoint.getRtti();
+	      signature = ClassNameAndDefinitionFormatter.estractConstructorSignature(rtti.getName(), rtti.getParameterTypes());
+	    }
+	    return signature;
+  }
+  
+  private static void logIOInteraction(JoinPoint joinPoint, int callType) {
+	  
+	  Object returnValue = null;
+	  Class returnType = null;
+	  Class[] argumentTypes = null;
+	  Object[] argumentValues = null;
+	  String signature = null;
+	  
+	  
+	  //Get method signature
+	  
+	  if ( joinPoint.getRtti() instanceof MethodRtti ) {
+		  MethodRtti rtti = (MethodRtti)joinPoint.getRtti();
+		  returnValue = rtti.getReturnValue();
+		  returnType = rtti.getReturnType();
+		  
+		  argumentValues = rtti.getParameterValues();
+		  argumentTypes = rtti.getParameterTypes();
+		  
+		  signature = ClassNameAndDefinitionFormatter.estractMethodSignature(joinPoint.getTargetClass().getName(), rtti.getName(), returnType, argumentTypes);
+	  }
+	  else {
+		  ConstructorRtti rtti = (ConstructorRtti)joinPoint.getRtti();
+		  
+		  argumentValues = rtti.getParameterValues();
+		  argumentTypes = rtti.getParameterTypes();
+		  signature = ClassNameAndDefinitionFormatter.estractConstructorSignature(rtti.getName(), argumentTypes);
+	  }
+	  
+	  //do logging actions
+	  
+	  
+	  ExecutionTokenMetaData md = new ExecutionTokenMetaData();
+			  Object calledObject = joinPoint.getCallee();
+			  if ( calledObject != null ){
+				  md.setCalledObjectId(""+System.identityHashCode(calledObject));
+			  }
+
+			  md.setTimestamp(System.currentTimeMillis());
+
+			  String currentTestCase = TcMetaInfoHandler.getCurrentTestCase();
+			  if ( currentTestCase != null ){
+				  ArrayList<String> tests = new ArrayList<String>(1);
+				  tests.add(currentTestCase);
+				  md.setCurrentTests(tests);
+			  }
+
+			  String metaInfo = md.storeToString();
+	  
+	  if ( callType == ENTER   ) {
+		  LoggingActionRecorder.logIoInteractionEnterMeta(joinPoint.getCallee(),signature, argumentValues, Thread.currentThread().getId(), metaInfo );
+	  } else {
+
+		  if ( returnType == void.class )
+			  LoggingActionRecorder.logIoInteractionExitMeta(joinPoint.getCallee(),signature, argumentValues, Thread.currentThread().getId(), metaInfo);
+		  else
+			  LoggingActionRecorder.logIoInteractionExitMeta(joinPoint.getCallee(),signature, argumentValues, returnValue, Thread.currentThread().getId(), metaInfo);
+
+	  }
+  }
+}

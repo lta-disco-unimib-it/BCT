@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probekit>
+  <probe>
+    <target className="*" method="test*" package="*" signature="*" type="include"/>
+    <target className="*" method="*" package="*" signature="*" type="exclude"/>
+    <import text="regressionTestManager.TestViolationWriter"/>
+    <fragment type="entry">
+      <data name="aclassName" type="className"/>
+      <data name="amethodName" type="methodName"/>
+      <data name="amethodSig" type="methodSig"/>
+      <code>TestViolationWriter.writeTestStart(aclassName,amethodName,amethodSig);</code>
+    </fragment>
+    <fragment type="exit">
+      <data name="aclassName" type="className"/>
+      <data name="amethodName" type="methodName"/>
+      <data name="amethodSig" type="methodSig"/>
+      <code>TestViolationWriter.writeTestEnd(aclassName,amethodName,amethodSig);</code>
+    </fragment>
+  </probe>
+</probekit>

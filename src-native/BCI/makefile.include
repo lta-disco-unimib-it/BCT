@@ -1,0 +1,383 @@
+#####################################################################
+# For inclusion in Unix builds only. Not suitable for nmake.
+#
+# This makefile contains relatively generic definitions that can
+# be shared across all runtime components. This is where we
+# define things like the build platform and build site, default
+# compilers, and default build rules. You should include this
+# file in ALL your own makefiles. Please tryt o use the variables
+# defined here before creating new one. If you have a general
+# purpose variable that is useful across all platforms, consider
+# defining it here so everyone can benefit.
+#
+# If you need to tailor definitions for you platform, see the
+# section below which "switches" on BUILD_PLATFORM. Similarly,
+# there is a section which switches on LOCATION for site-specific
+# settings.
+#
+# Kim's Rules of Makefiles - Please try to observe
+#
+# 1. Do not mix option names together with the compiler definition.
+#    Rationale: All your friends and neighbors might not agree that
+#    every compilation should use this flag. It is also error prone
+#    if someone wants to override the compiler name without changing
+#    the compiler flavors - what's cc in Toronto is cc5.2 in Cupertino.
+#    BAD:	CC = cc -foo
+#    GOOD:	CC = cc
+#		CFLAGS += -foo
+# 2. Don't mix C/C++ pre-processor flags with other compiler flags
+#    Pre-processor flags are only interesting when you build .o files.
+#    Other flags are often applicable to compiling, linking, and building
+#    libraries.
+#    BAD:	CFLAGS += -foo -I../bar -Dbaz
+#    GOOD:	CFLAGS += -foo
+#		CPPFLAGS += -I../bar -Dbaz
+# 3. Do not assume that CXXFLAGS is always a superset of CFLAGS. On
+#    some platforms, the C and C++ compilers are very different beasts
+#    and don't accept the same flags. 
+#####################################################################
+
+NSLOOKUP = nslookup
+AR       = ar
+
+###
+# Figure out what  platform this is
+###
+UNAME := $(shell uname -sr)
+OS_VERSION := $(shell uname -r)
+MACHINE := $(shell uname -m)
+
+###
+#  Set up platform-specific defines which can be used to drive
+#  the builds and as define's on the compiler cmd line.
+#  OS is usually the big thing, but hardware architecture matters
+#  for things like endian-ness. Do not put site-dependent variables
+#  here. Use makefile.include.<location> for shared site-specific
+#  settings.
+#
+#  There's some apparent duplication of purpose behind some of the
+#  platform defining vars. This is for historical reasons - bringing
+#  together makefiles that chose different names for similar things.
+#  It can (and should!) all be commonized, but I'm not going to do
+#  it now.
+###
+ifneq ($(findstring SunOS 5., $(UNAME)),)
+   ENVIRON = sunos5
+   ARCH=SPARC_ARCH
+   BUILD_PLATFORM = solaris_sparc
+   JDK_PLATFORM = solaris
+   NSLOOKUP = /usr/sbin/nslookup
+   AR = /usr/ccs/bin/ar
+endif
+ifneq ($(findstring HP-UX, $(UNAME)),)
+   ENVIRON = hpux
+   ARCH=HPPA_ARCH
+   BUILD_PLATFORM = hpux
+   JDK_PLATFORM = hp-ux
+endif
+ifneq ($(findstring AIX, $(UNAME)),)
+   ENVIRON = aix
+   ARCH=PPC_ARCH
+   BUILD_PLATFORM = aix_powerpc
+   JDK_PLATFORM = aix
+endif # AIX
+ifneq ($(findstring Linux, $(UNAME)),)
+   ENVIRON = linux
+   JDK_PLATFORM = linux
+   ifneq ($(findstring i686,$(MACHINE)),)
+      # nslookup on Red Hat is whiny, so shut it up
+      NSLOOKUP = nslookup -silent 
+      ARCH=IA32_ARCH
+      BUILD_PLATFORM = linux_ia32
+   endif # MACHINE
+   ifneq ($(findstring x86_64,$(MACHINE)),)
+      # nslookup on Red Hat is whiny, so shut it up
+      NSLOOKUP = nslookup -silent 
+      ARCH=EM64T_ARCH
+      BUILD_PLATFORM = linux_em64t
+   endif # MACHINE
+   ifneq ($(findstring s390,$(MACHINE)),)
+      ARCH=OS390_ARCH
+      BUILD_PLATFORM = linux_s390
+   endif #zLINUX
+   
+   ifneq ($(findstring ppc64,$(MACHINE)),)
+      ARCH=LINUX_PPC_ARCH
+      BUILD_PLATFORM = linux_ppc64
+   endif #LINUX_PPC64
+   
+   
+endif # LINUX
+ifneq ($(findstring OS/390, $(UNAME)),)
+   ARCH=OS390_ARCH
+   ENVIRON=os390
+   BUILD_PLATFORM = os390
+   JDK_PLATFORM = os390
+endif
+ifneq ($(findstring OS400, $(UNAME)),)
+   ARCH=OS400_ARCH
+   ENVIRON=os400
+   BUILD_PLATFORM = os400
+   JDK_PLATFORM = os400
+   DYNAMIC_EXT_LIB = so
+   STATIC_EXT_LIB = a
+endif
+# Make sure we haven't fallen through a configuration hole
+ifndef ARCH
+   # extend for your architecture, as needed.
+#   error: Unrecognized configuration
+endif 
+ifndef ENVIRON
+#   error Unrecognized platform configuration
+endif
+ifndef BUILD_PLATFORM
+#   error Unrecognized build platform configuration
+endif
+
+
+#####
+# Figure out the network domain so we can tailor the build to particular
+# site requirements. We hope for LONG_NAME to end up containing
+# something like blah.cupertino.ibm.com. Unfortunately, this can be
+# sadly dependent on having /etc/hosts set up properly. For example,
+# it is possible to end up with the short host name. If the worst
+# happens, we punt to assuming Toronto.
+#
+# If you can't get anything else to work, set LOCATION on the command line.
+#####
+HOSTNAME := $(shell hostname)
+LONG_NAME := $(shell $(NSLOOKUP) $(HOSTNAME) | grep Name: | awk '{print $2}')
+ifneq ($(findstring cupertino.ibm.com, $(LONG_NAME)),)
+  LOCATION = cupertino
+endif
+ifneq ($(findstring fr.ibm.com, $(LONG_NAME)),)
+  LOCATION = toulouse
+endif
+ifneq ($(findstring in.ibm.com, $(LONG_NAME)),)
+  LOCATION = bangalore
+endif
+ifneq ($(findstring torolab.ibm.com, $(LONG_NAME)),)
+  LOCATION = toronto
+endif
+#####
+# If all else fails, assume we're in Toronto...at least we won't screw
+# up the official build.
+#####
+ifndef LOCATION
+  LOCATION = toronto
+endif
+
+
+#####
+# Most of our sites don't have zip, but in Toronto they do, so
+# that's the default. Overriden as needed in the site-specific
+# settings, below.
+#####
+ZIP = zip -r
+
+CP = cp -p -f
+
+###
+# How do you create a C++ archive library? Need this because creation of
+# C++ archive libs sometimes gets weird. Sun's Forte compiler, for example.
+# This is the "normal" way. Do not put quotes around the value - want it to
+# expand unquoted. Most platforms should not need to override this.
+###
+CXX_AR=$(AR) cr
+
+#####
+# Defaults for controlling debug vs. optimized builds. These
+# settings should do for most platforms, but can be overridden
+# in the platform-specific settings, below.
+#####
+DEBUG_FLAG = -g
+OPT_FLAG = -O
+ifdef debug
+  CFLAGS = $(DEBUG_FLAG)
+else
+  CFLAGS = $(OPT_FLAG)
+endif
+INCLUDES =      # set by including makefiles
+
+######################################
+# Common per-platform definitions
+######################################
+ifeq ($(BUILD_PLATFORM), solaris_sparc)
+  #####
+  # Use Forte 6, Update 1. Must set SUNWSDIR to point to compiler
+  # installation so we can find some of the less common libs to link in.
+  #####
+  SUNWSDIR = /opt/SUNWspro/WS6U1
+  CC = cc
+  CFLAGS +=
+  PLATFORM_DEFS = -D_SOLARIS -DSOLARIS -D$(ARCH) -D_UNIX_
+  CPPFLAGS = $(INCLUDES) $(PLATFORM_DEFS) -D_REENTRANT
+  CXX = CC
+  CXXFLAGS +=
+  CXX_AR = $(CXX) -xar -o
+  LINK = $(CC)
+  LINKCPP = $(CXX)
+  LINK_CXX_SHLIB = $(CXX)
+  DYNAMIC_EXT_LIB = so
+  CXX_SHLIB_FLAG = -G
+  C_SHLIB_FLAG = -G
+  STATIC_EXT_LIB = a
+  STLIB_FLAG = -Bstatic
+  PIC_FLAG = -KPIC
+endif # solaris_sparc
+ifeq ($(BUILD_PLATFORM), hpux)
+  #####
+  # Compilers are HP's ansi cc and aCC
+  #####
+  CC = cc
+  CFLAGS +=
+  PLATFORM_DEFS = -D_HPUX -DHPUX -D$(ARCH) -D_UNIX_
+  CPPFLAGS = $(INCLUDES) $(PLATFORM_DEFS) 
+  CXX = aCC
+  CXXFLAGS +=
+  LINK = $(CC)
+  LINKCPP = $(CXX)
+  LINK_CXX_SHLIB = $(CXX)
+  DYNAMIC_EXT_LIB = sl
+  CXX_SHLIB_FLAG = -b
+  C_SHLIB_FLAG = -Wl,-b
+  STATIC_EXT_LIB = a
+  STLIB_FLAG =
+  PIC_FLAG = +Z
+endif # hpux
+ifeq ($(BUILD_PLATFORM), os390)
+  #####
+  # Build weirdness alert: The automated builds in Toronto set up the
+  # environment in a way that causes us to pick up the wrong compiler.
+  # Working around it requires both that we override a bunch of env vars
+  # and that we pick up c89 and cxx from /bin explicitly. This is not a
+  # very good solution, but putting /bin on the head of the path is not
+  # acceptable. The env var weirdness is handled in the top level makefile.
+  #####
+  CC = /bin/c89
+  CFLAGS += 
+  PLATFORM_DEFS = -DOS390 -D$(ARCH) -D_UNIX_
+  CPPFLAGS = $(INCLUDES) $(PLATFORM_DEFS) -D_XOPEN_SOURCE_EXTENDED=1 \
+             -DMVS=1 -D_OPEN_THREADS -D_ALL_SOURCE -D_OPEN_SYS
+  CXX = /bin/cxx
+  CXXFLAGS += -W c,DLL,EXPORTALL  -W c,NOLOCALE,LANGLVL\(EXTENDED\) -W c,CONVLIT\(ISO8859-1\) -W c,TARGET\(zOSV1R3\),XPLINK
+  LINK = $(CXX)
+  LINKCPP = $(LINK)
+  LINK_CXX_SHLIB = $(CXX)
+  DYNAMIC_EXT_LIB = so
+  CXX_SHLIB_FLAG = -W l,XPLINK,DLL,AMODE=31,RMODE=ANY,CALL,REUS=RENT,COMPAT=PM4
+  C_SHLIB_FLAG =
+  STATIC_EXT_LIB = a
+  STLIB_FLAG =
+  PIC_FLAG = -W l,XPLINK,DLL,AMODE=31,RMODE=ANY,CALL,REUS=RENT,COMPAT=PM4
+endif # os390
+ifeq ($(BUILD_PLATFORM), aix_powerpc)
+  #####
+  # Some of the compilers and other tools used here are only available
+  # in Toronto. Good luck.
+  #####
+  CC = cc_r
+  CFLAGS +=
+  PLATFORM_DEFS = -D_AIX -DAIX -D$(ARCH) -D_UNIX_
+  CPPFLAGS = $(INCLUDES) $(PLATFORM_DEFS)
+  CXX = xlC_r
+  CXXFLAGS += 
+  LINK = $(CC)
+  LINKCPP = $(CXX)
+  LINK_CXX_SHLIB = makeC++SharedLib_r -p0
+  DYNAMIC_EXT_LIB = so
+  CXX_SHLIB_FLAG =
+  C_SHLIB_FLAG =
+  STATIC_EXT_LIB = a
+  STLIB_FLAG =
+  OPT_FLAG =
+  PIC_FLAG =
+endif # aix_powerpc
+ifeq ($(ENVIRON), linux)
+  CC = gcc
+  CFLAGS +=
+  PLATFORM_DEFS = -D__linux__ -D_LINUX -DLINUX -D$(ARCH) -D_UNIX_
+  CPPFLAGS = $(INCLUDES) $(PLATFORM_DEFS)
+  CXX = g++
+  CXXFLAGS += 
+  LINK = $(CC)
+  LINKCPP = $(CXX)
+  LINK_CXX_SHLIB = $(CXX)
+  DYNAMIC_EXT_LIB = so
+  CXX_SHLIB_FLAG = -shared
+  C_SHLIB_FLAG = -shared
+  STATIC_EXT_LIB = a
+  STLIB_FLAG = -Xlinker -Bstatic
+  PIC_FLAG = -fpic
+  
+  ifeq ($(BUILD_PLATFORM), linux_ppc64)
+     CFLAGS += -m64
+     CPPFLAGS += -m64
+     CXX_SHLIB_FLAG += -m64
+  endif #linux_ppc64
+  
+  
+  # Place BUILD_PLATFORM specific settings here, for example
+  #    ifeq ($(BUILD_PLATFORM), linux_ia32) ... endif
+endif # linux
+
+#####
+# Site specific definitions for Cupertino
+#####
+ifeq ($(LOCATION), cupertino)
+  ZIP = $(JAR) cMf
+
+  #####
+  # Toronto builds with Forte 5.2, but ours is isntalled in a
+  # non-standard place. Work around it by overriding the compiler
+  # names to use our local aliases.
+  #####
+  ifeq ($(BUILD_PLATFORM), solaris_sparc)
+     CC = cc5.2
+     CXX = CC5.2
+     SUNWSDIR = /nfs/u50/forte6.1update/SUNWspro/WS6U1
+  endif # solaris_sparc
+
+  #####
+  # Set up to use javac, etc. from the JDK in depends. In Toronto,
+  # this comes from your path, but we don't reliably have the
+  # right JDK on our path in Cupertino.
+  #####
+  JAVAC = $(JDK_HOME)/bin/javac
+  JAR = $(JDK_HOME)/bin/jar
+endif # cupertino
+
+
+ifdef STATIC_LINKING
+   EXT_LIB=$(STATIC_EXT_LIB)
+else
+   EXT_LIB=$(DYNAMIC_EXT_LIB)
+   CFLAGS += $(PIC_FLAG)
+endif
+
+#####
+# These should be assigned real values by including makefiles. Set
+# them to something silly so it is in your face when it fails.
+#####
+SYS_DEPENDS = i_am_undefined
+MISC_DEPENDS = i_am_undefined
+
+#####
+# Where to find a JDK for picking up include files and libraries
+#####
+JDK_HOME = $(SYS_DEPENDS)/java
+
+#####
+# Where to find the Hyades Data Collection runtime and SDK
+#####
+RASERVER_SDK = $(MISC_DEPENDS)
+
+#####
+# Default build rules. INCLUDES is set by including makefiles.
+# The other variables may be set partly here and partly by includers.
+#####
+%.o : %.cpp
+	$(CXX) -c $(CFLAGS) $(CXXFLAGS) $(CPPFLAGS) $<
+
+%.o : %.c
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $<

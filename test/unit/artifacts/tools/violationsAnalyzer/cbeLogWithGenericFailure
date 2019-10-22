@@ -1,0 +1,10 @@
+<CommonBaseEvent creationTime="2012-11-02T14:45:25.653Z" globalInstanceId="" localInstanceId="" msg="Failure detected by BCT" severity="50" version="1.0.1">
+	<extendedDataElements name="FailureClass" type="string">
+		<values>failureDetection.Failure</values>
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.31-22-generic" location="ubuntu/127.0.1.1" locationType="IPV4" processId="1351867442693@pc" subComponent="util.cbe.FailuresExporter" threadId="1" componentType="Application"/>
+	<sourceComponentId application="tools.gdbTraceParser.GdbTraceParser.main:463" component="tools.gdbTraceParser.GdbTraceParser.main:463" componentIdType="Application" executionEnvironment="Linux_i386#2.6.31-22-generic" location="ubuntu/127.0.1.1" locationType="IPV4" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>

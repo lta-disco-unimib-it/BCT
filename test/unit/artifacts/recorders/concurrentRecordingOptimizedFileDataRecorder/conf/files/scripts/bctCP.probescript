@@ -1,0 +1,12 @@
+REM BctTestCasesMonitorProbe
+PROBE
+RULE tests* * * * include
+RULE * * * * exclude
+REF ONENTRY BctTestCasesMonitorProbe_probe$Probe_0 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V className,methodName,methodSig
+REF ONEXIT BctTestCasesMonitorProbe_probe$Probe_0 _exit (Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V exceptionObject,className,methodName,methodSig
+REM bctCPAll
+PROBE
+RULE net.n3.nanoxml * * * include
+RULE * * * * exclude
+REF ONENTRY bctCPAll_probe$Probe_0 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V className,methodName,methodSig,args
+REF ONEXIT bctCPAll_probe$Probe_0 _exit (Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V returnedObject,className,methodName,methodSig,args

@@ -1,0 +1,6 @@
+program.ClassC-0=0.txt
+program.ClassD-1=1.txt
+$program.StaticClassA-2=2.txt
+$program.ProgramForStaticTesting-3=3.txt
+$program.StaticClassB-4=4.txt
+program.ClassB-5=5.txt

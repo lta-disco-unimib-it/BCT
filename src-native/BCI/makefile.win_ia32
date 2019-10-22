@@ -1,0 +1,119 @@
+#################
+# Copyright (c) 2005, 2006 IBM Corporation and others. 
+# All rights reserved.   This program and the accompanying materials 
+# are made available under the terms of the Eclipse Public License v1.0 
+# which accompanies this distribution, and is available at 
+# http://www.eclipse.org/legal/epl-v10.html         
+# $Id: makefile.win_ia32,v 1.3 2006/03/14 22:56:48 hleung Exp $ 
+#  
+# Contributors: 
+# IBM - Initial contribution
+#################
+
+#####
+# How to build:
+#
+# Defaults to release configuration. If this is not what you want or you
+# just want to be explicit, use:
+#
+#    nmake /F makefile.win_ia32 CFG=release
+#    nmake /F makefile.win_ia32 CFG=debug
+#
+# If the build works properly, the required pieces will be copied
+# into ./Release or ./Debug, depending on what kind of build you did.
+# All the work really happens down inside BCIEng\BCIEngProbe\ProbeInstrumenter.
+#
+# There is a "package" target for zipping the necessary native code
+# pieces up. It defaults to creating a jar file, so you must have
+# a JDK on your path. To override this behavior, set ZIP and/or
+# ZIP_EXT on the make command line. For example, to create a zip
+# file instead of a jar file, you might do something like:
+#
+#	nmake /F makefile.win_ia32 ZIP=myzip ZIP_EXT=zip package
+#
+#####
+
+!IF "$(CFG)" == ""
+CFG=release
+!MESSAGE No configuration specified. Default to release.
+!endif
+
+###
+# What command should we use to create a release package?
+# Defaults to producing zip files using "jar" because we can rely on all
+# Eclipse developers to have java installed somewhere.
+###
+!IF "$(ZIP)" == ""
+ZIP=jar cMf
+!ENDIF
+!IF "$(ZIP_EXT)" == ""
+ZIP_EXT=zip
+!ENDIF
+
+!IF "$(CFG)" != "debug" && "$(CFG)" != "release"
+!MESSAGE Invalid configuration "$(CFG)" specified.
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "windows.mak" CFG="debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "release"
+!MESSAGE "debug"
+!MESSAGE 
+!ERROR An invalid configuration is specified.
+!ENDIF 
+
+COPY_CMD=copy /y 
+!IF "$(CFG)" == "release"
+BCIENG_CFG=BCIEng - Win32 Release
+BCIENGJ_CFG=BCIEngJ - Win32 Release
+BCIENGPROBE_CFG=BCIEngProbe - Win32 Release
+COMMON_CFG=Common - Win32 Release
+JCLASS_CFG=JClassStat - Win32 Release
+PROBEINSTRUMENTER_CFG=ProbeInstrumenter - Win32 Release
+OUTDIR=.\Release
+INTDIR=.\Release
+!ELSEIF "$(CFG)" == "debug"
+BCIENG_CFG=BCIEng - Win32 Debug
+BCIENGJ_CFG=BCIEngJ - Win32 Debug
+BCIENGPROBE_CFG=BCIEngProbe - Win32 Debug
+COMMON_CFG=Common - Win32 Debug
+JCLASS_CFG=JClassStat - Win32 Debug
+PROBEINSTRUMENTER_CFG=ProbeInstrumenter - Win32 Debug
+OUTDIR=.\Debug
+INTDIR=.\Debug
+!ENDIF
+
+ALL : "$(OUTDIR)" "$(OUTDIR)\ProbeInstrumenter.exe"
+
+"$(OUTDIR)\ProbeInstrumenter.exe" :
+	cd .\BCIEng\BCIEngProbe\ProbeInstrumenter
+	$(MAKE) $(MAKEFLAGS) /F .\ProbeInstrumenter.mak CFG="$(PROBEINSTRUMENTER_CFG)" ALL
+	cd ..
+	$(COPY_CMD) $(OUTDIR)\ProbeInstrumenter.exe ..\..\$(OUTDIR)
+	$(COPY_CMD) $(OUTDIR)\BCIEngProbe.dll ..\..\$(OUTDIR)
+	cd ..\..
+
+CLEAN :
+	-@RMDIR /S /Q $(OUTDIR)
+	cd .\BCIEng
+	$(MAKE) $(MAKEFLAGS) /F .\BCIEng.mak CFG="$(BCIENG_CFG)" clean
+	cd .\BCIEngJ
+	$(MAKE) $(MAKEFLAGS) /F .\BCIEngJ.mak CFG="$(BCIENGJ_CFG)" clean
+	cd ..\BCIEngProbe
+	$(MAKE) $(MAKEFLAGS) /F .\BCIEngProbe.mak CFG="$(BCIENGPROBE_CFG)" clean
+	cd ..\..\JClass
+	$(MAKE) $(MAKEFLAGS) /F .\JClassStat.mak CFG="$(JCLASS_CFG)" clean
+	cd ..
+
+PACKAGE : probekit.$(ZIP_EXT)
+
+probekit.$(ZIP_EXT): ALL
+	cd $(OUTDIR)
+	$(ZIP) ..\probekit.$(ZIP_EXT) BCIEngProbe.dll ProbeInstrumenter.exe
+	cd ..
+
+"$(OUTDIR)" :
+	if not exist "$(OUTDIR)" mkdir "$(OUTDIR)"

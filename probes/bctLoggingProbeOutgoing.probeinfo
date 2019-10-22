@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probekit>
+  <probe>
+    <target className="*" method="*" package="probes*" signature="*" type="exclude"/>
+    <target className="*" method="*" package="log*" signature="*" type="exclude"/>
+    <target className="*" method="*" package="java*" signature="*" type="exclude"/>
+    <import text="probes.IoLoggerProbe"/>
+    <import text="probes.InteractionLoggerProbe"/>
+    <fragmentAtClassScope></fragmentAtClassScope>
+  </probe>
+</probekit>

@@ -1,0 +1,15 @@
+program.ProgramForTesting.main(([Ljava.lang.String;)V)=0.dtrace
+program.ClassA.<init>(()V)=1.dtrace
+program.ClassA.internalConstructor(()V)=2.dtrace
+program.ClassB.<init>(()V)=3.dtrace
+program.ClassA.methodA((Lprogram.ClassB;)V)=4.dtrace
+program.ClassB.methodBA(()V)=5.dtrace
+program.ClassB.methodBB((I)V)=6.dtrace
+program.ClassA.methodB((Lprogram.ClassB;)V)=7.dtrace
+program.ClassB.methodBC((Lprogram.ClassA;)V)=8.dtrace
+program.ClassA.methodC(()V)=9.dtrace
+program.ClassA.methodD((Lprogram.ClassB;)V)=10.dtrace
+program.ClassA.methodE((Lprogram.ClassB;)V)=11.dtrace
+program.ClassB.methodBD((Lprogram.ClassA;)V)=12.dtrace
+program.ClassA.<init>((Lprogram.ClassB;)V)=13.dtrace
+program.ClassA.<init>((I)V)=14.dtrace

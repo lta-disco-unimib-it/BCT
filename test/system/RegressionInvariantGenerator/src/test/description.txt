@@ -1,0 +1,21 @@
+The test has been designed considering the structure of the trace files applying the category partition methodology.
+
+
+IO models
+
+[Program point]
+Unique
+Shared (never seen)
+Shared (seen previous time)
+Shared (seen before but not in the previous)
+
+[Test case]
+Unique
+Shared
+
+[Entry/Exit]
+Same
+Different values
+Different structure
+Differ in return V
+

@@ -1,0 +1,18 @@
+# Microsoft Developer Studio Generated Dependency File, included by ProbeInstrumenter.mak
+
+.\ProbeInstrumenter.cpp : \
+	"..\..\..\common\commondef.h"\
+	"..\..\..\common\javadef.h"\
+	"..\..\..\Common\JavaHelpers.h"\
+	"..\..\..\JClass\JBaseStream.h"\
+	"..\..\..\JClass\JClassBuilder.h"\
+	"..\..\..\JClass\JClassFile.h"\
+	"..\..\..\JClass\JStream.h"\
+	"..\..\BCIEng.h"\
+	"..\..\BCIEngInterface.h"\
+	"..\..\BCIEngJ\ModuleJ.h"\
+	"..\..\InsSet.h"\
+	"..\..\Module.h"\
+	"..\BCIEngProbe.h"\
+	"..\BCIEngProbeInterface.h"\
+	

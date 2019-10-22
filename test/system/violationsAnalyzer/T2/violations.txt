@@ -1,0 +1,92 @@
+TEST_INFO	1
+Violation of IOinvariant for method p4.C4.m4 during exit
+        returnValue != null = false
+	Parameters :
+	ReturnValue :
+	returnValue
+	null
+	1
+
+	Orig values:
+
+Thread : 1
+Stack trace :
+java.lang.Thread.dumpThreads : -2
+java.lang.Thread.getStackTrace : 1383
+check.InteractionInvariantHandler.logViolation : 170
+check.InteractionInvariantHandler._checkCurrentTransition : 130
+check.InteractionInvariantHandler.processCallEnter : 229
+check.Checker.checkInteractionEnter : 6
+aspects.BctCA1.processEvent : 160
+aspects.BctCA1.access$2 : 146
+aspects.BctCA1$Exec.checkEntry : 30
+p4.C4.m4_1_1506155831_1191650110___AW_JoinPoint.invoke : -1
+p4.C4.m4 : -1
+p2.C3.m3_1_1506155831_1191650110___AW_JoinPoint.invoke : -1
+p1.C2.m2 : -1
+p1.C1.m1 : 30
+p.C.m : 21
+x.v.t : 30
+TEST_INFO	1
+Interaction Invariant of the method p1.C1.m1 has been violated.
+         Current states are:
+        q_3 at (465,340) label: 6
+         Transition p2.C2.m2 is not valid
+Thread : 1
+Stack trace :
+java.lang.Thread.dumpThreads : -2
+java.lang.Thread.getStackTrace : 1383
+check.InteractionInvariantHandler.logViolation : 170
+check.InteractionInvariantHandler._checkCurrentTransition : 130
+check.InteractionInvariantHandler.processCallEnter : 229
+check.Checker.checkInteractionEnter : 6
+aspects.BctCA1.processEvent : 160
+aspects.BctCA1.access$2 : 146
+aspects.BctCA1$Exec.checkEntry : 30
+p2.C2.m2_1_1506155831_1191650110___AW_JoinPoint.invoke : -1
+p2.C2.m2 : -1
+p1.C1.m1 : 30
+p.C.m : 20
+x.v.t : 30
+TEST_INFO	1
+Interaction Invariant of the method p1.C2.m2 has been violated.
+         Current states are:
+        q_3 at (465,340) label: 6
+         Transition p3.C3.m3 is not valid
+Thread : 1
+Stack trace :
+java.lang.Thread.dumpThreads : -2
+java.lang.Thread.getStackTrace : 1383
+check.InteractionInvariantHandler.logViolation : 170
+check.InteractionInvariantHandler._checkCurrentTransition : 130
+check.InteractionInvariantHandler.processCallEnter : 229
+check.Checker.checkInteractionEnter : 6
+aspects.BctCA1.processEvent : 160
+aspects.BctCA1.access$2 : 146
+aspects.BctCA1$Exec.checkEntry : 30
+p2.C3.m3_1_1506155831_1191650110___AW_JoinPoint.invoke : -1
+p1.C2.m2 : -1
+p1.C1.m1 : 30
+p.C.m : 21
+x.v.t : 30
+TEST_INFO	2
+Interaction Invariant of the method p1.C2.m2 has been violated.
+         Current states are:
+        q_3 at (465,340) label: 6
+         Transition p3.C3.m3 is not valid
+Thread : 1
+Stack trace :
+java.lang.Thread.dumpThreads : -2
+java.lang.Thread.getStackTrace : 1383
+check.InteractionInvariantHandler.logViolation : 170
+check.InteractionInvariantHandler._checkCurrentTransition : 130
+check.InteractionInvariantHandler.processCallEnter : 229
+check.Checker.checkInteractionEnter : 6
+aspects.BctCA1.processEvent : 160
+aspects.BctCA1.access$2 : 146
+aspects.BctCA1$Exec.checkEntry : 30
+p2.C3.m3_1_1506155831_1191650110___AW_JoinPoint.invoke : -1
+p1.C2.m2 : -1
+p1.C1.m1 : 30
+p.C.m : 21
+x.v.t : 30

@@ -1,0 +1,65 @@
+<CommonBaseEvent creationTime="2010-01-05T21:03:05.472Z" globalInstanceId="0" localInstanceId="BCTMODELVIOLATION-0" msg="BCT Behavioral Model Violation" severity="30" version="1.0.1">
+	<extendedDataElements name="StackTrace" type="stringArray">
+		<values>org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSet : -1</values>
+		<values>org.eclipse.emf.test.core.dynamic.SimpleModelTest.testAttributes : 196</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0 : -2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke : 39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke : 25</values>
+		<values>java.lang.reflect.Method.invoke : 585</values>
+		<values>junit.framework.TestCase.runTest : 154</values>
+		<values>junit.framework.TestCase.runBare : 127</values>
+		<values>junit.framework.TestResult$1.protect : 106</values>
+		<values>junit.framework.TestResult.runProtected : 124</values>
+		<values>junit.framework.TestResult.run : 109</values>
+		<values>junit.framework.TestCase.run : 118</values>
+		<values>junit.framework.TestSuite.runTest : 208</values>
+		<values>junit.framework.TestSuite.run : 203</values>
+		<values>junit.framework.TestSuite.runTest : 208</values>
+		<values>junit.framework.TestSuite.run : 203</values>
+		<values>junit.framework.TestSuite.runTest : 208</values>
+		<values>junit.framework.TestSuite.run : 203</values>
+		<values>org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run : 128</values>
+		<values>org.eclipse.jdt.internal.junit.runner.TestExecution.run : 38</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests : 460</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests : 673</values>
+		<values>org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run : 386</values>
+		<values>org.eclipse.pde.internal.junit.runtime.RemotePluginTestRunner.main : 58</values>
+		<values>org.eclipse.pde.internal.junit.runtime.CoreTestApplication.run : 24</values>
+		<values>org.eclipse.core.internal.runtime.PlatformActivator$1.run : 78</values>
+		<values>org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication : 92</values>
+		<values>org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start : 68</values>
+		<values>org.eclipse.core.runtime.adaptor.EclipseStarter.run : 400</values>
+		<values>org.eclipse.core.runtime.adaptor.EclipseStarter.run : 177</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke0 : -2</values>
+		<values>sun.reflect.NativeMethodAccessorImpl.invoke : 39</values>
+		<values>sun.reflect.DelegatingMethodAccessorImpl.invoke : 25</values>
+		<values>java.lang.reflect.Method.invoke : 585</values>
+		<values>org.eclipse.core.launcher.Main.invokeFramework : 336</values>
+		<values>org.eclipse.core.launcher.Main.basicRun : 280</values>
+		<values>org.eclipse.core.launcher.Main.run : 977</values>
+		<values>org.eclipse.core.launcher.Main.main : 952</values>
+	</extendedDataElements>
+	<extendedDataElements name="CurrentActions" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="CurrentTests" type="stringArray">
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModel" type="string">
+		<values>org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSet((Lorg.eclipse.emf.ecore.EStructuralFeature;Ljava.lang.Object;)V:::ENTER</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolatedModelType" type="string">
+		<values>IO</values>
+	</extendedDataElements>
+	<extendedDataElements name="Violation" type="string">
+		<values>(parameter[1] != null)  ==&gt;  (parameter[1].value.intValue() one of { 0, 1, 2 }) = false</values>
+	</extendedDataElements>
+	<extendedDataElements name="ViolationType" type="string">
+		<values>IO</values>
+	</extendedDataElements>
+	<extendedDataElements name="ParametersStates" type="string">
+	</extendedDataElements>
+	<reporterComponentId application="BCT" component="BCT" componentIdType="Application" executionEnvironment="Linux_i386#2.6.28-16-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="27837@laptop" subComponent="util.cbe.CBEEventExporterUtil" threadId="1" componentType="Application"/>
+	<sourceComponentId application="org.eclipse.core.launcher.Main.main " component="org.eclipse.core.launcher.Main.main " componentIdType="Application" executionEnvironment="Linux_i386#2.6.28-16-generic" location="laptop/127.0.1.1" locationType="IPV4" processId="27837@laptop" subComponent="org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSet : -1" threadId="1" componentType="Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>

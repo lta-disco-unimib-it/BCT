@@ -1,0 +1,4 @@
+program.ClassA.<init>(()V)
+program.ClassA.methodE((Lprogram.ClassB;)V)
+program.ClassA.methodD((Lprogram.ClassB;)V)
+|

@@ -1,0 +1,1004 @@
+Breakpoint 1 at 0x8050c4f: file parse.c, line 155.
+Breakpoint 2 at 0x8050bc0: file parse.c, line 140.
+Breakpoint 3 at 0x8050efc: file parse.c, line 491.
+Breakpoint 4 at 0x8050d5b: file parse.c, line 491.
+Breakpoint 5 at 0x8050e0d: file parse.c, line 491.
+Breakpoint 6 at 0x8050cf1: file parse.c, line 491.
+Breakpoint 7 at 0x8050c80: file parse.c, line 214.
+Breakpoint 8 at 0x8051516: file io.c, line 81.
+Breakpoint 9 at 0x8051500: file io.c, line 74.
+Breakpoint 10 at 0x804cc6e: file indent.c, line 2644.
+Breakpoint 11 at 0x8049c34: file indent.c, line 1998.
+Breakpoint 12 at 0x804e162: file backup.c, line 463.
+Breakpoint 13 at 0x8052012: file output.c, line 1207.
+Breakpoint 14 at 0x804f5cc: file lexi.c, line 756.
+Breakpoint 15 at 0x804cb1d: file indent.c, line 2438.
+Breakpoint 16 at 0x804dc2e: file args.c, line 892.
+Breakpoint 17 at 0x804bd1f: file indent.c, line 1248.
+Breakpoint 18 at 0x805192f: file io.c, line 588.
+Breakpoint 19 at 0x8049aaf: file indent.c, line 1971.
+Breakpoint 20 at 0x804b7cc: file indent.c, line 1378.
+Breakpoint 21 at 0x804c57c: file indent.c, line 2708.
+Breakpoint 22 at 0x8051be6: file io.c, line 359.
+Breakpoint 23 at 0x8050dff: file parse.c, line 470.
+Breakpoint 24 at 0x804bc36: file indent.c, line 1352.
+Breakpoint 25 at 0x804db2b: file args.c, line 929.
+Breakpoint 26 at 0x804cbee: file indent.c, line 2611.
+Breakpoint 27 at 0x804ba2d: file indent.c, line 588.
+Breakpoint 28 at 0x805004b: file lexi.c, line 999.
+Breakpoint 29 at 0x8051370: file globs.c, line 76.
+Breakpoint 30 at 0x805145d: file globs.c, line 69.
+Breakpoint 31 at 0x8051440: file globs.c, line 59.
+Breakpoint 32 at 0x8048f14: file indent.c, line 127.
+Breakpoint 33 at 0x8048eb0: file indent.c, line 118.
+Breakpoint 34 at 0x804df14: file backup.c, line 163.
+Breakpoint 35 at 0x804deb0: file backup.c, line 157.
+Breakpoint 36 at 0x804cc6e: file indent.c, line 2644.
+Breakpoint 37 at 0x8049c34: file indent.c, line 1998.
+Breakpoint 38 at 0x804e162: file backup.c, line 463.
+Breakpoint 39 at 0x8052012: file output.c, line 1207.
+Breakpoint 40 at 0x804f5cc: file lexi.c, line 756.
+Breakpoint 41 at 0x804cb1d: file indent.c, line 2438.
+Breakpoint 42 at 0x804dc2e: file args.c, line 892.
+Breakpoint 43 at 0x804bd1f: file indent.c, line 1248.
+Breakpoint 44 at 0x805192f: file io.c, line 588.
+Breakpoint 45 at 0x8049aaf: file indent.c, line 1971.
+Breakpoint 46 at 0x804b7cc: file indent.c, line 1378.
+Breakpoint 47 at 0x804c57c: file indent.c, line 2708.
+Breakpoint 48 at 0x8051be6: file io.c, line 359.
+Breakpoint 49 at 0x8050dff: file parse.c, line 470.
+Breakpoint 50 at 0x804bc36: file indent.c, line 1352.
+Breakpoint 51 at 0x804db2b: file args.c, line 929.
+Breakpoint 52 at 0x804cbee: file indent.c, line 2611.
+Breakpoint 53 at 0x804ba2d: file indent.c, line 588.
+Breakpoint 54 at 0x805004b: file lexi.c, line 999.
+Breakpoint 55 at 0x8051370: file globs.c, line 76.
+Breakpoint 56 at 0x80514be: file globs.c, line 52.
+Breakpoint 57 at 0x80514a0: file globs.c, line 36.
+Breakpoint 58 at 0x804c788: file indent.c, line 156.
+Breakpoint 59 at 0x8052048: file output.c, line 1207.
+Breakpoint 60 at 0x804c654: file indent.c, line 156.
+Breakpoint 61 at 0x804e046: file backup.c, line 453.
+Breakpoint 62 at 0x8051d28: file io.c, line 404.
+Breakpoint 63 at 0x804cd3e: file indent.c, line 156.
+Breakpoint 64 at 0x804e1d8: file backup.c, line 442.
+Breakpoint 65 at 0x804cb5d: file indent.c, line 156.
+Breakpoint 66 at 0x8051c93: file io.c, line 399.
+Breakpoint 67 at 0x8051c1c: file io.c, line 375.
+Breakpoint 68 at 0x8051cc8: file io.c, line 349.
+Breakpoint 69 at 0x8050ce3: file parse.c, line 470.
+Breakpoint 70 at 0x80492ec: file indent.c, line 156.
+Breakpoint 71 at 0x804c720: file indent.c, line 156.
+Breakpoint 72 at 0x8051cf8: file io.c, line 354.
+Breakpoint 73 at 0x8051290: file globs.c, line 92.
+Breakpoint 74 at 0x80515a6: file io.c, line 154.
+Breakpoint 75 at 0x8051530: file io.c, line 124.
+Breakpoint 76 at 0x8051f3a: file output.c, line 200.
+Breakpoint 77 at 0x8051f2a: file output.c, line 200.
+Breakpoint 78 at 0x8051e8a: file output.c, line 200.
+Breakpoint 79 at 0x8051ece: file output.c, line 200.
+Breakpoint 80 at 0x8051e9a: file output.c, line 200.
+Breakpoint 81 at 0x8051eaa: file output.c, line 200.
+Breakpoint 82 at 0x8051e79: file output.c, line 200.
+Breakpoint 83 at 0x8051eda: file output.c, line 200.
+Breakpoint 84 at 0x8051eea: file output.c, line 200.
+Breakpoint 85 at 0x8051f1a: file output.c, line 200.
+Breakpoint 86 at 0x8051efa: file output.c, line 200.
+Breakpoint 87 at 0x8051f0a: file output.c, line 200.
+Breakpoint 88 at 0x8051f4a: file output.c, line 200.
+Breakpoint 89 at 0x8051e50: file output.c, line 147.
+Breakpoint 90 at 0x80514be: file globs.c, line 52.
+Breakpoint 91 at 0x80514a0: file globs.c, line 36.
+Breakpoint 92 at 0x80516c4: file io.c, line 292.
+Breakpoint 93 at 0x80516be: file io.c, line 292.
+Breakpoint 94 at 0x80516b5: file io.c, line 292.
+Breakpoint 95 at 0x8051683: file io.c, line 292.
+Breakpoint 96 at 0x8051640: file io.c, line 255.
+Breakpoint 97 at 0x804cc6e: file indent.c, line 2644.
+Breakpoint 98 at 0x8049c34: file indent.c, line 1998.
+Breakpoint 99 at 0x804e162: file backup.c, line 463.
+Breakpoint 100 at 0x8052012: file output.c, line 1207.
+Breakpoint 101 at 0x804f5cc: file lexi.c, line 756.
+Breakpoint 102 at 0x804cb1d: file indent.c, line 2438.
+Breakpoint 103 at 0x804dc2e: file args.c, line 892.
+Breakpoint 104 at 0x804bd1f: file indent.c, line 1248.
+Breakpoint 105 at 0x805192f: file io.c, line 588.
+Breakpoint 106 at 0x8049aaf: file indent.c, line 1971.
+Breakpoint 107 at 0x804b7cc: file indent.c, line 1378.
+Breakpoint 108 at 0x804c57c: file indent.c, line 2708.
+Breakpoint 109 at 0x8051be6: file io.c, line 359.
+Breakpoint 110 at 0x8050dff: file parse.c, line 470.
+Breakpoint 111 at 0x804bc36: file indent.c, line 1352.
+Breakpoint 112 at 0x804db2b: file args.c, line 929.
+Breakpoint 113 at 0x804cbee: file indent.c, line 2611.
+Breakpoint 114 at 0x804ba2d: file indent.c, line 588.
+Breakpoint 115 at 0x805004b: file lexi.c, line 999.
+Breakpoint 116 at 0x8051370: file globs.c, line 76.
+Breakpoint 117 at 0x8051966: file io.c, line 97.
+Breakpoint 118 at 0x8051940: file io.c, line 86.
+Breakpoint 119 at 0x80518b2: file io.c, line 607.
+Breakpoint 120 at 0x80517f2: file io.c, line 607.
+Breakpoint 121 at 0x8051720: file io.c, line 514.
+Breakpoint 122 at 0x8050efc: file parse.c, line 491.
+Breakpoint 123 at 0x8050d5b: file parse.c, line 491.
+Breakpoint 124 at 0x8050e0d: file parse.c, line 491.
+Breakpoint 125 at 0x8050cf1: file parse.c, line 491.
+Breakpoint 126 at 0x8050c80: file parse.c, line 214.
+Breakpoint 127 at 0x8048f14: file indent.c, line 127.
+Breakpoint 128 at 0x8048eb0: file indent.c, line 118.
+Breakpoint 129 at 0x805161c: file io.c, line 245.
+Breakpoint 130 at 0x80515b0: file io.c, line 201.
+Breakpoint 131 at 0x8052124: file output.c, line 1123.
+Breakpoint 132 at 0x8052110: file output.c, line 1121.
+Breakpoint 133 at 0x805145d: file globs.c, line 69.
+Breakpoint 134 at 0x8051440: file globs.c, line 59.
+Breakpoint 135 at 0x804cc6e: file indent.c, line 2644.
+Breakpoint 136 at 0x8049c34: file indent.c, line 1998.
+Breakpoint 137 at 0x804e162: file backup.c, line 463.
+Breakpoint 138 at 0x8052012: file output.c, line 1207.
+Breakpoint 139 at 0x804f5cc: file lexi.c, line 756.
+Breakpoint 140 at 0x804cb1d: file indent.c, line 2438.
+Breakpoint 141 at 0x804dc2e: file args.c, line 892.
+Breakpoint 142 at 0x804bd1f: file indent.c, line 1248.
+Breakpoint 143 at 0x805192f: file io.c, line 588.
+Breakpoint 144 at 0x8049aaf: file indent.c, line 1971.
+Breakpoint 145 at 0x804b7cc: file indent.c, line 1378.
+Breakpoint 146 at 0x804c57c: file indent.c, line 2708.
+Breakpoint 147 at 0x8051be6: file io.c, line 359.
+Breakpoint 148 at 0x8050dff: file parse.c, line 470.
+Breakpoint 149 at 0x804bc36: file indent.c, line 1352.
+Breakpoint 150 at 0x804db2b: file args.c, line 929.
+Breakpoint 151 at 0x804cbee: file indent.c, line 2611.
+Breakpoint 152 at 0x804ba2d: file indent.c, line 588.
+Breakpoint 153 at 0x805004b: file lexi.c, line 999.
+Breakpoint 154 at 0x8051370: file globs.c, line 76.
+Breakpoint 155 at 0x80518b2: file io.c, line 607.
+Breakpoint 156 at 0x80517f2: file io.c, line 607.
+Breakpoint 157 at 0x8051720: file io.c, line 514.
+Breakpoint 158 at 0x8048f14: file indent.c, line 127.
+Breakpoint 159 at 0x8048eb0: file indent.c, line 118.
+Breakpoint 160 at 0x804c788: file indent.c, line 156.
+Breakpoint 161 at 0x8052048: file output.c, line 1207.
+Breakpoint 162 at 0x804c654: file indent.c, line 156.
+Breakpoint 163 at 0x804e046: file backup.c, line 453.
+Breakpoint 164 at 0x8051d28: file io.c, line 404.
+Breakpoint 165 at 0x804cd3e: file indent.c, line 156.
+Breakpoint 166 at 0x804e1d8: file backup.c, line 442.
+Breakpoint 167 at 0x804cb5d: file indent.c, line 156.
+Breakpoint 168 at 0x8051c93: file io.c, line 399.
+Breakpoint 169 at 0x8051c1c: file io.c, line 375.
+Breakpoint 170 at 0x8051cc8: file io.c, line 349.
+Breakpoint 171 at 0x8050ce3: file parse.c, line 470.
+Breakpoint 172 at 0x80492ec: file indent.c, line 156.
+Breakpoint 173 at 0x804c720: file indent.c, line 156.
+Breakpoint 174 at 0x8051cf8: file io.c, line 354.
+Breakpoint 175 at 0x8051290: file globs.c, line 92.
+Breakpoint 176 at 0x80514be: file globs.c, line 52.
+Breakpoint 177 at 0x80514a0: file globs.c, line 36.
+Breakpoint 178 at 0x80515a6: file io.c, line 154.
+Breakpoint 179 at 0x8051530: file io.c, line 124.
+Breakpoint 180 at 0x8051f3a: file output.c, line 200.
+Breakpoint 181 at 0x8051f2a: file output.c, line 200.
+Breakpoint 182 at 0x8051e8a: file output.c, line 200.
+Breakpoint 183 at 0x8051ece: file output.c, line 200.
+Breakpoint 184 at 0x8051e9a: file output.c, line 200.
+Breakpoint 185 at 0x8051eaa: file output.c, line 200.
+Breakpoint 186 at 0x8051e79: file output.c, line 200.
+Breakpoint 187 at 0x8051eda: file output.c, line 200.
+Breakpoint 188 at 0x8051eea: file output.c, line 200.
+Breakpoint 189 at 0x8051f1a: file output.c, line 200.
+Breakpoint 190 at 0x8051efa: file output.c, line 200.
+Breakpoint 191 at 0x8051f0a: file output.c, line 200.
+Breakpoint 192 at 0x8051f4a: file output.c, line 200.
+Breakpoint 193 at 0x8051e50: file output.c, line 147.
+Breakpoint 194 at 0x80518b2: file io.c, line 607.
+Breakpoint 195 at 0x80517f2: file io.c, line 607.
+Breakpoint 196 at 0x8051720: file io.c, line 514.
+Breakpoint 197 at 0x80516c4: file io.c, line 292.
+Breakpoint 198 at 0x80516be: file io.c, line 292.
+Breakpoint 199 at 0x80516b5: file io.c, line 292.
+Breakpoint 200 at 0x8051683: file io.c, line 292.
+Breakpoint 201 at 0x8051640: file io.c, line 255.
+Breakpoint 202 at 0x805171e: file io.c, line 319.
+Breakpoint 203 at 0x8051703: file io.c, line 319.
+Breakpoint 204 at 0x8051715: file io.c, line 319.
+Breakpoint 205 at 0x80516d0: file io.c, line 300.
+Breakpoint 206 at 0x80514be: file globs.c, line 52.
+Breakpoint 207 at 0x80514a0: file globs.c, line 36.
+Breakpoint 208 at 0x8048f84: file indent.c, line 140.
+Breakpoint 209 at 0x8048f20: file indent.c, line 131.
+Breakpoint 210 at 0x805161c: file io.c, line 245.
+Breakpoint 211 at 0x80515b0: file io.c, line 201.
+Breakpoint 212 at 0x8051516: file io.c, line 81.
+Breakpoint 213 at 0x8051500: file io.c, line 74.
+Breakpoint 214 at 0x804cc6e: file indent.c, line 2644.
+Breakpoint 215 at 0x8049c34: file indent.c, line 1998.
+Breakpoint 216 at 0x804e162: file backup.c, line 463.
+Breakpoint 217 at 0x8052012: file output.c, line 1207.
+Breakpoint 218 at 0x804f5cc: file lexi.c, line 756.
+Breakpoint 219 at 0x804cb1d: file indent.c, line 2438.
+Breakpoint 220 at 0x804dc2e: file args.c, line 892.
+Breakpoint 221 at 0x804bd1f: file indent.c, line 1248.
+Breakpoint 222 at 0x805192f: file io.c, line 588.
+Breakpoint 223 at 0x8049aaf: file indent.c, line 1971.
+Breakpoint 224 at 0x804b7cc: file indent.c, line 1378.
+Breakpoint 225 at 0x804c57c: file indent.c, line 2708.
+Breakpoint 226 at 0x8051be6: file io.c, line 359.
+Breakpoint 227 at 0x8050dff: file parse.c, line 470.
+Breakpoint 228 at 0x804bc36: file indent.c, line 1352.
+Breakpoint 229 at 0x804db2b: file args.c, line 929.
+Breakpoint 230 at 0x804cbee: file indent.c, line 2611.
+Breakpoint 231 at 0x804ba2d: file indent.c, line 588.
+Breakpoint 232 at 0x805004b: file lexi.c, line 999.
+Breakpoint 233 at 0x8051370: file globs.c, line 76.
+Breakpoint 234 at 0x80514be: file globs.c, line 52.
+Breakpoint 235 at 0x80514a0: file globs.c, line 36.
+Breakpoint 236 at 0x80518b2: file io.c, line 607.
+Breakpoint 237 at 0x80517f2: file io.c, line 607.
+Breakpoint 238 at 0x8051720: file io.c, line 514.
+Breakpoint 239 at 0x8049284: file indent.c, line 161.
+Breakpoint 240 at 0x80492ba: file indent.c, line 161.
+Breakpoint 241 at 0x8049260: file indent.c, line 144.
+Breakpoint 242 at 0x80520ab: file output.c, line 1152.
+Breakpoint 243 at 0x80520bf: file output.c, line 1152.
+Breakpoint 244 at 0x8052080: file output.c, line 1137.
+Breakpoint 245 at 0x8051b8c: file io.c, line 438.
+Breakpoint 246 at 0x8051a40: file io.c, line 333.
+Breakpoint 247 at 0x805145d: file globs.c, line 69.
+Breakpoint 248 at 0x8051440: file globs.c, line 59.
+Breakpoint 249 at 0x80514be: file globs.c, line 52.
+Breakpoint 250 at 0x80514a0: file globs.c, line 36.
+Breakpoint 251 at 0x804d407: file args.c, line 594.
+Breakpoint 252 at 0x804d3f0: file args.c, line 590.
+Breakpoint 253 at 0x8051a17: file io.c, line 495.
+Breakpoint 254 at 0x8051980: file io.c, line 450.
+Breakpoint 255 at 0x804ce60: file indent.c, line 3091.
+Breakpoint 256 at 0x804e2e0: file backup.c, line 389.
+Breakpoint 257 at 0x8052018: file output.c, line 1207.
+Breakpoint 258 at 0x805204e: file output.c, line 1207.
+Breakpoint 259 at 0x8051fbd: file output.c, line 1207.
+Breakpoint 260 at 0x8051f60: file output.c, line 1182.
+Breakpoint 261 at 0x8051283: file parse.c, line 56.
+Breakpoint 262 at 0x8051180: file parse.c, line 32.
+Breakpoint 263 at 0x8052078: file output.c, line 1168.
+Breakpoint 264 at 0x8052050: file output.c, line 1165.
+Breakpoint 265 at 0x804cc6e: file indent.c, line 2644.
+Breakpoint 266 at 0x8049c34: file indent.c, line 1998.
+Breakpoint 267 at 0x804e162: file backup.c, line 463.
+Breakpoint 268 at 0x8052012: file output.c, line 1207.
+Breakpoint 269 at 0x804f5cc: file lexi.c, line 756.
+Breakpoint 270 at 0x804cb1d: file indent.c, line 2438.
+Breakpoint 271 at 0x804dc2e: file args.c, line 892.
+Breakpoint 272 at 0x804bd1f: file indent.c, line 1248.
+Breakpoint 273 at 0x805192f: file io.c, line 588.
+Breakpoint 274 at 0x8049aaf: file indent.c, line 1971.
+Breakpoint 275 at 0x804b7cc: file indent.c, line 1378.
+Breakpoint 276 at 0x804c57c: file indent.c, line 2708.
+Breakpoint 277 at 0x8051be6: file io.c, line 359.
+Breakpoint 278 at 0x8050dff: file parse.c, line 470.
+Breakpoint 279 at 0x804bc36: file indent.c, line 1352.
+Breakpoint 280 at 0x804db2b: file args.c, line 929.
+Breakpoint 281 at 0x804cbee: file indent.c, line 2611.
+Breakpoint 282 at 0x804ba2d: file indent.c, line 588.
+Breakpoint 283 at 0x805004b: file lexi.c, line 999.
+Breakpoint 284 at 0x8051370: file globs.c, line 76.
+Breakpoint 285 at 0x80515a6: file io.c, line 154.
+Breakpoint 286 at 0x8051530: file io.c, line 124.
+Breakpoint 287 at 0x80516c4: file io.c, line 292.
+Breakpoint 288 at 0x80516be: file io.c, line 292.
+Breakpoint 289 at 0x80516b5: file io.c, line 292.
+Breakpoint 290 at 0x8051683: file io.c, line 292.
+Breakpoint 291 at 0x8051640: file io.c, line 255.
+Breakpoint 292 at 0x805171e: file io.c, line 319.
+Breakpoint 293 at 0x8051703: file io.c, line 319.
+Breakpoint 294 at 0x8051715: file io.c, line 319.
+Breakpoint 295 at 0x80516d0: file io.c, line 300.
+Breakpoint 296 at 0x805145d: file globs.c, line 69.
+Breakpoint 297 at 0x8051440: file globs.c, line 59.
+Breakpoint 298 at 0x80514be: file globs.c, line 52.
+Breakpoint 299 at 0x80514a0: file globs.c, line 36.
+Breakpoint 300 at 0x80515a6: file io.c, line 154.
+Breakpoint 301 at 0x8051530: file io.c, line 124.
+Breakpoint 302 at 0x8050c4f: file parse.c, line 155.
+Breakpoint 303 at 0x8050bc0: file parse.c, line 140.
+Breakpoint 304 at 0x805161c: file io.c, line 245.
+Breakpoint 305 at 0x80515b0: file io.c, line 201.
+Breakpoint 306 at 0x8051516: file io.c, line 81.
+Breakpoint 307 at 0x8051500: file io.c, line 74.
+Breakpoint 308 at 0x805145d: file globs.c, line 69.
+Breakpoint 309 at 0x8051440: file globs.c, line 59.
+Breakpoint 310 at 0x8051966: file io.c, line 97.
+Breakpoint 311 at 0x8051940: file io.c, line 86.
+Breakpoint 312 at 0x80518b2: file io.c, line 607.
+Breakpoint 313 at 0x80517f2: file io.c, line 607.
+Breakpoint 314 at 0x8051720: file io.c, line 514.
+Breakpoint 315 at 0x80516c4: file io.c, line 292.
+Breakpoint 316 at 0x80516be: file io.c, line 292.
+Breakpoint 317 at 0x80516b5: file io.c, line 292.
+Breakpoint 318 at 0x8051683: file io.c, line 292.
+Breakpoint 319 at 0x8051640: file io.c, line 255.
+Breakpoint 320 at 0x805171e: file io.c, line 319.
+Breakpoint 321 at 0x8051703: file io.c, line 319.
+Breakpoint 322 at 0x8051715: file io.c, line 319.
+Breakpoint 323 at 0x80516d0: file io.c, line 300.
+Breakpoint 324 at 0x8050c4f: file parse.c, line 155.
+Breakpoint 325 at 0x8050bc0: file parse.c, line 140.
+Breakpoint 326 at 0x8051516: file io.c, line 81.
+Breakpoint 327 at 0x8051500: file io.c, line 74.
+Breakpoint 328 at 0x804cc6e: file indent.c, line 2644.
+Breakpoint 329 at 0x8049c34: file indent.c, line 1998.
+Breakpoint 330 at 0x804e162: file backup.c, line 463.
+Breakpoint 331 at 0x8052012: file output.c, line 1207.
+Breakpoint 332 at 0x804f5cc: file lexi.c, line 756.
+Breakpoint 333 at 0x804cb1d: file indent.c, line 2438.
+Breakpoint 334 at 0x804dc2e: file args.c, line 892.
+Breakpoint 335 at 0x804bd1f: file indent.c, line 1248.
+Breakpoint 336 at 0x805192f: file io.c, line 588.
+Breakpoint 337 at 0x8049aaf: file indent.c, line 1971.
+Breakpoint 338 at 0x804b7cc: file indent.c, line 1378.
+Breakpoint 339 at 0x804c57c: file indent.c, line 2708.
+Breakpoint 340 at 0x8051be6: file io.c, line 359.
+Breakpoint 341 at 0x8050dff: file parse.c, line 470.
+Breakpoint 342 at 0x804bc36: file indent.c, line 1352.
+Breakpoint 343 at 0x804db2b: file args.c, line 929.
+Breakpoint 344 at 0x804cbee: file indent.c, line 2611.
+Breakpoint 345 at 0x804ba2d: file indent.c, line 588.
+Breakpoint 346 at 0x805004b: file lexi.c, line 999.
+Breakpoint 347 at 0x8051370: file globs.c, line 76.
+Breakpoint 348 at 0x805145d: file globs.c, line 69.
+Breakpoint 349 at 0x8051440: file globs.c, line 59.
+Breakpoint 350 at 0x8048f14: file indent.c, line 127.
+Breakpoint 351 at 0x8048eb0: file indent.c, line 118.
+Breakpoint 352 at 0x804df14: file backup.c, line 163.
+Breakpoint 353 at 0x804deb0: file backup.c, line 157.
+Breakpoint 354 at 0x804cc6e: file indent.c, line 2644.
+Breakpoint 355 at 0x8049c34: file indent.c, line 1998.
+Breakpoint 356 at 0x804e162: file backup.c, line 463.
+Breakpoint 357 at 0x8052012: file output.c, line 1207.
+Breakpoint 358 at 0x804f5cc: file lexi.c, line 756.
+Breakpoint 359 at 0x804cb1d: file indent.c, line 2438.
+Breakpoint 360 at 0x804dc2e: file args.c, line 892.
+Breakpoint 361 at 0x804bd1f: file indent.c, line 1248.
+Breakpoint 362 at 0x805192f: file io.c, line 588.
+Breakpoint 363 at 0x8049aaf: file indent.c, line 1971.
+Breakpoint 364 at 0x804b7cc: file indent.c, line 1378.
+Breakpoint 365 at 0x804c57c: file indent.c, line 2708.
+Breakpoint 366 at 0x8051be6: file io.c, line 359.
+Breakpoint 367 at 0x8050dff: file parse.c, line 470.
+Breakpoint 368 at 0x804bc36: file indent.c, line 1352.
+Breakpoint 369 at 0x804db2b: file args.c, line 929.
+Breakpoint 370 at 0x804cbee: file indent.c, line 2611.
+Breakpoint 371 at 0x804ba2d: file indent.c, line 588.
+Breakpoint 372 at 0x805004b: file lexi.c, line 999.
+Breakpoint 373 at 0x8051370: file globs.c, line 76.
+Breakpoint 374 at 0x80514be: file globs.c, line 52.
+Breakpoint 375 at 0x80514a0: file globs.c, line 36.
+Breakpoint 376 at 0x804c788: file indent.c, line 156.
+Breakpoint 377 at 0x8052048: file output.c, line 1207.
+Breakpoint 378 at 0x804c654: file indent.c, line 156.
+Breakpoint 379 at 0x804e046: file backup.c, line 453.
+Breakpoint 380 at 0x8051d28: file io.c, line 404.
+Breakpoint 381 at 0x804cd3e: file indent.c, line 156.
+Breakpoint 382 at 0x804e1d8: file backup.c, line 442.
+Breakpoint 383 at 0x804cb5d: file indent.c, line 156.
+Breakpoint 384 at 0x8051c93: file io.c, line 399.
+Breakpoint 385 at 0x8051c1c: file io.c, line 375.
+Breakpoint 386 at 0x8051cc8: file io.c, line 349.
+Breakpoint 387 at 0x8050ce3: file parse.c, line 470.
+Breakpoint 388 at 0x80492ec: file indent.c, line 156.
+Breakpoint 389 at 0x804c720: file indent.c, line 156.
+Breakpoint 390 at 0x8051cf8: file io.c, line 354.
+Breakpoint 391 at 0x8051290: file globs.c, line 92.
+Breakpoint 392 at 0x80515a6: file io.c, line 154.
+Breakpoint 393 at 0x8051530: file io.c, line 124.
+Breakpoint 394 at 0x8051f3a: file output.c, line 200.
+Breakpoint 395 at 0x8051f2a: file output.c, line 200.
+Breakpoint 396 at 0x8051e8a: file output.c, line 200.
+Breakpoint 397 at 0x8051ece: file output.c, line 200.
+Breakpoint 398 at 0x8051e9a: file output.c, line 200.
+Breakpoint 399 at 0x8051eaa: file output.c, line 200.
+Breakpoint 400 at 0x8051e79: file output.c, line 200.
+Breakpoint 401 at 0x8051eda: file output.c, line 200.
+Breakpoint 402 at 0x8051eea: file output.c, line 200.
+Breakpoint 403 at 0x8051f1a: file output.c, line 200.
+Breakpoint 404 at 0x8051efa: file output.c, line 200.
+Breakpoint 405 at 0x8051f0a: file output.c, line 200.
+Breakpoint 406 at 0x8051f4a: file output.c, line 200.
+Breakpoint 407 at 0x8051e50: file output.c, line 147.
+Breakpoint 408 at 0x80514be: file globs.c, line 52.
+Breakpoint 409 at 0x80514a0: file globs.c, line 36.
+Breakpoint 410 at 0x80516c4: file io.c, line 292.
+Breakpoint 411 at 0x80516be: file io.c, line 292.
+Breakpoint 412 at 0x80516b5: file io.c, line 292.
+Breakpoint 413 at 0x8051683: file io.c, line 292.
+Breakpoint 414 at 0x8051640: file io.c, line 255.
+Breakpoint 415 at 0x804cc6e: file indent.c, line 2644.
+Breakpoint 416 at 0x8049c34: file indent.c, line 1998.
+Breakpoint 417 at 0x804e162: file backup.c, line 463.
+Breakpoint 418 at 0x8052012: file output.c, line 1207.
+Breakpoint 419 at 0x804f5cc: file lexi.c, line 756.
+Breakpoint 420 at 0x804cb1d: file indent.c, line 2438.
+Breakpoint 421 at 0x804dc2e: file args.c, line 892.
+Breakpoint 422 at 0x804bd1f: file indent.c, line 1248.
+Breakpoint 423 at 0x805192f: file io.c, line 588.
+Breakpoint 424 at 0x8049aaf: file indent.c, line 1971.
+Breakpoint 425 at 0x804b7cc: file indent.c, line 1378.
+Breakpoint 426 at 0x804c57c: file indent.c, line 2708.
+Breakpoint 427 at 0x8051be6: file io.c, line 359.
+Breakpoint 428 at 0x8050dff: file parse.c, line 470.
+Breakpoint 429 at 0x804bc36: file indent.c, line 1352.
+Breakpoint 430 at 0x804db2b: file args.c, line 929.
+Breakpoint 431 at 0x804cbee: file indent.c, line 2611.
+Breakpoint 432 at 0x804ba2d: file indent.c, line 588.
+Breakpoint 433 at 0x805004b: file lexi.c, line 999.
+Breakpoint 434 at 0x8051370: file globs.c, line 76.
+Breakpoint 435 at 0x8051966: file io.c, line 97.
+Breakpoint 436 at 0x8051940: file io.c, line 86.
+Breakpoint 437 at 0x8048f14: file indent.c, line 127.
+Breakpoint 438 at 0x8048eb0: file indent.c, line 118.
+Breakpoint 439 at 0x805161c: file io.c, line 245.
+Breakpoint 440 at 0x80515b0: file io.c, line 201.
+Breakpoint 441 at 0x8052124: file output.c, line 1123.
+Breakpoint 442 at 0x8052110: file output.c, line 1121.
+Breakpoint 443 at 0x805145d: file globs.c, line 69.
+Breakpoint 444 at 0x8051440: file globs.c, line 59.
+Breakpoint 445 at 0x804cc6e: file indent.c, line 2644.
+Breakpoint 446 at 0x8049c34: file indent.c, line 1998.
+Breakpoint 447 at 0x804e162: file backup.c, line 463.
+Breakpoint 448 at 0x8052012: file output.c, line 1207.
+Breakpoint 449 at 0x804f5cc: file lexi.c, line 756.
+Breakpoint 450 at 0x804cb1d: file indent.c, line 2438.
+Breakpoint 451 at 0x804dc2e: file args.c, line 892.
+Breakpoint 452 at 0x804bd1f: file indent.c, line 1248.
+Breakpoint 453 at 0x805192f: file io.c, line 588.
+Breakpoint 454 at 0x8049aaf: file indent.c, line 1971.
+Breakpoint 455 at 0x804b7cc: file indent.c, line 1378.
+Breakpoint 456 at 0x804c57c: file indent.c, line 2708.
+Breakpoint 457 at 0x8051be6: file io.c, line 359.
+Breakpoint 458 at 0x8050dff: file parse.c, line 470.
+Breakpoint 459 at 0x804bc36: file indent.c, line 1352.
+Breakpoint 460 at 0x804db2b: file args.c, line 929.
+Breakpoint 461 at 0x804cbee: file indent.c, line 2611.
+Breakpoint 462 at 0x804ba2d: file indent.c, line 588.
+Breakpoint 463 at 0x805004b: file lexi.c, line 999.
+Breakpoint 464 at 0x8051370: file globs.c, line 76.
+Breakpoint 465 at 0x8048f14: file indent.c, line 127.
+Breakpoint 466 at 0x8048eb0: file indent.c, line 118.
+Breakpoint 467 at 0x804c788: file indent.c, line 156.
+Breakpoint 468 at 0x8052048: file output.c, line 1207.
+Breakpoint 469 at 0x804c654: file indent.c, line 156.
+Breakpoint 470 at 0x804e046: file backup.c, line 453.
+Breakpoint 471 at 0x8051d28: file io.c, line 404.
+Breakpoint 472 at 0x804cd3e: file indent.c, line 156.
+Breakpoint 473 at 0x804e1d8: file backup.c, line 442.
+Breakpoint 474 at 0x804cb5d: file indent.c, line 156.
+Breakpoint 475 at 0x8051c93: file io.c, line 399.
+Breakpoint 476 at 0x8051c1c: file io.c, line 375.
+Breakpoint 477 at 0x8051cc8: file io.c, line 349.
+Breakpoint 478 at 0x8050ce3: file parse.c, line 470.
+Breakpoint 479 at 0x80492ec: file indent.c, line 156.
+Breakpoint 480 at 0x804c720: file indent.c, line 156.
+Breakpoint 481 at 0x8051cf8: file io.c, line 354.
+Breakpoint 482 at 0x8051290: file globs.c, line 92.
+Breakpoint 483 at 0x80514be: file globs.c, line 52.
+Breakpoint 484 at 0x80514a0: file globs.c, line 36.
+Breakpoint 485 at 0x80515a6: file io.c, line 154.
+Breakpoint 486 at 0x8051530: file io.c, line 124.
+Breakpoint 487 at 0x8051f3a: file output.c, line 200.
+Breakpoint 488 at 0x8051f2a: file output.c, line 200.
+Breakpoint 489 at 0x8051e8a: file output.c, line 200.
+Breakpoint 490 at 0x8051ece: file output.c, line 200.
+Breakpoint 491 at 0x8051e9a: file output.c, line 200.
+Breakpoint 492 at 0x8051eaa: file output.c, line 200.
+Breakpoint 493 at 0x8051e79: file output.c, line 200.
+Breakpoint 494 at 0x8051eda: file output.c, line 200.
+Breakpoint 495 at 0x8051eea: file output.c, line 200.
+Breakpoint 496 at 0x8051f1a: file output.c, line 200.
+Breakpoint 497 at 0x8051efa: file output.c, line 200.
+Breakpoint 498 at 0x8051f0a: file output.c, line 200.
+Breakpoint 499 at 0x8051f4a: file output.c, line 200.
+Breakpoint 500 at 0x8051e50: file output.c, line 147.
+Breakpoint 501 at 0x80516c4: file io.c, line 292.
+Breakpoint 502 at 0x80516be: file io.c, line 292.
+Breakpoint 503 at 0x80516b5: file io.c, line 292.
+Breakpoint 504 at 0x8051683: file io.c, line 292.
+Breakpoint 505 at 0x8051640: file io.c, line 255.
+Breakpoint 506 at 0x805171e: file io.c, line 319.
+Breakpoint 507 at 0x8051703: file io.c, line 319.
+Breakpoint 508 at 0x8051715: file io.c, line 319.
+Breakpoint 509 at 0x80516d0: file io.c, line 300.
+Breakpoint 510 at 0x80514be: file globs.c, line 52.
+Breakpoint 511 at 0x80514a0: file globs.c, line 36.
+Breakpoint 512 at 0x8048f84: file indent.c, line 140.
+Breakpoint 513 at 0x8048f20: file indent.c, line 131.
+Breakpoint 514 at 0x805161c: file io.c, line 245.
+Breakpoint 515 at 0x80515b0: file io.c, line 201.
+Breakpoint 516 at 0x8051516: file io.c, line 81.
+Breakpoint 517 at 0x8051500: file io.c, line 74.
+Breakpoint 518 at 0x804cc6e: file indent.c, line 2644.
+Breakpoint 519 at 0x8049c34: file indent.c, line 1998.
+Breakpoint 520 at 0x804e162: file backup.c, line 463.
+Breakpoint 521 at 0x8052012: file output.c, line 1207.
+Breakpoint 522 at 0x804f5cc: file lexi.c, line 756.
+Breakpoint 523 at 0x804cb1d: file indent.c, line 2438.
+Breakpoint 524 at 0x804dc2e: file args.c, line 892.
+Breakpoint 525 at 0x804bd1f: file indent.c, line 1248.
+Breakpoint 526 at 0x805192f: file io.c, line 588.
+Breakpoint 527 at 0x8049aaf: file indent.c, line 1971.
+Breakpoint 528 at 0x804b7cc: file indent.c, line 1378.
+Breakpoint 529 at 0x804c57c: file indent.c, line 2708.
+Breakpoint 530 at 0x8051be6: file io.c, line 359.
+Breakpoint 531 at 0x8050dff: file parse.c, line 470.
+Breakpoint 532 at 0x804bc36: file indent.c, line 1352.
+Breakpoint 533 at 0x804db2b: file args.c, line 929.
+Breakpoint 534 at 0x804cbee: file indent.c, line 2611.
+Breakpoint 535 at 0x804ba2d: file indent.c, line 588.
+Breakpoint 536 at 0x805004b: file lexi.c, line 999.
+Breakpoint 537 at 0x8051370: file globs.c, line 76.
+Breakpoint 538 at 0x80514be: file globs.c, line 52.
+Breakpoint 539 at 0x80514a0: file globs.c, line 36.
+Breakpoint 540 at 0x8049284: file indent.c, line 161.
+Breakpoint 541 at 0x80492ba: file indent.c, line 161.
+Breakpoint 542 at 0x8049260: file indent.c, line 144.
+Breakpoint 543 at 0x80520ab: file output.c, line 1152.
+Breakpoint 544 at 0x80520bf: file output.c, line 1152.
+Breakpoint 545 at 0x8052080: file output.c, line 1137.
+Breakpoint 546 at 0x8051b8c: file io.c, line 438.
+Breakpoint 547 at 0x8051a40: file io.c, line 333.
+Breakpoint 548 at 0x805145d: file globs.c, line 69.
+Breakpoint 549 at 0x8051440: file globs.c, line 59.
+Breakpoint 550 at 0x80514be: file globs.c, line 52.
+Breakpoint 551 at 0x80514a0: file globs.c, line 36.
+Breakpoint 552 at 0x804d407: file args.c, line 594.
+Breakpoint 553 at 0x804d3f0: file args.c, line 590.
+Breakpoint 554 at 0x8051a17: file io.c, line 495.
+Breakpoint 555 at 0x8051980: file io.c, line 450.
+Breakpoint 556 at 0x804ce60: file indent.c, line 3091.
+Breakpoint 557 at 0x804e2e0: file backup.c, line 389.
+Breakpoint 558 at 0x8052018: file output.c, line 1207.
+Breakpoint 559 at 0x805204e: file output.c, line 1207.
+Breakpoint 560 at 0x8051fbd: file output.c, line 1207.
+Breakpoint 561 at 0x8051f60: file output.c, line 1182.
+Breakpoint 562 at 0x8051283: file parse.c, line 56.
+Breakpoint 563 at 0x8051180: file parse.c, line 32.
+Breakpoint 564 at 0x8052078: file output.c, line 1168.
+Breakpoint 565 at 0x8052050: file output.c, line 1165.
+Breakpoint 566 at 0x804cc6e: file indent.c, line 2644.
+Breakpoint 567 at 0x8049c34: file indent.c, line 1998.
+Breakpoint 568 at 0x804e162: file backup.c, line 463.
+Breakpoint 569 at 0x8052012: file output.c, line 1207.
+Breakpoint 570 at 0x804f5cc: file lexi.c, line 756.
+Breakpoint 571 at 0x804cb1d: file indent.c, line 2438.
+Breakpoint 572 at 0x804dc2e: file args.c, line 892.
+Breakpoint 573 at 0x804bd1f: file indent.c, line 1248.
+Breakpoint 574 at 0x805192f: file io.c, line 588.
+Breakpoint 575 at 0x8049aaf: file indent.c, line 1971.
+Breakpoint 576 at 0x804b7cc: file indent.c, line 1378.
+Breakpoint 577 at 0x804c57c: file indent.c, line 2708.
+Breakpoint 578 at 0x8051be6: file io.c, line 359.
+Breakpoint 579 at 0x8050dff: file parse.c, line 470.
+Breakpoint 580 at 0x804bc36: file indent.c, line 1352.
+Breakpoint 581 at 0x804db2b: file args.c, line 929.
+Breakpoint 582 at 0x804cbee: file indent.c, line 2611.
+Breakpoint 583 at 0x804ba2d: file indent.c, line 588.
+Breakpoint 584 at 0x805004b: file lexi.c, line 999.
+Breakpoint 585 at 0x8051370: file globs.c, line 76.
+Breakpoint 586 at 0x80515a6: file io.c, line 154.
+Breakpoint 587 at 0x8051530: file io.c, line 124.
+Breakpoint 588 at 0x80516c4: file io.c, line 292.
+Breakpoint 589 at 0x80516be: file io.c, line 292.
+Breakpoint 590 at 0x80516b5: file io.c, line 292.
+Breakpoint 591 at 0x8051683: file io.c, line 292.
+Breakpoint 592 at 0x8051640: file io.c, line 255.
+Breakpoint 593 at 0x805171e: file io.c, line 319.
+Breakpoint 594 at 0x8051703: file io.c, line 319.
+Breakpoint 595 at 0x8051715: file io.c, line 319.
+Breakpoint 596 at 0x80516d0: file io.c, line 300.
+Breakpoint 597 at 0x805145d: file globs.c, line 69.
+Breakpoint 598 at 0x8051440: file globs.c, line 59.
+Breakpoint 599 at 0x80514be: file globs.c, line 52.
+Breakpoint 600 at 0x80514a0: file globs.c, line 36.
+Breakpoint 601 at 0x80515a6: file io.c, line 154.
+Breakpoint 602 at 0x8051530: file io.c, line 124.
+Breakpoint 603 at 0x8050c4f: file parse.c, line 155.
+Breakpoint 604 at 0x8050bc0: file parse.c, line 140.
+Breakpoint 605 at 0x805161c: file io.c, line 245.
+Breakpoint 606 at 0x80515b0: file io.c, line 201.
+Breakpoint 607 at 0x8051516: file io.c, line 81.
+Breakpoint 608 at 0x8051500: file io.c, line 74.
+Breakpoint 609 at 0x805145d: file globs.c, line 69.
+Breakpoint 610 at 0x8051440: file globs.c, line 59.
+Breakpoint 611 at 0x8051966: file io.c, line 97.
+Breakpoint 612 at 0x8051940: file io.c, line 86.
+Breakpoint 613 at 0x80516c4: file io.c, line 292.
+Breakpoint 614 at 0x80516be: file io.c, line 292.
+Breakpoint 615 at 0x80516b5: file io.c, line 292.
+Breakpoint 616 at 0x8051683: file io.c, line 292.
+Breakpoint 617 at 0x8051640: file io.c, line 255.
+Breakpoint 618 at 0x805171e: file io.c, line 319.
+Breakpoint 619 at 0x8051703: file io.c, line 319.
+Breakpoint 620 at 0x8051715: file io.c, line 319.
+Breakpoint 621 at 0x80516d0: file io.c, line 300.
+Breakpoint 622 at 0x8050c50: file parse.c, line 616.
+Breakpoint 623 at 0x804d3a0: file args.c, line 577.
+Breakpoint 624 at 0x804d3e5: file args.c, line 584.
+Breakpoint 625 at 0x8049c50: file indent.c, line 2085.
+Breakpoint 626 at 0x8049d27: file indent.c, line 2236.
+Breakpoint 627 at 0x804df20: file backup.c, line 420.
+Breakpoint 628 at 0x804e08c: file backup.c, line 469.
+Breakpoint 629 at 0x8053240: file output.c, line 209.
+Breakpoint 630 at 0x8053405: file output.c, line 411.
+Breakpoint 631 at 0x804f370: file lexi.c, line 203.
+Breakpoint 632 at 0x804f73f: file lexi.c, line 1123.
+Breakpoint 633 at 0x804fae0: file lexi.c, line 1123.
+Breakpoint 634 at 0x804f918: file lexi.c, line 1123.
+Breakpoint 635 at 0x804f9b4: file lexi.c, line 1123.
+Breakpoint 636 at 0x804dd90: file backup.c, line 202.
+Breakpoint 637 at 0x804de92: file backup.c, line 238.
+Breakpoint 638 at 0x8050850: file parse.c, line 60.
+Breakpoint 639 at 0x8050aba: file parse.c, line 134.
+Breakpoint 640 at 0x8048f90: file indent.c, line 214.
+Breakpoint 641 at 0x80490bc: file indent.c, line 281.
+Breakpoint 642 at 0x804904f: file indent.c, line 281.
+Breakpoint 643 at 0x8049155: file indent.c, line 281.
+Breakpoint 644 at 0x804bdd0: file indent.c, line 2758.
+Breakpoint 645 at 0x804cc0d: file indent.c, line 2795.
+Breakpoint 646 at 0x804d4e0: file args.c, line 657.
+Breakpoint 647 at 0x804d88e: file args.c, line 844.
+Breakpoint 648 at 0x804d6ab: file args.c, line 844.
+Breakpoint 649 at 0x804d736: file args.c, line 844.
+Breakpoint 650 at 0x804d7ac: file args.c, line 844.
+Breakpoint 651 at 0x8052230: file output.c, line 570.
+Breakpoint 652 at 0x805295d: file output.c, line 1109.
+Breakpoint 653 at 0x8052e03: file output.c, line 1109.
+Breakpoint 654 at 0x804d410: file args.c, line 542.
+Breakpoint 655 at 0x804dc50: file args.c, line 1061.
+Breakpoint 656 at 0x804dcf6: file args.c, line 1119.
+Breakpoint 657 at 0x804dc9f: file args.c, line 1119.
+Breakpoint 658 at 0x8049300: file indent.c, line 1675.
+Breakpoint 659 at 0x804979d: file indent.c, line 2032.
+Breakpoint 660 at 0x8052130: file output.c, line 529.
+Breakpoint 661 at 0x80521a0: file output.c, line 554.
+Breakpoint 662 at 0x80521d4: file output.c, line 554.
+Breakpoint 663 at 0x8051d30: file output.c, line 60.
+Breakpoint 664 at 0x8051d6b: file output.c, line 123.
+Breakpoint 665 at 0x80521e0: file output.c, line 414.
+Breakpoint 666 at 0x805222c: file output.c, line 427.
+Breakpoint 667 at 0x804ce10: file indent.c, line 3059.
+Breakpoint 668 at 0x804d1be: file indent.c, line 3112.
+Breakpoint 669 at 0x804f2c0: file gperf.c, line 62.
+Breakpoint 670 at 0x804f2eb: file gperf.c, line 133.
+Breakpoint 671 at 0x804d8e0: file args.c, line 985.
+Breakpoint 672 at 0x804da1e: file args.c, line 1038.
+Breakpoint 673 at 0x8049170: file indent.c, line 167.
+Breakpoint 674 at 0x804922e: file indent.c, line 206.
+Breakpoint 675 at 0x8050ac0: file parse.c, line 530.
+Breakpoint 676 at 0x8050ae8: file parse.c, line 608.
+Breakpoint 677 at 0x80505b0: file lexi.c, line 1131.
+Breakpoint 678 at 0x8050625: file lexi.c, line 1157.
+Breakpoint 679 at 0x804f180: file gperf-cc.c, line 62.
+Breakpoint 680 at 0x804f1ab: file gperf-cc.c, line 174.
+Breakpoint 681 at 0x8051f50: file output.c, line 1211.
+Breakpoint 682 at 0x8051f5c: file output.c, line 1213.
+Breakpoint 683 at 0x804d490: file args.c, line 608.
+Breakpoint 684 at 0x804e3a0: file comments.c, line 81.
+Breakpoint 685 at 0x804e8d9: file comments.c, line 859.
+Breakpoint 686 at 0x804eb1f: file comments.c, line 859.
+Breakpoint 687 at 0x804e93e: file comments.c, line 859.
+Breakpoint 688 at 0x8049c50: file indent.c, line 2085.
+Breakpoint 689 at 0x8049d27: file indent.c, line 2236.
+Breakpoint 690 at 0x804df20: file backup.c, line 420.
+Breakpoint 691 at 0x804e08c: file backup.c, line 469.
+Breakpoint 692 at 0x804ce10: file indent.c, line 3059.
+Breakpoint 693 at 0x804d1be: file indent.c, line 3112.
+Breakpoint 694 at 0x8053240: file output.c, line 209.
+Breakpoint 695 at 0x8053405: file output.c, line 411.
+Breakpoint 696 at 0x804f370: file lexi.c, line 203.
+Breakpoint 697 at 0x804f73f: file lexi.c, line 1123.
+Breakpoint 698 at 0x804fae0: file lexi.c, line 1123.
+Breakpoint 699 at 0x804f918: file lexi.c, line 1123.
+Breakpoint 700 at 0x804f9b4: file lexi.c, line 1123.
+Breakpoint 701 at 0x8051720: file io.c, line 514.
+Breakpoint 702 at 0x80518b2: file io.c, line 607.
+Breakpoint 703 at 0x80517f2: file io.c, line 607.
+Breakpoint 704 at 0x804d8e0: file args.c, line 985.
+Breakpoint 705 at 0x804da1e: file args.c, line 1038.
+Breakpoint 706 at 0x804bdd0: file indent.c, line 2758.
+Breakpoint 707 at 0x804cc0d: file indent.c, line 2795.
+Breakpoint 708 at 0x8048f90: file indent.c, line 214.
+Breakpoint 709 at 0x80490bc: file indent.c, line 281.
+Breakpoint 710 at 0x804904f: file indent.c, line 281.
+Breakpoint 711 at 0x8049155: file indent.c, line 281.
+Breakpoint 712 at 0x804d4e0: file args.c, line 657.
+Breakpoint 713 at 0x804d88e: file args.c, line 844.
+Breakpoint 714 at 0x804d6ab: file args.c, line 844.
+Breakpoint 715 at 0x804d736: file args.c, line 844.
+Breakpoint 716 at 0x804d7ac: file args.c, line 844.
+Breakpoint 717 at 0x8050c80: file parse.c, line 214.
+Breakpoint 718 at 0x8050efc: file parse.c, line 491.
+Breakpoint 719 at 0x8050d5b: file parse.c, line 491.
+Breakpoint 720 at 0x8050e0d: file parse.c, line 491.
+Breakpoint 721 at 0x8050cf1: file parse.c, line 491.
+Breakpoint 722 at 0x8052230: file output.c, line 570.
+Breakpoint 723 at 0x805295d: file output.c, line 1109.
+Breakpoint 724 at 0x8052e03: file output.c, line 1109.
+Breakpoint 725 at 0x804dc50: file args.c, line 1061.
+Breakpoint 726 at 0x804dcf6: file args.c, line 1119.
+Breakpoint 727 at 0x804dc9f: file args.c, line 1119.
+Breakpoint 728 at 0x804e3a0: file comments.c, line 81.
+Breakpoint 729 at 0x804e8d9: file comments.c, line 859.
+Breakpoint 730 at 0x804eb1f: file comments.c, line 859.
+Breakpoint 731 at 0x804e93e: file comments.c, line 859.
+Breakpoint 732 at 0x8049300: file indent.c, line 1675.
+Breakpoint 733 at 0x804979d: file indent.c, line 2032.
+!!!BCT-NEW-EXECUTION
+!!!BCT-stack-end
+!!!BCT-ENTER: main
+!!!BCT-stack
+#0  main (argc=5, argv=0xbffff204) at indent.c:3059
+!!!BCT-stack-end
+!!!BCT-ENTER: parse
+!!!BCT-stack
+#0  parse (tk=decl) at parse.c:214
+#1  0x0804b2d8 in handle_token_decl (type_code=decl, scase=<value optimized out>, force_nl=<value optimized out>, sp_sw=0xbffff09d "", flushed_nl=0xbffff09e "", hd_type=0xbffff094, dec_ind=0xbffff08c, last_token_ends_sp=0xbffff09b "", file_exit_value=0xbffff090, can_break=bb_none, last_else=0xbffff09a "", is_procname_definition=0 '\000') at indent.c:1457
+#2  handle_the_token (type_code=decl, scase=<value optimized out>, force_nl=<value optimized out>, sp_sw=0xbffff09d "", flushed_nl=0xbffff09e "", hd_type=0xbffff094, dec_ind=0xbffff08c, last_token_ends_sp=0xbffff09b "", file_exit_value=0xbffff090, can_break=bb_none, last_else=0xbffff09a "", is_procname_definition=0 '\000') at indent.c:2192
+#3  0x0804c215 in indent_main_loop (this_file=<value optimized out>) at indent.c:2712
+#4  indent (this_file=<value optimized out>) at indent.c:2794
+#5  0x0804d25a in indent_single_file (argc=5, argv=0xbffff204) at indent.c:3021
+#6  indent_all (argc=5, argv=0xbffff204) at indent.c:3048
+#7  main (argc=5, argv=0xbffff204) at indent.c:3108
+!!!BCT-stack-end
+!!!BCT-EXIT: fatal
+!!!BCT-stack
+#0  parse (tk=decl) at parse.c:470
+#1  0x0804b2d8 in handle_token_decl (type_code=decl, scase=<value optimized out>, force_nl=<value optimized out>, sp_sw=0xbffff09d "", flushed_nl=0xbffff09e "", hd_type=0xbffff094, dec_ind=0xbffff08c, last_token_ends_sp=0xbffff09b "", file_exit_value=0xbffff090, can_break=bb_none, last_else=0xbffff09a "", is_procname_definition=0 '\000') at indent.c:1457
+#2  handle_the_token (type_code=decl, scase=<value optimized out>, force_nl=<value optimized out>, sp_sw=0xbffff09d "", flushed_nl=0xbffff09e "", hd_type=0xbffff094, dec_ind=0xbffff08c, last_token_ends_sp=0xbffff09b "", file_exit_value=0xbffff090, can_break=bb_none, last_else=0xbffff09a "", is_procname_definition=0 '\000') at indent.c:2192
+#3  0x0804c215 in indent_main_loop (this_file=<value optimized out>) at indent.c:2712
+#4  indent (this_file=<value optimized out>) at indent.c:2794
+#5  0x0804d25a in indent_single_file (argc=5, argv=0xbffff204) at indent.c:3021
+#6  indent_all (argc=5, argv=0xbffff204) at indent.c:3048
+#7  main (argc=5, argv=0xbffff204) at indent.c:3108
+i = 134583392
+eax            0x1	1
+ecx            0x8059388	134583176
+edx            0x8059460	134583392
+ebx            0x0	0
+esp            0xbfffefa0	0xbfffefa0
+ebp            0xbfffefd8	0xbfffefd8
+esi            0x0	0
+edi            0x0	0
+eip            0x8050ce3	0x8050ce3 <parse+99>
+eflags         0x246	[ PF ZF IF ]
+cs             0x73	115
+ss             0x7b	123
+ds             0x7b	123
+es             0x7b	123
+fs             0x0	0
+gs             0x33	51
+st0            0	(raw 0x00000000000000000000)
+st1            0	(raw 0x00000000000000000000)
+st2            0	(raw 0x00000000000000000000)
+st3            0	(raw 0x00000000000000000000)
+st4            0	(raw 0x00000000000000000000)
+st5            0	(raw 0x00000000000000000000)
+st6            0	(raw 0x00000000000000000000)
+st7            0	(raw 0x00000000000000000000)
+fctrl          0x37f	895
+fstat          0x0	0
+ftag           0xffff	65535
+fiseg          0x0	0
+fioff          0x0	0
+foseg          0x0	0
+fooff          0x0	0
+fop            0x0	0
+xmm0           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm1           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm2           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm3           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm4           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm5           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm6           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm7           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+mxcsr          0x1f80	[ IM DM ZM OM UM PM ]
+mm0            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm1            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm2            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm3            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm4            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm5            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm6            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm7            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+!!!BCT-stack-end
+!!!BCT-ENTER: reduce
+!!!BCT-stack
+#0  reduce () at parse.c:530
+#1  0x08050ce8 in parse (tk=decl) at parse.c:470
+#2  0x0804b2d8 in handle_token_decl (type_code=decl, scase=<value optimized out>, force_nl=<value optimized out>, sp_sw=0xbffff09d "", flushed_nl=0xbffff09e "", hd_type=0xbffff094, dec_ind=0xbffff08c, last_token_ends_sp=0xbffff09b "", file_exit_value=0xbffff090, can_break=bb_none, last_else=0xbffff09a "", is_procname_definition=0 '\000') at indent.c:1457
+#3  handle_the_token (type_code=decl, scase=<value optimized out>, force_nl=<value optimized out>, sp_sw=0xbffff09d "", flushed_nl=0xbffff09e "", hd_type=0xbffff094, dec_ind=0xbffff08c, last_token_ends_sp=0xbffff09b "", file_exit_value=0xbffff090, can_break=bb_none, last_else=0xbffff09a "", is_procname_definition=0 '\000') at indent.c:2192
+#4  0x0804c215 in indent_main_loop (this_file=<value optimized out>) at indent.c:2712
+#5  indent (this_file=<value optimized out>) at indent.c:2794
+#6  0x0804d25a in indent_single_file (argc=5, argv=0xbffff204) at indent.c:3021
+#7  indent_all (argc=5, argv=0xbffff204) at indent.c:3048
+#8  main (argc=5, argv=0xbffff204) at indent.c:3108
+!!!BCT-stack-end
+!!!BCT-EXIT: reduce
+!!!BCT-stack
+#0  0x08050ae8 in reduce () at parse.c:608
+#1  0x08050ce8 in parse (tk=decl) at parse.c:470
+#2  0x0804b2d8 in handle_token_decl (type_code=decl, scase=<value optimized out>, force_nl=<value optimized out>, sp_sw=0xbffff09d "", flushed_nl=0xbffff09e "", hd_type=0xbffff094, dec_ind=0xbffff08c, last_token_ends_sp=0xbffff09b "", file_exit_value=0xbffff090, can_break=bb_none, last_else=0xbffff09a "", is_procname_definition=0 '\000') at indent.c:1457
+#3  handle_the_token (type_code=decl, scase=<value optimized out>, force_nl=<value optimized out>, sp_sw=0xbffff09d "", flushed_nl=0xbffff09e "", hd_type=0xbffff094, dec_ind=0xbffff08c, last_token_ends_sp=0xbffff09b "", file_exit_value=0xbffff090, can_break=bb_none, last_else=0xbffff09a "", is_procname_definition=0 '\000') at indent.c:2192
+#4  0x0804c215 in indent_main_loop (this_file=<value optimized out>) at indent.c:2712
+#5  indent (this_file=<value optimized out>) at indent.c:2794
+#6  0x0804d25a in indent_single_file (argc=5, argv=0xbffff204) at indent.c:3021
+#7  indent_all (argc=5, argv=0xbffff204) at indent.c:3048
+#8  main (argc=5, argv=0xbffff204) at indent.c:3108
+!!!BCT-stack-end
+No locals.
+eax            0x8059388	134583176
+ecx            0x1	1
+edx            0x8059450	134583376
+ebx            0x0	0
+esp            0xbfffef9c	0xbfffef9c
+ebp            0xbfffefd8	0xbfffefd8
+esi            0x0	0
+edi            0x0	0
+eip            0x8050ae8	0x8050ae8 <reduce+40>
+eflags         0x282	[ SF IF ]
+cs             0x73	115
+ss             0x7b	123
+ds             0x7b	123
+es             0x7b	123
+fs             0x0	0
+gs             0x33	51
+st0            0	(raw 0x00000000000000000000)
+st1            0	(raw 0x00000000000000000000)
+st2            0	(raw 0x00000000000000000000)
+st3            0	(raw 0x00000000000000000000)
+st4            0	(raw 0x00000000000000000000)
+st5            0	(raw 0x00000000000000000000)
+st6            0	(raw 0x00000000000000000000)
+st7            0	(raw 0x00000000000000000000)
+fctrl          0x37f	895
+fstat          0x0	0
+ftag           0xffff	65535
+fiseg          0x0	0
+fioff          0x0	0
+foseg          0x0	0
+fooff          0x0	0
+fop            0x0	0
+xmm0           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm1           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm2           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm3           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm4           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm5           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm6           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm7           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+mxcsr          0x1f80	[ IM DM ZM OM UM PM ]
+mm0            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm1            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm2            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm3            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm4            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm5            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm6            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm7            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+!!!BCT-stack-end
+!!!BCT-EXIT: parse
+!!!BCT-stack
+#0  0x08050cf1 in parse (tk=3221221533) at parse.c:491
+#1  0x0804b2d8 in handle_token_decl (type_code=decl, scase=<value optimized out>, force_nl=<value optimized out>, sp_sw=0xbffff09d "", flushed_nl=0xbffff09e "", hd_type=0xbffff094, dec_ind=0xbffff08c, last_token_ends_sp=0xbffff09b "", file_exit_value=0xbffff090, can_break=bb_none, last_else=0xbffff09a "", is_procname_definition=0 '\000') at indent.c:1457
+#2  handle_the_token (type_code=decl, scase=<value optimized out>, force_nl=<value optimized out>, sp_sw=0xbffff09d "", flushed_nl=0xbffff09e "", hd_type=0xbffff094, dec_ind=0xbffff08c, last_token_ends_sp=0xbffff09b "", file_exit_value=0xbffff090, can_break=bb_none, last_else=0xbffff09a "", is_procname_definition=0 '\000') at indent.c:2192
+#3  0x0804c215 in indent_main_loop (this_file=<value optimized out>) at indent.c:2712
+#4  indent (this_file=<value optimized out>) at indent.c:2794
+#5  0x0804d25a in indent_single_file (argc=5, argv=0xbffff204) at indent.c:3021
+#6  indent_all (argc=5, argv=0xbffff204) at indent.c:3048
+#7  main (argc=5, argv=0xbffff204) at indent.c:3108
+i = <value optimized out>
+eax            0x0	0
+ecx            0x1	1
+edx            0x8059450	134583376
+ebx            0x8059388	134583176
+esp            0xbfffefdc	0xbfffefdc
+ebp            0xbffff038	0xbffff038
+esi            0x18	24
+edi            0xbffff09d	-1073745763
+eip            0x8050cf1	0x8050cf1 <parse+113>
+eflags         0x246	[ PF ZF IF ]
+cs             0x73	115
+ss             0x7b	123
+ds             0x7b	123
+es             0x7b	123
+fs             0x0	0
+gs             0x33	51
+st0            0	(raw 0x00000000000000000000)
+st1            0	(raw 0x00000000000000000000)
+st2            0	(raw 0x00000000000000000000)
+st3            0	(raw 0x00000000000000000000)
+st4            0	(raw 0x00000000000000000000)
+st5            0	(raw 0x00000000000000000000)
+st6            0	(raw 0x00000000000000000000)
+st7            0	(raw 0x00000000000000000000)
+fctrl          0x37f	895
+fstat          0x0	0
+ftag           0xffff	65535
+fiseg          0x0	0
+fioff          0x0	0
+foseg          0x0	0
+fooff          0x0	0
+fop            0x0	0
+xmm0           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm1           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm2           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm3           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm4           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm5           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm6           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm7           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+mxcsr          0x1f80	[ IM DM ZM OM UM PM ]
+mm0            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm1            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm2            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm3            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm4            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm5            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm6            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm7            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+!!!BCT-stack-end
+!!!BCT-EXIT: main
+!!!BCT-stack
+#0  0x0804d1be in main (argc=134532624, argv=0x5) at indent.c:3112
+profile_pathname = 0xffffffff <Address 0xffffffff out of bounds>
+using_stdin = 0 '\000'
+exit_status = <value optimized out>
+eax            0x0	0
+ecx            0x805a800	134588416
+edx            0x2703d0	2556880
+ebx            0x26eff4	2551796
+esp            0xbffff15c	0xbffff15c
+ebp            0xbffff1d8	0xbffff1d8
+esi            0x0	0
+edi            0x0	0
+eip            0x804d1be	0x804d1be <main+942>
+eflags         0x286	[ PF SF IF ]
+cs             0x73	115
+ss             0x7b	123
+ds             0x7b	123
+es             0x7b	123
+fs             0x0	0
+gs             0x33	51
+st0            0	(raw 0x00000000000000000000)
+st1            0	(raw 0x00000000000000000000)
+st2            0	(raw 0x00000000000000000000)
+st3            0	(raw 0x00000000000000000000)
+st4            0	(raw 0x00000000000000000000)
+st5            0	(raw 0x00000000000000000000)
+st6            0	(raw 0x00000000000000000000)
+st7            0	(raw 0x00000000000000000000)
+fctrl          0x37f	895
+fstat          0x0	0
+ftag           0xffff	65535
+fiseg          0x0	0
+fioff          0x0	0
+foseg          0x0	0
+fooff          0x0	0
+fop            0x0	0
+xmm0           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm1           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm2           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm3           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm4           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm5           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm6           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+xmm7           {v4_float = {0x0, 0x0, 0x0, 0x0}, v2_double = {0x0, 0x0}, v16_int8 = {0x0 <repeats 16 times>}, v8_int16 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int32 = {0x0, 0x0, 0x0, 0x0}, v2_int64 = {0x0, 0x0}, uint128 = 0x00000000000000000000000000000000}
+mxcsr          0x1f80	[ IM DM ZM OM UM PM ]
+mm0            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm1            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm2            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm3            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm4            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm5            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm6            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+mm7            {uint64 = 0x0, v2_int32 = {0x0, 0x0}, v4_int16 = {0x0, 0x0, 0x0, 0x0}, v8_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+
+Program exited normally.

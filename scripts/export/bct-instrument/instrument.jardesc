@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="bct-instrumenter.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/BCT/scripts/export/instrument.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="false" manifestLocation="/BCT/scripts/export/bct-instrument/instrument.MF" manifestVersion="1.0" reuseManifest="true" saveManifest="true" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=BCT/src-asm&lt;instrumenter.asm{BctTransformer.java"/>
+        <javaElement handleIdentifier="=BCT/src-asm&lt;instrumenter.asm{BctTransformerMain.java"/>
+    </selectedElements>
+</jardesc>

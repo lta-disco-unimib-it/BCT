@@ -1,0 +1,9 @@
+program.CounterTest.<init>(()V)=0.meta
+program.CounterTest.testAverage(()V)=1.meta
+program.Counter.<init>(()V)=2.meta
+program.Counter.increment(()V)=3.meta
+program.Counter.divideByCounterValue((I)I)=4.meta
+org.junit.Assert.assertEquals((JJ)V)=5.meta
+program.CounterTest.testAverageMultiple(()V)=6.meta
+program.CounterTest.testAverageMany(()V)=7.meta
+program.CounterTest.testAverageNoValue(()V)=8.meta

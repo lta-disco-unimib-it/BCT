@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="kbehavior.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/BCT/scripts/export/kbehavior/kbehaviorJar.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="true" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+<storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+<selectedProjects/>
+<manifest generateManifest="true" mainClassHandleIdentifier="=BCT/src&lt;grammarInference.Engine{KBehaviorEngine.java[KBehaviorEngine" manifestLocation="/BCT/scripts/export/KBehaviorJarManifest.MF" manifestVersion="1.0" reuseManifest="false" saveManifest="true" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+<javaElement handleIdentifier="=BCT/src&lt;gui.environment"/>
+<javaElement handleIdentifier="=BCT/src&lt;sjm.utensil"/>
+<javaElement handleIdentifier="=BCT/src&lt;util"/>
+<javaElement handleIdentifier="=BCT/src&lt;automata.fsa"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.deterministic"/>
+<javaElement handleIdentifier="=BCT/src&lt;sjm.engine"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.grammar.transform"/>
+<javaElement handleIdentifier="=BCT/src&lt;sjm.imperative"/>
+<javaElement handleIdentifier="=BCT/src&lt;grammar"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.sim.multiple"/>
+<javaElement handleIdentifier="=BCT/src&lt;tools{FSAInspector.java"/>
+<javaElement handleIdentifier="=BCT/src&lt;grammar.reg"/>
+<javaElement handleIdentifier="=BCT/src&lt;sjm.parse"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.lsystem"/>
+<javaElement handleIdentifier="=BCT/src&lt;grammarInference.Record"/>
+<javaElement handleIdentifier="=BCT/src&lt;automata.vdg"/>
+<javaElement handleIdentifier="=BCT/src&lt;automata.turing"/>
+<javaElement handleIdentifier="=BCT/src&lt;file.xml"/>
+<javaElement handleIdentifier="=BCT/src&lt;grammarInference.Log"/>
+<javaElement handleIdentifier="=BCT/src&lt;automata.pda"/>
+<javaElement handleIdentifier="=BCT/src&lt;sjm.parse.tokens"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.editor"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.menu"/>
+<javaElement handleIdentifier="=BCT/src&lt;conf"/>
+<javaElement handleIdentifier="=BCT/src&lt;ICON.web"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.grammar.automata"/>
+<javaElement handleIdentifier="=BCT/src&lt;MEDIA"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.grammar"/>
+<javaElement handleIdentifier="=BCT/src&lt;tools{ShowFSA.java"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.sim"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.action"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.regular"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.viewer"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.transform"/>
+<javaElement handleIdentifier="=BCT/src&lt;automata.event"/>
+<javaElement handleIdentifier="=BCT/src&lt;grammarInference.Engine"/>
+<file path="/BCT/.classpath"/>
+<javaElement handleIdentifier="=BCT/src&lt;ICON"/>
+<javaElement handleIdentifier="=BCT/src&lt;sjm.parse.chars"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.minimize"/>
+<javaElement handleIdentifier="=BCT/src&lt;sjm.combinatorics"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.grammar.parse"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.event"/>
+<javaElement handleIdentifier="=BCT/src&lt;grammar.lsystem"/>
+<javaElement handleIdentifier="=BCT/src&lt;grammar.cfg"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.tree"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.environment.tag"/>
+<javaElement handleIdentifier="=BCT/src&lt;grammar.parse"/>
+<javaElement handleIdentifier="=BCT/src&lt;automata.graph"/>
+<javaElement handleIdentifier="=BCT/src&lt;gui.grammar.convert"/>
+<javaElement handleIdentifier="=BCT/src&lt;file"/>
+<javaElement handleIdentifier="=BCT/src&lt;regular"/>
+<javaElement handleIdentifier="=BCT/src&lt;automata"/>
+</selectedElements>
+</jardesc>

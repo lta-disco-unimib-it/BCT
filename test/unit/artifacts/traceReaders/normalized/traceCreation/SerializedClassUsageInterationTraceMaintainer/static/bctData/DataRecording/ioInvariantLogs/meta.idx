@@ -1,0 +1,14 @@
+program.ProgramForStaticTesting.main(([Ljava.lang.String;)V)=0.meta
+program.ClassB.<init>(()V)=1.meta
+program.ClassC.<init>(()V)=2.meta
+program.ClassD.<init>(()V)=3.meta
+program.StaticClassA.<clinit>(()V)=4.meta
+program.StaticClassA.internalConstructor(()V)=5.meta
+program.StaticClassA.methodC(()V)=6.meta
+program.StaticClassA.methodD((Lprogram.ClassB;)V)=7.meta
+program.StaticClassA.methodA((Lprogram.ClassB;)V)=8.meta
+program.ClassB.methodBA(()V)=9.meta
+program.ClassB.methodBB((I)V)=10.meta
+program.StaticClassA.methodE(()V)=11.meta
+program.StaticClassB.methodBA(()V)=12.meta
+program.StaticClassB.methodBB((I)V)=13.meta

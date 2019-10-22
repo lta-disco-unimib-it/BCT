@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probekit>
+  <probe>
+    <target className="*" method="*" package="java*" signature="*" type="exclude"/>
+    <import text="probes.TcInteractionLoggerProbe"/>
+    <import text="probes.TcIoLoggerProbe"/>
+    <fragment type="afterCall">
+      <data name="className" type="className"/>
+      <data name="args" type="args"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="methodName" type="methodName"/>
+      <data name="returnedObject" type="returnedObject"/>
+      <code>try{
+   TcIoLoggerProbe.ioLogExit(className,methodName,methodSig,args,returnedObject);
+   TcInteractionLoggerProbe.intLogExit(className,methodName,methodSig,args);
+
+} catch ( Exception e ){
+ 	System.out.println(&quot;EXC &quot;+e.getMessage());
+}</code>
+    </fragment>
+    <fragment type="beforeCall">
+      <data name="className" type="className"/>
+      <data name="args" type="args"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="methodName" type="methodName"/>
+      <data name="aclassName4" type="thisObject"/>
+      <code>try{
+   TcIoLoggerProbe.ioLogEnter(className,methodName,methodSig,args);
+   TcInteractionLoggerProbe.intLogEnter(className,methodName,methodSig,args);
+} catch ( Exception e ){
+ 	System.out.println(&quot;EXC &quot;+e.getMessage());
+ 	e.printStackTrace();
+}</code>
+    </fragment>
+  </probe>
+</probekit>

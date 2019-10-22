@@ -1,0 +1,6 @@
+REM unnamed_probe
+PROBE
+RULE test *Test test* * include
+RULE * * * * exclude
+REF ONEXIT TCMonitor_probe$Probe_0 _exit (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V className,methodName,methodSig
+REF ONENTRY TCMonitor_probe$Probe_0 _entry (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V className,methodName,methodSig

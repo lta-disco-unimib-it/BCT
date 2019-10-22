@@ -1,0 +1,49 @@
+#############################################################
+# Copyright (c) 2005, 2006 IBM Corporation and others. 
+# All rights reserved.   This program and the accompanying materials 
+# are made available under the terms of the Eclipse Public License v1.0 
+# which accompanies this distribution, and is available at 
+# http://www.eclipse.org/legal/epl-v10.html         
+# $Id: Makefile.unix,v 1.6 2006/03/24 21:59:29 hleung Exp $ 
+#  
+# Contributors: 
+# IBM - Initial contribution
+#############################################################
+
+
+include ../../Common/Makefile.include
+
+CPPFLAGS += -I.. -I../../Common -I../../JClass -I../BCIEngJ -I../BCIEngProbe
+
+OBJS = 	ProbeUnitTests.o
+
+LDIRS =  -L../BCIEngProbe -L../BCIEngJ -L.. -L../../JClass
+LIBS = -lBCIEngProbe -lBCIEngJ -lBCIEng -lJClassStat 
+
+all: ProbeUnitTests
+
+.PHONY: JClass BCIEng BCIEngJ BCIEngProbe
+
+JClass:
+	cd ../../JClass; $(MAKE) $(MAKEFILE_NAME) libJClassStat.a
+
+BCIEng:
+	cd ..; $(MAKE) $(MAKEFILE_NAME) libBCIEng.a
+
+BCIEngJ:
+	cd ../BCIEngJ; $(MAKE) $(MAKEFILE_NAME) libBCIEngJ.a
+
+BCIEngProbe:
+	cd ../BCIEngProbe; $(MAKE) $(MAKEFILE_NAME) libBCIEngProbe.a
+
+ProbeUnitTests: $(OBJS) JClass BCIEng BCIEngJ BCIEngProbe
+	$(CXX) $(CFLAGS) $< -o $@ $(LDIRS) $(LIBS)
+
+clean :
+	rm -f $(OBJS) ProbeUnitTests
+
+clobber : clean
+	cd ../../JClass; $(MAKE) $(MAKEFILE_NAME) clean
+	cd ..; $(MAKE) $(MAKEFILE_NAME) clean
+	cd ../BCIEngJ; $(MAKE) $(MAKEFILE_NAME) clean
+	cd ../BCIEngProbe; $(MAKE) $(MAKEFILE_NAME) clean

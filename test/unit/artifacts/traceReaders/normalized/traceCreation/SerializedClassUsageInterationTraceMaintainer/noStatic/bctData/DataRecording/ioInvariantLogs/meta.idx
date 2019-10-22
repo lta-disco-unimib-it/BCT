@@ -1,0 +1,15 @@
+program.ProgramForTesting.main(([Ljava.lang.String;)V)=0.meta
+program.ClassA.<init>(()V)=1.meta
+program.ClassA.internalConstructor(()V)=2.meta
+program.ClassB.<init>(()V)=3.meta
+program.ClassA.methodA((Lprogram.ClassB;)V)=4.meta
+program.ClassB.methodBA(()V)=5.meta
+program.ClassB.methodBB((I)V)=6.meta
+program.ClassA.methodB((Lprogram.ClassB;)V)=7.meta
+program.ClassB.methodBC((Lprogram.ClassA;)V)=8.meta
+program.ClassA.methodC(()V)=9.meta
+program.ClassA.methodD((Lprogram.ClassB;)V)=10.meta
+program.ClassA.methodE((Lprogram.ClassB;)V)=11.meta
+program.ClassB.methodBD((Lprogram.ClassA;)V)=12.meta
+program.ClassA.<init>((Lprogram.ClassB;)V)=13.meta
+program.ClassA.<init>((I)V)=14.meta

@@ -1,0 +1,8 @@
+timestamp=1292461728327
+calledObjectId=1318663487
+tests=*program.CounterTest.testAverageNoValue,
+#
+timestamp=1292461728329
+calledObjectId=1318663487
+tests=*program.CounterTest.testAverageNoValue,
+#

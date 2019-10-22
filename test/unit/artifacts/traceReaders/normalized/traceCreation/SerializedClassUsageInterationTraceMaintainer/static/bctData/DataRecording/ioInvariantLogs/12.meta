@@ -1,0 +1,8 @@
+timestamp=1297095688130
+tests=*program.StaticClassB.methodBA,
+context=program.StaticClassA:34,
+#
+timestamp=1297095688134
+tests=*program.StaticClassB.methodBA,
+context=program.StaticClassA:34,
+#

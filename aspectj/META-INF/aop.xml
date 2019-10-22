@@ -1,0 +1,6 @@
+<aspectj>
+<aspects>
+<aspect name="asp.AOPaspect" />
+</aspects>
+<!-- <weaver options="-verbose -showWeaveInfo"/>  -->
+</aspectj>

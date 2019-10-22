@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.0/notation" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.2/Umlnotation" xmi:id="_zADOYKznEdyB39L_O19odA" name="Preprocessing">
+  <eAnnotations xmi:id="_zADOYaznEdyB39L_O19odA" source="uml2.diagrams" references="_zADOYqznEdyB39L_O19odA">
+    <contents xmi:type="notation:Diagram" xmi:id="_zADOYqznEdyB39L_O19odA" type="Class" name="Main">
+      <children xmi:id="_6I6ugKznEdyB39L_O19odA">
+        <children xmi:id="_6JLNMKznEdyB39L_O19odA" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_6JL0QKznEdyB39L_O19odA" width="1320" height="1320"/>
+        </children>
+        <children xmi:id="_6JMbUKznEdyB39L_O19odA" type="Stereotype"/>
+        <children xmi:id="_6JMbUaznEdyB39L_O19odA" type="Name"/>
+        <children xmi:id="_6JNCYKznEdyB39L_O19odA" type="Parent"/>
+        <children xmi:id="_6JO3kKznEdyB39L_O19odA" type="AttributeCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_6JO3kaznEdyB39L_O19odA" showTitle="true"/>
+        </children>
+        <children xmi:id="_6JPeoKznEdyB39L_O19odA" type="OperationCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_6JPeoaznEdyB39L_O19odA" showTitle="true"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_6I6ugaznEdyB39L_O19odA" fontName="Sans" showParentName="true" showStereotype="Text"/>
+        <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=DaikonDeclarationMaker%5Bjcu%5Ename=DaikonDeclarationMaker.java%5Bjpack%5Ename=dfmaker.core%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=BCT%5D%5D%5D%5D$uml.Class"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6I6ugqznEdyB39L_O19odA" x="2177" y="2799"/>
+      </children>
+      <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_zADOY6znEdyB39L_O19odA"/>
+    </contents>
+  </eAnnotations>
+  <packageImport xmi:id="_zADOZKznEdyB39L_O19odA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <profileApplication xmi:id="_zADOZaznEdyB39L_O19odA">
+    <eAnnotations xmi:id="_zADOZqznEdyB39L_O19odA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+  <profileApplication xmi:id="_zADOZ6znEdyB39L_O19odA">
+    <eAnnotations xmi:id="_zADOaKznEdyB39L_O19odA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_IN8k8MmBEdqBcN1R6EvWUw?Default/Default?"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?"/>
+  </profileApplication>
+  <profileApplication xmi:id="_zADOaaznEdyB39L_O19odA">
+    <eAnnotations xmi:id="_zADOaqznEdyB39L_O19odA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_IrdAUMmBEdqBcN1R6EvWUw?Deployment/Deployment?"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?"/>
+  </profileApplication>
+</uml:Model>

@@ -1,0 +1,10 @@
+
+program.ProgramForTesting.main(([Ljava.lang.String;)V):::ENTER
+parameter[0]
+!NULL
+1
+
+program.ProgramForTesting.main(([Ljava.lang.String;)V):::EXIT1
+parameter[0]
+!NULL
+1

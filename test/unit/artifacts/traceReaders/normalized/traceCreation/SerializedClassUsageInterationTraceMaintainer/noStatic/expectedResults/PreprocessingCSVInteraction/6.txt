@@ -1,0 +1,2 @@
+program.ProgramForTesting.main(([Ljava.lang.String;)V)
+|

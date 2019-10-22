@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probekit>
+  <probe>
+    <target className="*" method="*" package="probes*" signature="*" type="exclude"/>
+    <target className="*" method="*" package="log*" signature="*" type="exclude"/>
+    <target className="*" method="*" package="java*" signature="*" type="exclude"/>
+    <import text="probes.IoLoggerProbe"/>
+    <import text="probes.InteractionLoggerProbe"/>
+    <fragmentAtClassScope></fragmentAtClassScope>
+    <fragment type="afterCall">
+      <data name="className" type="className"/>
+      <data name="args" type="args"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="methodName" type="methodName"/>
+      <data name="returnedObject" type="returnedObject"/>
+      <code>try{
+   IoLoggerProbe.ioLogExit(className,methodName,methodSig,args,returnedObject);
+   InteractionLoggerProbe.intLogExit(className,methodName,methodSig,args);
+} catch ( Exception e ){
+ 	System.out.println(&quot;EXC &quot;+e.getMessage());
+}</code>
+    </fragment>
+    <fragment type="beforeCall">
+      <data name="className" type="className"/>
+      <data name="args" type="args"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="methodName" type="methodName"/>
+      <code>try{
+	IoLoggerProbe.ioLogEnter(className,methodName,methodSig,args);
+   InteractionLoggerProbe.intLogEnter(className,methodName,methodSig,args);
+} catch ( Exception e ){
+ 	System.out.println(&quot;EXC &quot;+e.getMessage());
+}</code>
+    </fragment>
+  </probe>
+</probekit>

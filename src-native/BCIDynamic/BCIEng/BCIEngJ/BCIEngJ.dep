@@ -1,0 +1,71 @@
+#############################################################
+# Copyright (c) 2005, 2006 IBM Corporation and others. 
+# All rights reserved.   This program and the accompanying materials 
+# are made available under the terms of the Eclipse Public License v1.0 
+# which accompanies this distribution, and is available at 
+# http://www.eclipse.org/legal/epl-v10.html         
+# $Id: BCIEngJ.dep,v 1.6 2006/03/24 21:57:24 hleung Exp $ 
+#  
+# Contributors: 
+# IBM - Initial contribution
+#############################################################
+
+# Microsoft Developer Studio Generated Dependency File, included by BCIEngJ.mak
+
+.\ExtRefJ_Interface.cpp : \
+	"..\..\common\commondef.h"\
+	"..\..\common\javadef.h"\
+	"..\..\Common\JavaHelpers.h"\
+	"..\..\JClass\JBaseStream.h"\
+	"..\..\JClass\JClassBuilder.h"\
+	"..\..\JClass\JClassFile.h"\
+	"..\..\JClass\JStream.h"\
+	"..\InsSet.h"\
+	"..\Module.h"\
+	".\ExtRefJ_Interface.h"\
+	".\ModuleJ.h"\
+	
+
+.\ExtRefJ_StatMethod.cpp : \
+	"..\..\common\commondef.h"\
+	"..\..\common\javadef.h"\
+	"..\..\Common\JavaHelpers.h"\
+	"..\..\JClass\JBaseStream.h"\
+	"..\..\JClass\JClassBuilder.h"\
+	"..\..\JClass\JClassFile.h"\
+	"..\..\JClass\JStream.h"\
+	"..\InsSet.h"\
+	"..\Module.h"\
+	".\ExtRefJ_StatMethod.h"\
+	".\ModuleJ.h"\
+	
+
+.\JVMInsSet.cpp : \
+	"..\..\common\commondef.h"\
+	"..\..\common\javadef.h"\
+	"..\..\Common\JavaHelpers.h"\
+	"..\..\JClass\JBaseStream.h"\
+	"..\..\JClass\JClassBuilder.h"\
+	"..\..\JClass\JClassFile.h"\
+	"..\..\JClass\JStream.h"\
+	"..\InsSet.h"\
+	"..\Module.h"\
+	".\jvmins.def"\
+	".\JVMInsSet.h"\
+	".\ModuleJ.h"\
+	
+
+.\ModuleJ.cpp : \
+	"..\..\common\commondef.h"\
+	"..\..\common\javadef.h"\
+	"..\..\Common\JavaHelpers.h"\
+	"..\..\JClass\JBaseStream.h"\
+	"..\..\JClass\JClassBuilder.h"\
+	"..\..\JClass\JClassFile.h"\
+	"..\..\JClass\JFileStream.h"\
+	"..\..\JClass\JStream.h"\
+	"..\InsSet.h"\
+	"..\Module.h"\
+	".\JVMInsSet.h"\
+	".\ModuleJ.h"\
+	

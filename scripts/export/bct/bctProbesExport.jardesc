@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="bctProbes.zip"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/BCT/scripts/export/bct/bctProbesExport.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="true" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+<storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+<selectedProjects/>
+<manifest generateManifest="true" manifestLocation="/AspectDefinitionMakerDavide/Manifest.MF" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+<file path="/BCT/probes/TCViolationMonitorRaw.probescript"/>
+<file path="/BCT/probes/bctLP.probescript"/>
+<file path="/BCT/probes/bctTCLP.probe"/>
+<file path="/BCT/probes/bctCP.probescript"/>
+<file path="/BCT/probes/bctTCLP.probeinfo"/>
+<file path="/BCT/probes/bctLP.probe"/>
+<file path="/BCT/probes/bctTCLP.probescript"/>
+<file path="/BCT/probes/TCViolationMonitorRaw.probe"/>
+<file path="/BCT/probes/UnitTestMonitor.probescript"/>
+<file path="/BCT/probes/bctLP.probeinfo"/>
+<file path="/BCT/probes/bctCP.probeinfo"/>
+<file path="/BCT/probes/bctCP.probe"/>
+<file path="/BCT/probes/UnitTestMonitor.probeinfo"/>
+<file path="/BCT/probes/UnitTestMonitor.probe"/>
+<file path="/BCT/probes/TCViolationMonitorRaw.probeinfo"/>
+</selectedElements>
+</jardesc>

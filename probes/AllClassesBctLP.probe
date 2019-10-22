@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probekit>
+  <probe>
+    <import text="probes.LoggerProbe"/>
+    <fragmentAtClassScope>public static int level = 0;</fragmentAtClassScope>
+    <fragment type="entry">
+      <data name="className" type="className"/>
+      <data name="methodName" type="methodName"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="args" type="args"/>
+      <code>// Put your code here
+if (++level==1)
+	LoggerProbe.enter(className,methodName,methodSig,args);
+--level;</code>
+    </fragment>
+    <fragment type="exit">
+      <data name="className" type="className"/>
+      <data name="methodName" type="methodName"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="args" type="args"/>
+      <data name="returnValue" type="returnedObject"/>
+      <code>if (++level==1)
+	LoggerProbe.exit(className,methodName,methodSig,args,returnValue);
+--level;</code>
+    </fragment>
+  </probe>
+  <probe>
+    <target className="*" method="*" package="java*" signature="*" type="include"/>
+    <target className="*" method="*" package="sun*" signature="*" type="include"/>
+    <target className="*" method="*" package="com*" signature="*" type="include"/>
+    <target className="*" method="*" package="*" signature="*" type="exclude"/>
+    <import text="probes.LoggerProbe"/>
+    <fragment type="beforeCall">
+      <data name="className" type="className"/>
+      <data name="methodName" type="methodName"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="args" type="args"/>
+      <code>if (++Probe_0.level==1)
+	LoggerProbe.enter(className,methodName,methodSig,args);
+--Probe_0.level;</code>
+    </fragment>
+    <fragment type="afterCall">
+      <data name="className" type="className"/>
+      <data name="methodName" type="methodName"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="args" type="args"/>
+      <data name="returnedObject" type="returnedObject"/>
+      <code>if (++Probe_0.level==1)
+	LoggerProbe.exit(className,methodName,methodSig,args,returnedObject);
+--Probe_0.level;</code>
+    </fragment>
+  </probe>
+</probekit>

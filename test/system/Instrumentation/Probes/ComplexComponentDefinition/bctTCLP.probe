@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probekit id="bctComponentLogger" version="">
+  <probe>
+    <target className="*" method="*" package="packageM.one.two.three*" signature="*" type="exclude"/>
+    <target className="*" method="*" package="packageM.one.two*" signature="*" type="include"/>
+    <target className="*" method="*" package="packageM.one*" signature="*" type="exclude"/>
+    <target className="*" method="*" package="packageM*" signature="*" type="include"/>
+    <target className="*" method="*" package="packageN.one*" signature="*" type="exclude"/>
+    <target className="*" method="*" package="packageN*" signature="*" type="include"/>
+    <target className="*" method="*" package="*" signature="*" type="exclude"/>
+    <fragmentAtClassScope></fragmentAtClassScope>
+    <fragment type="entry">
+      <data name="className" type="className"/>
+      <data name="args" type="args"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="methodName" type="methodName"/>
+      <code>//the instrumentation engine knows what to do</code>
+    </fragment>
+    <fragment type="exit">
+      <data name="className" type="className"/>
+      <data name="args" type="args"/>
+      <data name="methodSig" type="methodSig"/>
+      <data name="methodName" type="methodName"/>
+      <data name="returnedObject" type="returnedObject"/>
+      <code>//the instrumentation engine knows what to do</code>
+    </fragment>
+  </probe>
+</probekit>

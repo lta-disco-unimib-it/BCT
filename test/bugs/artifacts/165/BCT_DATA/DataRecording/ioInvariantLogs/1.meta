@@ -1,0 +1,16 @@
+timestamp=1292461549387
+calledObjectId=1486975107
+tests=*program.CounterTest.testAverage,
+#
+timestamp=1292461549397
+calledObjectId=1486975107
+tests=*program.CounterTest.testAverage,
+#
+timestamp=1292461728173
+calledObjectId=1650627452
+tests=*program.CounterTest.testAverage,
+#
+timestamp=1292461728257
+calledObjectId=1650627452
+tests=*program.CounterTest.testAverage,
+#
